@@ -1,0 +1,4 @@
+phase,n,accuracy,brier,log_loss,mean_draw_prob
+group,72,0.6667,0.4856,0.8268,0.2178
+knockout,32,0.7188,0.4311,0.7612,0.253
+all,104,0.6827,0.4688,0.8066,0.2286

@@ -1,0 +1,5 @@
+model,n_wrong,self_incorrect,self_partial,self_correct,own_error_rate,when_right_says_correct
+claude,35,17,16,2,0.486,0.681
+chatgpt,33,12,18,3,0.364,0.761
+gemini,36,31,1,4,0.861,0.853
+grok,33,20,12,1,0.606,0.944

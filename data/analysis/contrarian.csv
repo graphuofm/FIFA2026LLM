@@ -1,0 +1,5 @@
+model,n_bets,n_contrarian,contrarian_share,contrarian_hit,contrarian_profit,contrarian_roi,conform_hit,conform_profit,mean_edge_claimed
+claude,73,42,0.575,0.214,-167.4,-24.1,0.484,-108.0,0.015
+chatgpt,55,20,0.364,0.25,-37.7,-13.6,0.657,155.6,0.002
+gemini,103,14,0.136,0.286,-111.5,-12.1,0.685,433.2,0.015
+grok,104,5,0.048,0.4,63.8,32.7,0.687,586.4,0.023

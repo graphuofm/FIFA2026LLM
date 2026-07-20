@@ -1,0 +1,14 @@
+,chatgpt,claude,gemini,grok,ALL
+market_odds,0.923,1.0,0.115,0.625,0.666
+squad_depth_quality,0.548,0.442,0.538,0.875,0.601
+star_player,0.221,0.394,0.394,0.558,0.392
+form_momentum,0.471,0.5,0.587,0.76,0.579
+fifa_ranking,0.375,0.183,0.038,0.606,0.3
+injuries_susp,0.462,0.404,0.192,0.308,0.341
+head_to_head,0.038,0.106,0.106,0.231,0.12
+home_altitude,0.135,0.135,0.125,0.288,0.171
+defense_organized,0.394,0.731,0.74,0.558,0.606
+attack_threat,0.644,0.644,0.673,0.663,0.656
+experience_motiv,0.106,0.154,0.308,0.51,0.269
+fatigue_rest,0.077,0.077,0.067,0.096,0.079
+variance_penalty,0.163,0.529,0.163,0.317,0.293

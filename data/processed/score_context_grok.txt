@@ -1,0 +1,144 @@
+m01  Mexico vs South Africa
+     html", "https://sports.yahoo.com/articles/mexico-vs-south-africa-world-130647150.html" ] } || Mexico South Africa 2 0
+m02  Korea Republic vs Czechia
+     tml", "https://www.espn.com/soccer/odds/_/gameId/760414" ] }republic of korea 2 czechia 1 ||
+m03  USA vs Paraguay
+     cousa2026/articles/usa-paraguay-preview-live-stream-team-news-tickets"] }USA 4 PARAGUAY 1 ||
+m04  Canada vs Bosnia and Herzegovina
+     rediction-lineups-odds-2026-world-cup-group-b-117672"] }CANADA 1 BOSNIA AND HERZEGOVINA 1 ||
+m05  Qatar vs Switzerland
+     SUI", "https://inside.fifa.com/fifa-world-ranking/QAT?gender=men"] }qatar 1 Switzerland 1 ||
+m06  Brazil vs Morocco
+     World_Cup_Group_C", "https://inside.fifa.com/fifa-world-ranking/men"] }brazil 1 Morocco 1 ||
+m07  Haiti vs Scotland
+     d-lineups-team-news-tactical-analysis-2026-world-cup-group-c-117818"] }Haiti 0 Scotland 1 ||
+m08  Australia vs Türkiye
+     ww.forebet.com/en/football/matches/australia-t%C3%BCrkiye-2463136"] }Australia 2 turkey 0 ||
+m09  Germany vs Curaçao
+     CMtv/", "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_E"] }Germany 7 curacao 1 ||
+m10  Netherlands vs Japan
+     men", "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_F"] }Netherlands 2 Japan 2 ||
+m11  Côte d'Ivoire vs Ecuador
+     eups-team-news-tactical-analysis-2026-world-cup-group-e-117960"] }ivory coast 1 Ecuador 0 ||
+m12  Sweden vs Tunisia
+     /preview/sweden-vs-tunisia-prediction-team-news-lineups_599031.html"] }Sweden 5 Tunisia 1 ||
+m13  Spain vs Cabo Verde
+     2026", "https://inside.fifa.com/fifa-world-ranking/CPV?gender=men"] }spain 0 cape verde 0 ||
+m14  IR Iran vs New Zealand
+     spn.com/soccer/story//id/46664763/fifa-mens-top-50-world-rankings"] }iran 2 new Zealand 2 ||
+m15  Saudi Arabia vs Uruguay
+     www.fifa.com/en/match-centre/match/17/285023/289273/400021486"] }Saudi arabia 1 Uruguay 1 ||
+m16  Belgium vs Egypt
+     ay/90488415007/", "https://oddspedia.com/football/belgium-egypt-1406"] }Belgium 1 Egypt 1 ||
+m17  Austria vs Jordan
+     d-lineups-team-news-tactical-analysis-2026-world-cup-group-j-118225"] }Austria 3 Jordan 1 ||
+m18  France vs Senegal
+     ng/men", "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_I"] }France 3 Senegal 1 ||
+m19  Iraq vs Norway
+     /matches/1976997/preview/international-fifa-world-cup-2026-iraq-norway"] }Iraq 1 Norway 4 ||
+m20  Argentina vs Algeria
+     -fit-ahead-algeria", "https://inside.fifa.com/fifa-world-ranking"] }Argentina 3 algeria 0 ||
+m21  Portugal vs Congo DR
+     yahoo.com/articles/dr-congo-predicted-lineup-team-050000981.html"] }Portugal 1 congo DR 1 ||
+m22  England vs Croatia
+     -news-latest-h2h-results-odds-world-cup-2026-preview-b1286253.html"] }England 4 Croatia 2 ||
+m23  Ghana vs Panama
+     ted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-118362"] }ghana 1 panama 0 ||
+m24  Uzbekistan vs Colombia
+     ", "https://www.dimers.com/bet-hub/swc/schedule/2026_1_uzb_col"] }Colombia 3 Uzbekistan 1 ||
+m25  Mexico vs Korea Republic
+     https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_A"] }Mexico 1 republic of korea 0 ||
+m26  Canada vs Qatar
+     om/world-cup/canada-vs-qatar-prediction-picks-odds-thursday-6-18-2026"] }Canada 6 Qatar 0 ||
+m27  Switzerland vs Bosnia and Herzegovina
+     canada-bosnia-herzegovina-qatar-and-switzerland"] }Switzerland 4 bosnia and Herzegovina 1 ||
+m28  Czechia vs South Africa
+     www.fifa.com/en/match-centre/match/17/285023/289273/400021440"] }Czechia 1 south Africa 1 ||
+m29  USA vs Australia
+     cup/2026/06/14/fifa-rankings-world-cup-2026-june-update/90530584007/"] }USA 2 Australia 0 ||
+m30  Türkiye vs Paraguay
+     s://www.fifa.com/en/match-centre/match/17/285023/289273/400021460"] }turkiye 0 Paraguay 1 ||
+m31  Brazil vs Haiti
+     19brahti", "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_C"] }Brazil 3 Haiti 0 ||
+m32  Scotland vs Morocco
+     ld-cup/morocco-vs-scotland-prediction-picks-odds-friday-6-19-2026"] }Scotland 0 Morocco 1 ||
+m33  Tunisia vs Japan
+     -ready-for-a-different-tunisia-in-world-cup-s-1000th-match/0Uq2kNc4/"] }Tunisia 0 japan 4 ||
+m34  Ecuador vs Curaçao
+     acao-world-cup-match-preview-picks-odds-for-saturday-june-20-2026/"] }ecuador 0 curacao 0 ||
+m35  Germany vs Côte d'Ivoire
+     /www.fifa.com/en/match-centre/match/17/285023/289273/400021469"] }germany 2 ivory coast 1 ||
+m36  Netherlands vs Sweden
+     //www.fifa.com/en/match-centre/match/17/285023/289273/400021472"] }Netherlands 5 sweden 1 ||
+m37  New Zealand vs Egypt
+     3878/preview/international-fifa-world-cup-2026-new-zealand-egypt"] }new zealand 1 egypt 3 ||
+m38  Uruguay vs Cabo Verde
+     o.com/articles/uruguay-vs-cape-verde-predictions-185000640.html"] }uruguay 2 cape verde 2 ||
+m39  Belgium vs IR Iran
+     com/soccer/story//id/49128265/jeremy-doku-belgium-world-cup-game-iran"] }belgium 0 iran 0 ||
+m40  Spain vs Saudi Arabia
+     ml", "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_H"] }spain 4 Saudi arabia 0 ||
+m41  Jordan vs Algeria
+     //kalshi.com/markets/kxwcgame/world-cup-game/kxwcgame-26jun22jordza"] }jordan 1 algeria 2 ||
+m42  Norway vs Senegal
+     26-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"] }norway 3 senegal 2 ||
+m43  France vs Iraq
+     dds-monday-6-22-2026", "https://inside.fifa.com/fifa-world-ranking/men"] }france 3 iraq 0 ||
+m44  Argentina vs Austria
+     cks-best-bets/", "https://inside.fifa.com/fifa-world-ranking/men"] }Argentina 2 austria 0 ||
+m45  Colombia vs Congo DR
+     .com/articles/colombia-vs-congo-predictions-picks-190100003.html"] }colombia 1 congo DR 0 ||
+m46  Panama vs Croatia
+     rediction-team-news-odds-betting-tips-and-bet-builder-aZnLU5O1Zsqe/"] }panama 0 croatia 1 ||
+m47  England vs Ghana
+     ifa-world-cup-2026-schedule-watch-time-channels-streaming-rcna351255"] }england 0 ghana 0 ||
+m48  Portugal vs Uzbekistan
+     /www.fifa.com/en/match-centre/match/17/285023/289273/400021503"] }portugal 5 uzbekistan 0 ||
+m49  South Africa vs Korea Republic
+     ews-odds-betting-tips-and-bet-builder-afEgA7q1q3rv/"] }south africa 1 republic of korea 0 ||
+m50  Czechia vs Mexico
+     rediction-team-news-odds-betting-tips-and-bet-builder-aVhrU9r75F2V/"] }czechia 0 mexico 3 ||
+m51  Morocco vs Haiti
+     ches/1953864/preview/international-fifa-world-cup-2026-morocco-haiti"] }morocco 4 haiti 2 ||
+m52  Scotland vs Brazil
+     ediction-team-news-odds-betting-tips-and-bet-builder-a1B9A9D9fjpC/"] }scotland 0 brazil 3 ||
+m53  Bosnia and Herzegovina vs Qatar
+     ina", "https://inside.fifa.com/fifa-world-ranking/men"] }bosnia and herzegovina 3 Qatar 1 ||
+m54  Switzerland vs Canada
+     39", "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B"] }switzerland 2 canada 1 ||
+m55  Curaçao vs Côte d'Ivoire
+     /www.espn.com/soccer/match/_/gameId/760473/ivory-coast-curacao"] }curacao 0 ivory coast 2 ||
+m56  Ecuador vs Germany
+     r-vs-germany-prediction-2026-fifa-world-cup-preview-and-best-bets/"] }ecuador 2 germany 1 ||
+m57  Japan vs Sweden
+     lysis.com/competitions/fifa-world-cup-2026/japan-v-sweden-predictions"] }japan 1 sweden 1 ||
+m58  Tunisia vs Netherlands
+     ticles/netherlands-vs-tunisia-predictions-picks-190000498.html"] }tunisia 1 netherlands 3 ||
+m59  Türkiye vs USA
+     e-squad-keep-same-xi", "https://inside.fifa.com/fifa-world-ranking/men"] }turkiye 3 USA 2 ||
+m60  Paraguay vs Australia
+     .com/articles/preview-paraguay-vs-australia-team-021000008.html"] }paraguay 0 australia 0 ||
+m61  New Zealand vs Belgium
+     ameId/760477", "https://inside.fifa.com/fifa-world-ranking/men"] }new zealand 1 belgium 5 ||
+m62  Egypt vs IR Iran
+     tions-betting-tips/", "https://www.espn.com/soccer/odds/_/gameId/760476"] }egypt 1 iran 1 ||
+m63  Cabo Verde vs Saudi Arabia
+     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_H"] }cape verde 0 saudi arabia 0 ||
+m64  Uruguay vs Spain
+     l", "https://www.espn.com/soccer/match/_/gameId/760479/spain-uruguay"] }uruguay 0 spain 1 ||
+m65  Senegal vs Iraq
+     rld-cup-group-i-standings-results-table-2026/e0c681e074cb3b3bc2f8f958"] }senegal 5 iraq 0 ||
+m66  Norway vs France
+     ches/1953890/preview/international-fifa-world-cup-2026-norway-france"] }norway 1 france 4 ||
+m67  Algeria vs Austria
+     -predictions-team-news-odds-betting-tips-bet-builder-aVgbm2W8srwo/"] }algeria 3 Austria 3 ||
+m68  Jordan vs Argentina
+     y/90694556007/", "https://www.espn.com/soccer/odds//gameId/760483"] }Jordan 1 Argentina 3 ||
+m69  Colombia vs Portugal
+     -colombia-battle-top-spot-dodge-heavyweights-last-32-2026-06-25/"] }Colombia 0 Portugal 0 ||
+m70  Congo DR vs Uzbekistan
+     un27coduzb", "https://www.espn.com/soccer/odds/_/gameId/760482"] }congo DR 3 Uzbekistan 1 ||
+m71  Croatia vs Ghana
+     na-tv-channel-how-watch-kickoff-live-stream-injury-predicted-lineups"] }Croatia 2 ghana 1 ||
+m72  Panama vs England
+     d-predictions-team-news-odds-betting-tips-bet-builder-apQ9S0K8XqK3/"] }panama 0 England 2 ||

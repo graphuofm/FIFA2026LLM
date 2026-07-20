@@ -1,0 +1,9 @@
+model,phase,n,accuracy,brier,log_loss,mean_draw_prob,mean_conf
+chatgpt,group,72,0.6667,0.4926,0.8381,0.2288,0.6038
+chatgpt,knockout,32,0.7188,0.4286,0.7589,0.2478,0.55
+claude,group,72,0.6389,0.4892,0.8282,0.2243,0.61
+claude,knockout,32,0.7188,0.4284,0.756,0.2547,0.5441
+gemini,group,72,0.625,0.4853,0.8197,0.2306,0.6269
+gemini,knockout,32,0.7188,0.4773,0.822,0.2557,0.5318
+grok,group,72,0.6667,0.4908,0.8255,0.2206,0.6385
+grok,knockout,32,0.7188,0.4251,0.7524,0.2425,0.5688

@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+
+# loose original pastes at repo root — canonical copies live in data/raw/
+/*result*.txt
+/prompt FIFA.txt
+
+# internal working notes (not for public release)
+/你的任务.txt
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/page*.png
