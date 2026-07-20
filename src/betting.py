@@ -91,7 +91,21 @@ def build():
     for m in MODELS:
         d = df[df.model == m].sort_values("mnum")
         bank[m] = d.groupby("mnum").profit.sum().cumsum()
-    bankroll = pd.DataFrame(bank).sort_index().ffill()
+    # market baseline: flat $100 on the market favourite every match
+    per_match = df.drop_duplicates("match_id")
+    mrows = []
+    for r in per_match.itertuples():
+        imp = [r.imp_home, r.imp_draw, r.imp_away]
+        fi = max(range(3), key=lambda i: imp[i])
+        fav = OUTCOMES[fi]
+        dec = [r.odds_home_dec, r.odds_draw_dec, r.odds_away_dec][fi]
+        prof = 100 * (dec - 1) if fav == r.outcome else -100
+        mrows.append((mnum(r.match_id), prof))
+    md = (pd.DataFrame(mrows, columns=["mnum", "profit"])
+          .groupby("mnum").profit.sum().cumsum())
+    bankroll = pd.DataFrame(bank).sort_index()
+    bankroll["market"] = md
+    bankroll = bankroll.ffill()
     bankroll.to_csv(ANA / "bankroll.csv")
     print("\nfinal bankroll (net $ from $ staked):")
     print({m: round(bankroll[m].iloc[-1], 0) for m in MODELS})

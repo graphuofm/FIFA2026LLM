@@ -444,7 +444,13 @@ Settling each agent's own picks at real odds, betting ROI spans $-18.1\%$
 (Table~\ref{tab:t2}, Fig.~\ref{fig:bankroll}). The spread is not driven by who
 they pick --- they pick alike --- but by \emph{how much they stake and whether
 they respect the price}. Gemini stakes most aggressively (\$8{,}660 across 103
-bets); Claude stakes least and most often on draws and underdogs.
+bets); Claude stakes least and most often on draws and underdogs. As a
+reference, a naive baseline that stakes a flat \$100 on the market favourite
+every match returns $+\$1{,}041$ (grey line, Fig.~\ref{fig:bankroll}),
+out-earning all four agents in absolute terms at comparable ROI --- a betting
+counterpart of the result that no agent beats the market. (Favorites
+over-performed their price this cup, \S\ref{sec:calib}; the released odds let
+users hold this difficulty fixed.)
 
 \begin{figure*}[t]
   \centering
@@ -464,14 +470,14 @@ the more an agent fades the market, the worse it does. Claude cites the market
 in every forecast yet bets against it 58\% of the time --- it \emph{sees} the
 price and overrides it --- and is the only agent with a net loss.
 
-\begin{figure*}[t]
+\begin{figure}[t]
   \centering
-  \includegraphics[width=\textwidth]{fig_contrarian.pdf}
-  \caption{Against-the-market analysis. Left: share of each agent's bets that
-  fade the market favourite. Right: net profit from market-conforming vs.\
+  \includegraphics[width=\columnwidth]{fig_contrarian.pdf}
+  \caption{Against-the-market analysis. Top: share of each agent's bets that
+  fade the market favourite. Bottom: net profit from market-conforming vs.\
   contrarian bets. Fading the market loses money for all four agents.}
   \label{fig:contrarian}
-\end{figure*}
+\end{figure}
 
 \subsection{Staking discipline is a distinct axis}
 Beyond \emph{which} side to back, agents differ in how they \emph{size} a bet.

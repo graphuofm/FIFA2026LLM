@@ -105,9 +105,24 @@ def fig_calibration():
     df = pd.read_csv(ANA / "forecasts_tidy_104.csv")
     fig, axes = plt.subplots(2, 2, figsize=(V.COL1 * 1.7, V.COL1 * 1.72))
     bins = np.round(np.arange(0, 1.01, 0.1), 2)
+    # market reliability (top pick) overlaid on every panel as a reference
+    fwo = pd.read_csv(ANA / "forecasts_with_odds.csv").drop_duplicates("match_id")
+    imp = fwo[["imp_home", "imp_draw", "imp_away"]].values
+    mconf = imp.max(1)
+    mpick = np.array(["team_a_win", "draw", "team_b_win"])[imp.argmax(1)]
+    mok = (mpick == fwo.outcome.values)
+    mxs, mys = [], []
+    for i in range(len(bins) - 1):
+        lo, hi = bins[i], bins[i + 1]
+        sel = (mconf > lo) & (mconf <= hi) if i else (mconf >= lo) & (mconf <= hi)
+        if sel.sum():
+            mxs.append(mconf[sel].mean()); mys.append(mok[sel].mean())
     for ax, m in zip(axes.ravel(), M):
         d = df[df.model == m]
         ax.plot([0.33, 1], [0.33, 1], ls=(0, (3, 3)), lw=0.9, color=V.MUTED, zorder=1)
+        ax.fill_between([0.33, 1], [0.33, 1], 1, color=V.GOOD, alpha=0.05, zorder=0)
+        ax.plot(mxs, mys, "-", color=V.MARKET_COLOR, lw=1.2, alpha=0.7, zorder=1.5,
+                label="Market")
         xs, ys, ns = [], [], []
         for i in range(len(bins) - 1):
             lo, hi = bins[i], bins[i + 1]
@@ -115,7 +130,6 @@ def fig_calibration():
             sub = d[mm]
             if len(sub):
                 xs.append(sub.conf.mean()); ys.append(sub.correct.mean()); ns.append(len(sub))
-        ax.fill_between([0.33, 1], [0.33, 1], 1, color=V.GOOD, alpha=0.05, zorder=0)
         ax.plot(xs, ys, "-", color=_mc(m), lw=1.7, zorder=2)
         ax.scatter(xs, ys, s=[16 + n * 3 for n in ns], color=_mc(m),
                    marker=V.MODEL_MARKER[m], edgecolor="white", linewidth=0.7, zorder=3)
@@ -129,8 +143,8 @@ def fig_calibration():
         ax.set_xlabel("Mean predicted confidence")
     for ax in axes[:, 0]:
         ax.set_ylabel("Empirical accuracy")
-    fig.suptitle("Reliability of the top pick (above the diagonal = under-confident)",
-                 fontsize=9.3, x=0.02, ha="left", y=1.0, color=V.INK)
+    fig.suptitle("Reliability of the top pick — colour = agent, grey = market "
+                 "(all under-confident)", fontsize=8.8, x=0.02, ha="left", y=1.0, color=V.INK)
     fig.tight_layout(rect=(0, 0, 1, 0.97))
     V.save(fig, "fig_calibration")
 
@@ -138,26 +152,37 @@ def fig_calibration():
 # --------------------------------------------------------------------------- #
 def fig_convergence():
     df = pd.read_csv(ANA / "forecasts_tidy_104.csv")
+    fwo = pd.read_csv(ANA / "forecasts_with_odds.csv").drop_duplicates("match_id")
+    mk = fwo.set_index("match_id")[["imp_home", "imp_draw", "imp_away"]]
+    mkpick = mk.values.argmax(1)
+    mkpick = pd.Series([["team_a_win", "draw", "team_b_win"][i] for i in mkpick],
+                       index=mk.index)
     piv = df.pivot_table(index="match_id", columns="model",
                          values="pick_outcome", aggfunc="first").dropna()
     corr = df.pivot_table(index="match_id", columns="model",
                           values="correct", aggfunc="first").dropna()
     phase = df.drop_duplicates("match_id").set_index("match_id")["phase"]
+    piv["market"] = piv.index.map(mkpick)
+    ents = M + ["market"]
+    labs = [LBL[m] for m in M] + ["Market"]
     fig, (axA, axB) = plt.subplots(1, 2, figsize=(V.COL2, 2.7),
-                                   gridspec_kw={"width_ratios": [1, 1.15]})
-    A = np.zeros((4, 4))
-    for i, a in enumerate(M):
-        for j, b in enumerate(M):
+                                   gridspec_kw={"width_ratios": [1.12, 1.05]})
+    n = len(ents)
+    A = np.zeros((n, n))
+    for i, a in enumerate(ents):
+        for j, b in enumerate(ents):
             A[i, j] = (piv[a] == piv[b]).mean()
     im = axA.imshow(A, cmap=V.SEQ, vmin=0.85, vmax=1.0)
-    axA.set_xticks(range(4)); axA.set_yticks(range(4))
-    axA.set_xticklabels([LBL[m] for m in M], rotation=30, ha="right")
-    axA.set_yticklabels([LBL[m] for m in M])
-    for i in range(4):
-        for j in range(4):
-            axA.text(j, i, f"{A[i,j]:.2f}", ha="center", va="center", fontsize=8,
+    axA.set_xticks(range(n)); axA.set_yticks(range(n))
+    axA.set_xticklabels(labs, rotation=30, ha="right")
+    axA.set_yticklabels(labs)
+    for lab in [axA.get_xticklabels()[-1], axA.get_yticklabels()[-1]]:
+        lab.set_color(V.MARKET_COLOR); lab.set_weight("bold")
+    for i in range(n):
+        for j in range(n):
+            axA.text(j, i, f"{A[i,j]:.2f}", ha="center", va="center", fontsize=7.2,
                      color="white" if A[i, j] > 0.96 else V.INK)
-    axA.set_title("Pairwise same-pick rate", color=V.INK, fontsize=9)
+    axA.set_title("Pairwise same-pick rate (agents + market)", color=V.INK, fontsize=8.8)
     for s in axA.spines.values():
         s.set_visible(False)
     axA.tick_params(length=0)
