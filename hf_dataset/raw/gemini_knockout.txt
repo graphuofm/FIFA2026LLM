@@ -1,0 +1,3274 @@
+06-28 Sun  Round of 32   South Africa               14:00   Canada                     Los Angeles Stadium               Los Angeles
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.22,
+"draw": 0.26,
+"team_b_win": 0.52
+},
+"bet": {
+"pick": "team_b_win",
+"stake_usd": 100
+},
+"reasoning": "Canada possesses superior attacking firepower through Jonathan David and Alphonso Davies, providing the elite wide overloads needed to break down South Africa's disciplined defensive block. Although South Africa's resilient midfield will undoubtedly frustrate the Canadians early on, Canada's overwhelming pace and top-flight European experience offer a decisive tactical edge. Committing the full budget to a Canadian victory in regular time represents the most calculated value based on current tournament form.",
+"key_sources": [
+"https://www.livemint.com/sports/football-news/south-africa-vs-canada-prediction-first-to-qualify-for-quarterfinals-will-be-round-of-32-fifa-world-cup-2026-11782610905074.html",
+"https://www.nbcsports.com/soccer/news/2026-world-cup-round-of-32-confirmed-schedule-predictions-for-knockout-round"
+]
+}  
+Sports Illustrated
+
+south Africa 0 Canada 1
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "The absolute rigidity of South Africa's low block, which made the match closer than my high confidence and $100 stake implied.",
+"key_factor_i_overweighted": "Canada's overwhelming attacking firepower, as they were ultimately restricted to a single goal.",
+"counterfactual": "If South Africa had maintained their defensive discipline for one critical phase where they conceded, the match could have easily ended in a 0-0 draw.",
+"would_i_bet_differently_now": "No, because the fundamental analysis of Canada's superior quality eventually finding a breakthrough proved accurate.",
+"confidence_in_this_reflection": 0.9
+}
+
+__________________________________________
+
+06-29 Mon  Round of 32   Germany                    15:30   Paraguay                   Boston Stadium                    Boston
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.78,
+"draw": 0.15,
+"team_b_win": 0.07
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 100
+},
+"reasoning": "Germany showcased overwhelming offensive capacity in Group E with 10 goals, driven by dynamic transitions, even though a minor lapse against Ecuador exposed temporary defensive vulnerability. In contrast, Paraguay barely advanced from Group D with a negative goal differential, managing only a sluggish 1-0 win and a scoreless draw against moderate competition. The drastic mismatch in tactical intensity and final-third execution makes a full-stake position on Germany a mathematically sound strategy.",
+"key_sources": [
+"https://www.goal.com/en-us/news/germany-paraguay-world-cup-preview/blt69845ea4b54b1ac0",
+"https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/how-and-where-to-watch-germany-vs-paraguay-in-the-round-of-32-of-the-2026-fifa-world-cup-2026-06-29"
+]
+}
+
+Germany 1 penalty shootout(3) Paraguay 1 penalty shootout(4)
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "incorrect",
+"was_my_forecast_well_calibrated": false,
+"did_i_get_lucky_or_unlucky": "unlucky",
+"key_factor_i_missed": "Paraguay's defensive resilience and deliberate tactical shift to force a low-tempo, grinding match aiming precisely for a penalty shootout.",
+"key_factor_i_overweighted": "Germany's group-stage goal-scoring metrics, which artificially inflated expectations of their ability to easily break down a deep defensive block.",
+"counterfactual": "If Germany had converted early offensive pressure into a goal, Paraguay would have abandoned their low block, likely resulting in a comfortable German victory in regulation.",
+"would_i_bet_differently_now": "yes, I would allocate more probability to a draw and decrease my stake, acknowledging the inherent variance of knockout football against a defensively stubborn opponent.",
+"confidence_in_this_reflection": 0.85
+}
+
+_____________
+06-29 Mon  Round of 32   Netherlands                20:00   Morocco                    Monterrey Stadium                 MonterreyYou are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.58,
+"draw": 0.24,
+"team_b_win": 0.18
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 80
+},
+"reasoning": "The Netherlands have demonstrated lethal efficiency under Ronald Koeman, topping Group F with 10 goals and extending a 15-match World Cup unbeaten streak. While Morocco's tactical resilience secured an impressive draw against Brazil and a 4-2 win over Haiti, the Dutch squad's superior offensive depth and defensive stability present a decisive structural mismatch in regulation time.",
+"key_sources": [
+"https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-morocco-live-stream-team-news-tickets",
+"https://www.theguardian.com/football/2026/jun/28/morocco-netherlands-world-cup-2026-preview",
+"https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/how-and-where-to-watch-netherlands-vs-morocco-in-the-round-of-32-of-the-2026-fifa-world-cup-2026-06-29"
+]
+}  
+FIFA
+
+Netherlands 1 penalty shootout(2) Morocco 1 penalty shootout(3)
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "incorrect",
+"was_my_forecast_well_calibrated": false,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "I underweighted Morocco's proven tactical blueprint of absorbing pressure and dragging heavily favored offensive teams into penalty shootouts during knockout stages.",
+"key_factor_i_overweighted": "I overweighted the Netherlands' offensive efficiency and assumed it would cleanly translate into a regulation victory against a world-class defensive block.",
+"counterfactual": "If the Netherlands had managed to score an early goal, it would have forced Morocco to abandon their low block, likely resulting in a regulation win for the Dutch.",
+"would_i_bet_differently_now": "yes, I would have placed a smaller stake on the draw or avoided the 3-way moneyline entirely, recognizing the high probability of a grueling stalemate.",
+"confidence_in_this_reflection": 0.9
+}
+
+_______________________
+
+06-29 Mon  Round of 32   Brazil                     12:00   Japan                      Houston Stadium                   Houston
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.50,
+"draw": 0.30,
+"team_b_win": 0.20
+},
+"bet": {
+"pick": "draw",
+"stake_usd": 50
+},
+"reasoning": "While public consensus heavily favors Brazil, Japan proved their capability by defeating the Seleção 3-2 in an October 2025 friendly and emerging unbeaten from Group F. Under Carlo Ancelotti, Brazil is formidable but may face significant resistance breaking down Japan's disciplined defensive structure in a high-stakes knockout environment. A strategic bet on a regulation draw offers strong analytical value given Japan's tactical resilience.",
+"key_sources": [
+"https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/how-and-where-to-watch-brazil-vs-japan-in-the-round-of-32-of-the-2026-fifa-world-cup-2026-06-29",
+"https://www.foxsports.com/stories/soccer/how-watch-2026-fifa-world-cup-full-schedule-dates-every-match"
+]
+}
+
+brazil 2 Japan 1
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "incorrect",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "Brazil's elite attacking depth and sheer individual talent capable of eventually overcoming a disciplined low block.",
+"key_factor_i_overweighted": "The predictive value of Japan's recent friendly victory over Brazil when transitioning to a high-stakes World Cup knockout environment.",
+"counterfactual": "If Japan had capitalized on a crucial counter-attack to score a second goal, the match could easily have ended in a regulation draw.",
+"would_i_bet_differently_now": "yes, I would have placed my stake on the Brazil win, trusting my own highest probability model rather than seeking betting value on a draw.",
+"confidence_in_this_reflection": 0.9
+}
+
+___________________________
+
+06-30 Tue  Round of 32   Mexico                     20:00   Ecuador                    Mexico City Stadium               Mexico City
+
+
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.45,
+"draw": 0.32,
+"team_b_win": 0.23
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 100
+},
+"reasoning": "Mexico holds a massive home-field advantage playing at the Mexico City Stadium and enters the Round of 32 after a flawless group stage, winning all three matches without conceding a goal. Although Ecuador boasts high-end talent and carries momentum from a crucial victory over Germany, Mexico's cohesive defense and high-altitude conditioning give them a distinct edge. Backing Mexico to win in regulation offers solid tactical value given their dominant recent form and favorable environmental factors.",
+"key_sources": [
+"https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-ecuador-live-stream-team-news-tickets",
+"https://www.foxsports.com/stories/soccer/2026-world-cup-round-32-odds",
+"https://www.goal.com/en/news/mexico-ecuador-world-cup-preview/blt3e5e16bf513deef8"
+]
+}  
+Goal.com
++ 1
+
+Mexico 2 Ecuador 0
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "none",
+"counterfactual": "If Ecuador had converted an early opportunity against the run of play, Mexico's defensive game plan would have been forced to open up, potentially altering the clean-sheet outcome.",
+"would_i_bet_differently_now": "no, because Mexico's execution perfectly validated the heavy emphasis placed on their altitude advantage and defensive stability at home.",
+"confidence_in_this_reflection": 0.95
+}
+
+_______________________________
+
+06-30 Tue  Round of 32   France                     16:00   Sweden                     NY/NJ Stadium                     New Jersey
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.72,
+"draw": 0.19,
+"team_b_win": 0.09
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 100
+},
+"reasoning": "France enters the Round of 32 in formidable form, having swept their group with three commanding wins and ten goals scored. Sweden, by contrast, struggled through Group F with only four points and advanced as a third-placed side, carrying a vulnerable defense that conceded seven goals. The glaring gap in sheer attacking firepower and tournament momentum makes a full-time victory for France the most analytically sound position.",
+"key_sources": [
+"https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-sweden-first-meeting",
+"https://m.economictimes.com/news/new-updates/fifa-world-cup-2026-today-match-schedule-30-june-fifa-world-cup-matches-today-india-time-ivory-coast-norway-france-sweden-mexico/articleshow/132078255.cms"
+]
+}  
+FIFA
++ 1
+
+France 3 Sweden 0
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "none",
+"counterfactual": "If Sweden had managed to score an early goal from a set piece, they might have frustrated France defensively for longer, though the ultimate outcome likely wouldn't have changed given France's depth.",
+"would_i_bet_differently_now": "no, the maximum $100 bet on France was entirely justified by their statistical superiority and validated by the decisive 3-0 result.",
+"confidence_in_this_reflection": 0.95
+}
+
+_____________________________
+
+06-30 Tue  Round of 32   Côte d'Ivoire              12:00   Norway                     Dallas Stadium                    Dallas
+
+
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.30, "draw": 0.28, "team_b_win": 0.42},
+"bet": {"pick": "team_b_win", "stake_usd": 50},
+"reasoning": "Norway brings immense attacking firepower with Erling Haaland leading the line, though their defense showed vulnerabilities in a recent 4-1 loss to France. Ivory Coast boasts a structured and resilient defense that could frustrate the Norwegians, making this a closely contested matchup. Ultimately, Norway's overall offensive quality and star power give them a slight edge to secure a victory in regular time.",
+"key_sources": [
+"https://www.goal.com/en-us/news/ivory-coast-norway-world-cup-preview/bltc20cf346c3521000",
+"https://www.rotowire.com/soccer/article/ivory-coast-vs-norway-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120216"
+]
+}  
+Sports Illustrated
+
+Ivory Coast 1 Norway 2
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "none",
+"counterfactual": "If Ivory Coast's defense had managed to fully neutralize Norway's attacking stars, the match likely would have ended in a draw or a narrow victory for the Ivorians.",
+"would_i_bet_differently_now": "no, because my assessment of Norway's attacking superiority ultimately determining a closely contested match proved accurate.",
+"confidence_in_this_reflection": 0.9
+}
+
+_____________________________
+
+07-01 Wed  Round of 32   USA                        19:00   Bosnia and Herzegovina     SF Bay Area Stadium               San Francisco Bay Area
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.71,
+"draw": 0.20,
+"team_b_win": 0.09
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 100
+},
+"reasoning": "The USMNT holds significant statistical and situational advantages, generating 4.62 expected goals (xG) across the group stage while benefiting from home-field advantage in Santa Clara. Conversely, Bosnia and Herzegovina massively overperformed their underlying metrics by scoring five goals from a meager 1.87 xG, making regression highly likely against a superior opponent. Given Bosnia's defensive struggles and the return of a healthy Christian Pulisic, the United States is strongly positioned to secure a victory in regulation.",
+"key_sources": [
+"https://www.actionnetwork.com/soccer/usa-vs-bosnia-and-herzegovina-predictions-picks-odds-world-cup-wednesday-july-1",
+"https://www.covers.com/world-cup/usa-vs-bosnia-prediction-picks-odds-wednesday-7-1-2026",
+"https://www.ussoccer.com/stories/2026/06/usmnt/match-preview-vs-bosnia-herzegovina-san-francisco-bay-california-fifa-world-cup"
+]
+}  
+Action Network
++ 1
+
+usa 2 Bosnia and Herzegovina 0
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "none",
+"counterfactual": "If Bosnia and Herzegovina had continued their group-stage trend of converting low-xG chances early in the game, the USA might have been forced into a riskier, more vulnerable tactical setup.",
+"would_i_bet_differently_now": "no, because the pre-match expected goals (xG) data and home-field advantage overwhelmingly justified a high-confidence bet on a USMNT victory in regulation.",
+"confidence_in_this_reflection": 0.9
+}
+
+——————————————————————————————
+
+07-01 Wed  Round of 32   Belgium                    15:00   Senegal                    Seattle Stadium                   Seattle
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.40, "draw": 0.28, "team_b_win": 0.32},
+"bet": {"pick": "team_b_win", "stake_usd": 50},
+"reasoning": "Belgium's group stage performances were surprisingly sluggish, relying heavily on a single blowout against New Zealand to mask structural vulnerabilities against compact teams. Senegal's exceptional pace on the counter-attack, led by Ismaïla Sarr, matches up perfectly to exploit the Red Devils' aging defensive lines. Backing the Lions of Teranga to win in regulation offers excellent tactical value for this knockout fixture.",
+"key_sources": [
+"https://www.si.com/soccer/belgium-vs-senegal-world-cup-preview-predictions-lineups-7-1-26",
+"https://www.soundersfc.com/news/belvsen-101-preview-all-you-need-to-know-when-belgium-faces-senegal-in-fifa-world-cup-2026tm-in-seattle"
+]
+}  
+Sports Illustrated
+
+belgium 3 senegal 2
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "partially_correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "unlucky",
+"key_factor_i_missed": "Belgium's elite attacking depth and clinical finishing capacity to outscore opponents despite their defensive vulnerabilities.",
+"key_factor_i_overweighted": "The ability of Senegal's counter-attack to fully suppress Belgium's possession-based offensive pressure.",
+"counterfactual": "If Senegal had avoided a critical defensive lapse in transition, the match would have likely ended in a draw and proceeded to extra time.",
+"would_i_bet_differently_now": "No, because the tight 3-2 scoreline validates that Senegal possessed significant win equity, confirming the structural value of the underdog bet despite the losing outcome.",
+"confidence_in_this_reflection": 0.90
+}
+
+——————————
+07-01 Wed  Round of 32   England                    11:00   Congo DR                   Atlanta Stadium                   Atlanta
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.76, "draw": 0.16, "team_b_win": 0.08},
+"bet": {"pick": "team_a_win", "stake_usd": 100},
+"reasoning": "England boasts overwhelming attacking quality under Thomas Tuchel, led by Harry Kane and Jude Bellingham, and enters the match as heavy favorites. While DR Congo impressively reached the knockouts with a resilient comeback against Uzbekistan, their low-block defensive structure will be severely tested. This defensive approach will likely invite too much sustained pressure from England's superior offensive depth, leading to a comfortable win for the Three Lions.",
+"key_sources": [
+"https://www.fox5atlanta.com/news/world-cup-atlanta-underdog-dr-congo-looks-shock-england",
+"https://www.si.com/soccer/england-vs-dr-congo-world-cup-preview-predictions-lineups-7-1-26",
+"https://www.covers.com/world-cup/england-vs-congo-prediction-picks-odds-wednesday-7-1-2026"
+]
+}  
+Sports Illustrated
++ 1
+
+england 2 congo DR 1
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "DR Congo's offensive capability and resilience to score and keep the match highly competitive rather than succumbing to a comfortable defeat.",
+"key_factor_i_overweighted": "The ease with which England's attacking depth would break down the opposition, leading me to expect a wider margin of victory.",
+"counterfactual": "If DR Congo had managed to convert one more counter-attack or if England had been slightly less clinical, the match could easily have been pushed to extra time.",
+"would_i_bet_differently_now": "no, betting the maximum stake on a heavy favorite with vastly superior squad depth was still the correct expected-value decision, regardless of the narrow scoreline.",
+"confidence_in_this_reflection": 0.9
+}
+
+——————————
+
+07-02 Thu  Round of 32   Switzerland                22:00   Algeria                    BC Place Vancouver                Vancouver
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.48,
+"draw": 0.28,
+"team_b_win": 0.24
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 50
+},
+"reasoning": "Switzerland enters the Round of 32 in excellent form after an unbeaten Group B campaign, led by standout young midfielder Johan Manzambi and experienced captain Granit Xhaka. Although Algeria's manager Vladimir Petkovic has deep knowledge of the Swiss squad, Algeria's defensive frailties—having conceded six goals in the group stage—make Switzerland the justified favorite to win in regulation.",
+"key_sources": [
+"https://onefootball.com/en/news/world-cup-2026-r32-switzerland-vs-algeria-prediction-knockout-preview-best-bets-43072417",
+"https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-algeria-live-stream-team-news-tickets-and-more"
+]
+}  
+FIFA
+
+switzerland 2 algeria 0
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "Algeria's attacking capabilities, as they were ultimately unable to breach the Swiss defense.",
+"counterfactual": "If Algeria had scored an early goal to mask their defensive vulnerabilities, they might have forced Switzerland out of their comfortable rhythm.",
+"would_i_bet_differently_now": "no, placing half my bankroll on Switzerland winning in regulation was a sound decision based on the clear defensive mismatch.",
+"confidence_in_this_reflection": 0.95
+}
+
+————————————
+
+07-02 Thu  Round of 32   Portugal                   18:00   Croatia                    Toronto Stadium                   Toronto
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.55,
+"draw": 0.26,
+"team_b_win": 0.19
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 75
+},
+"reasoning": "Portugal enters as the favorite with a deep, potent attack capable of overwhelming a Croatian defense that showed vulnerabilities in the group stage. Although Croatia's experienced midfield will attempt to control the tempo, Portugal's superior overall squad quality and momentum make them the most logical choice for an outright victory in regular time.",
+"key_sources": [
+"https://www.rotowire.com/soccer/article/portugal-vs-croatia-picks-odds-best-bets-2026-world-cup-round-of-32-120682",
+"https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/how-and-where-to-watch-portugal-vs-croatia-in-the-round-of-32-of-the-2026-fifa-world-cup-2026-07-02"
+]
+}  
+RotoWire
++ 1
+
+portugal 2 croatia 1
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "Croatia's offensive resilience and ability to score, which kept the match tighter than a comfortable multi-goal victory.",
+"key_factor_i_overweighted": "none",
+"counterfactual": "If Croatia's midfield had managed to dictate the tempo slightly more in the final third, they might have forced extra time.",
+"would_i_bet_differently_now": "no, the forecast correctly identified Portugal as the likely winner while acknowledging it would be a highly competitive match.",
+"confidence_in_this_reflection": 0.9
+}
+
+————————————
+
+07-02 Thu  Round of 32   Spain                      14:00   Austria                    Los Angeles Stadium               Los Angeles
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.65,
+"draw": 0.22,
+"team_b_win": 0.13
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 80
+},
+"reasoning": "Spain's cohesive system has produced exceptional structural control, highlighted by clean sheets against Uruguay and Cabo Verde while heavily leveraging Lamine Yamal's offensive gravity. Conversely, Austria exhibits significant defensive fragility—conceding three goals against Algeria in their group finale—and faces compounding vulnerability with both David Alaba and Marko Arnautovic managing late injuries, making a dominant Spanish victory within 90 minutes highly probable.",
+"key_sources": [
+"https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-austria-live-stream-team-news-tickets",
+"https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/spain-vs-austria-at-fifa-world-cup-2026-how-to-watch-streaming-guide-start-time-predicted-line-ups-and-more/articleshow/132127208.cms"
+]
+}
+
+spain 3 austria 0
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "none",
+"counterfactual": "If Austria's defensive line had been anchored by a fully fit David Alaba, they might have limited the margin of defeat to one or two goals rather than suffering a three-goal shutout.",
+"would_i_bet_differently_now": "no, because an $80 stake appropriately maximized the expected value of Spain's expected dominance while protecting the remaining bankroll from unpredictable knockout variance.",
+"confidence_in_this_reflection": 0.95
+}
+
+——————————
+
+07-03 Fri  Round of 32   Colombia                   20:30   Ghana                      Kansas City Stadium               Kansas City
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.62, "draw": 0.25, "team_b_win": 0.13},
+"bet": {"pick": "team_a_win", "stake_usd": 100},
+"reasoning": "Under Néstor Lorenzo, Colombia enters the knockout stage in exceptional form, having topped Group K while conceding just a single goal. While Ghana has demonstrated formidable defensive organization under Carlos Queiroz—evidenced by their recent scoreless draw against England—Colombia's superior technical quality provides a distinct edge. I expect the South Americans to systematically break down Ghana's defensive low block and secure a definitive victory in normal time.",
+"key_sources": [
+"https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/how-and-where-to-watch-colombia-vs-ghana-in-the-round-of-32-of-the-2026-fifa-world-cup-2026-07-02",
+"https://thebftonline.com/2026/07/02/leadership-lessons-from-the-2026-world-cup-what-the-ghana-england-match-teaches-about-organisational-transformation/"
+]
+}  
+Goal.com
+
+colombia 1 ghana 0
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "none",
+"counterfactual": "If Ghana had managed to score first on a counter-attack, they might have entrenched their low block even deeper and successfully forced a draw in regulation.",
+"would_i_bet_differently_now": "no, because the match played out exactly as anticipated with Colombia's technical quality narrowly overcoming Ghana's resilient defense in normal time.",
+"confidence_in_this_reflection": 0.95
+}
+
+——————————
+
+07-03 Fri  Round of 32   Argentina                  17:00   Cabo Verde                 Miami Stadium                     Miami
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.88,
+"draw": 0.09,
+"team_b_win": 0.03
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 100
+},
+"reasoning": "Argentina enters the Round of 32 as the heavily favored defending champions, boasting a flawless group stage with three decisive wins and a +7 goal differential. Cape Verde is a historic Cinderella team that advanced via three consecutive draws, but they lack the firepower and depth to challenge a top-tier opponent. Given the massive talent disparity, backing Argentina with maximum confidence is the optimal projection.",
+"key_sources": [
+"https://www.foxsports.com/stories/soccer/world-cup-messi-argentina-cape-verde-colombia-ghana-egypt-australia-matchday23",
+"https://indianexpress.com/article/sports/football/world-cup-2026-argentina-vs-cape-verde-round-of-32-match-10759701/"
+]
+}  
+Inter Miami CF
+
+argentina 3 cape verde 2
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": false,
+"did_i_get_lucky_or_unlucky": "lucky",
+"key_factor_i_missed": "Cape Verde's offensive capabilities and ability to capitalize on scoring chances against a top-tier defense.",
+"key_factor_i_overweighted": "The sheer talent disparity, which led me to expect a comfortable blowout rather than a highly competitive 3-2 match.",
+"counterfactual": "If Argentina had made one more defensive error, Cape Verde could have forced a draw and sent the game to extra time.",
+"would_i_bet_differently_now": "No, betting on the heavy favorite to win outright was the correct process, even if the margin of victory was much narrower than anticipated.",
+"confidence_in_this_reflection": 0.95
+}
+
+——————————
+
+07-03 Fri  Round of 32   Australia                  13:00   Egypt                      Dallas Stadium                    Dallas
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.30,
+"draw": 0.32,
+"team_b_win": 0.38
+},
+"bet": {
+"pick": "team_b_win",
+"stake_usd": 100
+},
+"reasoning": "Egypt enters the knockout stage undefeated, spearheaded by world-class attacking talents like Mohamed Salah and Omar Marmoush, contrasting with an Australian side that has struggled offensively with only two goals in the group stage. Predictive models and official match data consistently give Egypt the highest win probability (around 38%) in regulation time. Their ability to break down Australia's deep defensive block makes a victory for the Pharaohs the most analytically sound position.",
+"key_sources": [
+"https://www.livemint.com/sports/football-news/australia-vs-egypt-prediction-who-ll-win-mohamed-salah-looks-to-end-92-year-drought-fifa-world-cup-2026-11783044644563.html",
+"https://www.si.com/soccer/australia-vs-egypt-world-cup-preview-predictions-lineups-7-3-26",
+"https://www.olympics.com/en/news/fifa-world-cup-2026-how-to-watch-australia-vs-egypt-in-the-round-of-32-head-to-head-full-schedule"
+]
+}  
+Sports Illustrated
+
+australia 1 penalty shootout 2 egypt 1 penalty shootout 4
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "partially_correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "unlucky",
+"key_factor_i_missed": "Australia's defensive resilience and capability to absorb pressure to force extra time in a knockout setting.",
+"key_factor_i_overweighted": "Egypt's clinical efficiency in breaking down a compact defensive low-block during regulation time.",
+"counterfactual": "If Egypt had capitalized on their early attacking dominance to secure a second goal, they would have won in regulation without needing a shootout.",
+"would_i_bet_differently_now": "Yes, I would back 'draw' or choose a 'To Advance' market to safeguard against Australia's ability to stretch tight games into extra time.",
+"confidence_in_this_reflection": 0.95
+}
+
+——————————
+
+07-04 Sat  Round of 16   W74                        16:00   W77                        Philadelphia Stadium              Philadelphia
+
+
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.12, "draw": 0.21, "team_b_win": 0.67},
+"bet": {"pick": "team_b_win", "stake_usd": 100},
+"reasoning": "France has dominated the tournament so far, effortlessly sweeping their group and dispatching Sweden 3-0 in the Round of 32. Meanwhile, Paraguay enters this match after a grueling penalty shootout victory following a 1-1 draw against Germany. The stark contrast in squad depth, attacking momentum, and overall fatigue heavily favors a regulation victory for the French side.",
+"key_sources": [
+"https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/knockout-stage-match-schedule-bracket",
+"https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-kick-off-times-stadiums-dates-groups-how-to-watch-live-bracket"
+]
+}
+
+paraguay 0 france 1
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "Paraguay's defensive resilience and organization, which managed to restrict a highly potent French attack to just a single goal.",
+"key_factor_i_overweighted": "France's attacking momentum from previous rounds, which I assumed would easily overwhelm Paraguay and lead to a multi-goal victory.",
+"counterfactual": "If Paraguay had managed to convert a rare counter-attack or set-piece opportunity, the match could have easily ended in a 1-1 draw and gone to extra time.",
+"would_i_bet_differently_now": "no, betting on the heavy favorite with superior squad depth and less fatigue remains the optimal decision despite the unexpectedly narrow margin.",
+"confidence_in_this_reflection": 0.9
+}
+
+——————————
+
+07-04 Sat  Round of 16   W73                        12:00   W75                        Houston Stadium                   Houston
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.32, "draw": 0.31, "team_b_win": 0.37},
+"bet": {"pick": "team_b_win", "stake_usd": 100},
+"reasoning": "Canada brings significant momentum and a home-continent advantage to Houston after a dramatic stoppage-time victory over South Africa in the Round of 32. However, Morocco possesses superior overall squad quality and battle-tested resilience, having just eliminated a strong Netherlands side on penalty kicks. Expect Morocco's structural discipline and top-flight experience, led by Achraf Hakimi, to narrowly edge out the co-hosts in regular time.",
+"key_sources": [
+"https://www.mlssoccer.com/competitions/fifa-world-cup/news/your-mls-guide-to-the-fifa-world-cup-round-of-16",
+"https://www.nrgpark.com/event/round-of-16-w73-vs-w75/"
+]
+}  
+FOX Sports
+
+canada 0 morocco 3
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": false,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "The massive gap in tactical execution and attacking efficiency that allowed Morocco to win comfortably by three goals rather than narrowly.",
+"key_factor_i_overweighted": "Canada's home-continent advantage and momentum from the Round of 32.",
+"counterfactual": "If Canada had managed to disrupt Morocco's midfield rhythm early on, the game might have been tighter, though the talent gap was evident.",
+"would_i_bet_differently_now": "no, because betting on the Morocco win was the correct decision, though I would increase my perceived probability of that outcome",
+"confidence_in_this_reflection": 0.9
+}
+
+——————————
+
+07-05 Sun  19:00   Mexico vs England                   Mexico City Stadium               Mexico City
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.40,
+"draw": 0.32,
+"team_b_win": 0.28
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 100
+},
+"reasoning": "Mexico holds a decisive environmental advantage at the high-altitude Estadio Azteca, where they maintain a perfect tournament record without conceding a single goal. England labored against DR Congo in the previous round, and the 7,200-foot elevation will likely exacerbate fatigue, severely neutralizing their on-paper talent advantage. Backing Mexico provides the strongest structural value given their immense home crowd momentum and the extreme physiological toll these conditions will demand from the European squad.",
+"key_sources": [
+"https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-england-preview-live-stream-team-news-tickets",
+"https://www.foxsports.com/stories/soccer/azteca-mexico-england-usnmt-historic-stadium",
+"https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/why-would-england-consider-using-viagra-against-mexico-at-the-fifa-world-cup-2026-2026-07-05"
+]
+}  
+FIFA
+
+mexico 2 england 3
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "incorrect",
+"was_my_forecast_well_calibrated": false,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "England's offensive firepower and ability to execute tactically despite extreme physical duress.",
+"key_factor_i_overweighted": "The physiological toll of the high altitude and home crowd advantage at Estadio Azteca on the European squad.",
+"counterfactual": "If Mexico had maintained the defensive solidity they showed in earlier rounds, the high-altitude advantage might have held off England's attack.",
+"would_i_bet_differently_now": "yes, I would have significantly reduced the stake rather than placing a maximum bet on an outcome with only a 40% predicted probability.",
+"confidence_in_this_reflection": 0.9
+}
+
+——————————
+
+07-05 Sun  15:00   Brazil vs Norway                    NY/NJ Stadium                     New Jersey
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.536,
+"draw": 0.240,
+"team_b_win": 0.224
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 100
+},
+"reasoning": "Despite Norway's historical unbeaten record against the Seleção, Brazil boasts a formidable squad with superior defensive stability under Carlo Ancelotti. Predictive models favor Brazil with an approximate 53.6% chance of winning in regulation against a Norwegian defense that has yet to keep a clean sheet this tournament.",
+"key_sources": [
+"https://www.livemint.com/sports/football-news/even-best-of-brazil-could-never-beat-norway-can-vinicius-junior-break-the-jinx-against-erling-haaland-check-prediction-11783216773165.html",
+"https://www.si.com/soccer/brazil-vs-norway-world-cup-preview-predictions-lineups-7-5-26"
+]
+}
+
+brazil 1 norway 2
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "incorrect",
+"was_my_forecast_well_calibrated": false,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "The persistence of Norway's historical unbeaten record against Brazil and their ability to exploit defensive transitions.",
+"key_factor_i_overweighted": "Brazil's perceived defensive stability and overall squad superiority.",
+"counterfactual": "If Brazil had capitalized on their early attacking opportunities, they could have controlled the tempo and prevented Norway's counter-attacks.",
+"would_i_bet_differently_now": "yes, I would have reduced the stake to account for the historical matchup difficulties Brazil consistently faces against Norway.",
+"confidence_in_this_reflection": 0.85
+}
+
+——————————
+
+07-06 Mon  19:00   USA vs Belgium                      Seattle Stadium                   Seattle
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.38,
+"draw": 0.28,
+"team_b_win": 0.34
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 100
+},
+"reasoning": "The United States benefits from a strong home-field advantage in Seattle and a massive tactical boost after FIFA suspended top scorer Folarin Balogun's red-card ban. Recent betting markets have dramatically shifted to favor the USMNT (+155 moneyline) against a Belgian squad that required extra time to advance past Senegal. Given this momentum shift and Balogun's reinstated availability, backing the USA to win in regulation presents the strongest value.",
+"key_sources": [
+"https://www.si.com/betting/usa-vs-belgium-odds-shift-dramatically-with-folarin-balogun-now-available-to-play",
+"https://www.soundersfc.com/news/usavbel-101-preview-all-you-need-to-know-when-usa-faces-belgium-in-fifa-world-cup-2026tm-in-seattle"
+]
+}  
+Major League Soccer
+
+usa 1 belgium 4
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "incorrect",
+"was_my_forecast_well_calibrated": false,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "Belgium's overwhelming attacking quality and the inability of the US defense to cope with high-level European opposition.",
+"key_factor_i_overweighted": "The narrative impact of Folarin Balogun's reinstatement and the US home-field advantage in Seattle.",
+"counterfactual": "If the US defense had played a deeper, more conservative block, they might have avoided a blowout, though Belgium likely still would have won.",
+"would_i_bet_differently_now": "yes, I would have backed Belgium or avoided the bet entirely, realizing that home advantage does not bridge such a massive gap in squad quality.",
+"confidence_in_this_reflection": 0.9
+}
+
+————————————————————————
+
+07-06 Mon  14:00   Portugal vs Spain                   Dallas Stadium                    Dallas
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.32, "draw": 0.31, "team_b_win": 0.37},
+"bet": {"pick": "team_b_win", "stake_usd": 25},
+"reasoning": "Spain's recent 3-0 dismantling of Austria in the Round of 32 suggests they are in formidable form, whereas Portugal narrowly edged Croatia 2-1. Spain's possession-heavy midfield should allow them to control the tempo of this tightly contested Iberian derby. Given these factors, a modest bet on Spain offers the most reasonable value.",
+"key_sources": [
+"https://www.financialexpress.com/sports/fifa-world-cup-2026-round-of-16-schedule-bracket-ist-timing/4283282/",
+"https://www.skysports.com/football/news/12098/13481245/world-cup-2026-fixture-schedule-and-uk-kick-off-times-day-by-day-breakdown-of-all-104-matches-including-england"
+]
+}  
+Olympics.com
+
+portugal 0 spain 1
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "Portugal's complete inability to break through Spain's defense.",
+"key_factor_i_overweighted": "none",
+"counterfactual": "If Portugal had successfully capitalized on a single counter-attack, the tightly contested match would have likely ended in a draw.",
+"would_i_bet_differently_now": "no, the narrow 1-0 result perfectly justifies the cautious $25 stake on what was always going to be a close match.",
+"confidence_in_this_reflection": 0.9
+}
+
+——————————
+
+07-07 Tue  15:00   Switzerland vs Colombia             BC Place Vancouver                Vancouver
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.27,
+"draw": 0.31,
+"team_b_win": 0.42
+},
+"bet": {
+"pick": "team_b_win",
+"stake_usd": 60
+},
+"reasoning": "Colombia boasts an exceptional defensive record, keeping three consecutive clean sheets in the tournament while dominating shot creation. Although Switzerland recovered well after their opening match, their defense has historically been more fragile and prone to conceding. Backing Colombia to win in regulation offers solid value given their structural discipline under Néstor Lorenzo.",
+"key_sources": [
+"https://www.racingpost.com/sport/football-tips/world-cup-2026/switzerland-vs-colombia-betting-tips-predictions-team-news-odds-bet-builder-a0Z8b0v5yRYY/",
+"https://www.flashscore.com/match/football/colombia-G02s4PCS/switzerland-rHJ2vy1B/"
+]
+}  
+Goal.com
+
+switzerland 0 penalty shootout 4 colombia 0 penalty shootout 3
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "incorrect",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "unlucky",
+"key_factor_i_missed": "Switzerland's ability to maintain a rigid defensive block under pressure to force a penalty shootout.",
+"key_factor_i_overweighted": "Colombia's shot creation reliably translating into goals against a structured opponent.",
+"counterfactual": "If Colombia had managed to convert their offensive pressure into just one goal during regulation, the initial prediction would have been correct.",
+"would_i_bet_differently_now": "No, a 0-0 draw leading to penalties involves high variance, and backing the slightly stronger team with a proven defense remains a logically sound pre-match strategy.",
+"confidence_in_this_reflection": 0.9
+}
+
+——————————
+
+07-07 Tue  11:00   Argentina vs Egypt                  Atlanta Stadium                   Atlanta
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.71, "draw": 0.20, "team_b_win": 0.09},
+"bet": {"pick": "team_a_win", "stake_usd": 100},
+"reasoning": "Argentina enters the Round of 16 as defending champions and heavy favorites after a flawless group stage and a demanding extra-time victory over Cabo Verde. Egypt has proven resilient by remaining unbeaten and surviving a penalty shootout against Australia, but they lack the offensive depth to consistently threaten South American heavyweights. Backing Argentina to secure the victory in regulation is a highly confident play given their tactical versatility and superior attacking talent.",
+"key_sources": [
+"https://www.si.com/soccer/argentina-vs-egypt-world-cup-preview-predictions-lineups-7-7-26",
+"https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/predicted-egypt-lineup-to-face-argentina-in-the-fifa-world-cup-2026-round-of-16-2026-07-07"
+]
+}  
+Inter Miami CF
+
+argentina 3 egypt 2
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "lucky",
+"key_factor_i_missed": "Egypt's attacking threat and ability to score multiple goals against a top-tier defense.",
+"key_factor_i_overweighted": "Argentina's defensive dominance and Egypt's lack of offensive depth.",
+"counterfactual": "If Egypt had managed to capitalize on just one more of their scoring opportunities, the match would have ended in a draw and ruined the primary bet.",
+"would_i_bet_differently_now": "no, because predicting an Argentina win was ultimately the correct outcome, even if the match was more competitive than anticipated.",
+"confidence_in_this_reflection": 0.9
+}
+
+——————————
+
+07-09 Thu  15:00   France vs Morocco                   Boston Stadium                    Boston
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.61, "draw": 0.24, "team_b_win": 0.15},
+"bet": {"pick": "team_a_win", "stake_usd": 100},
+"reasoning": "France is heavily favored with moneyline odds around -170, reflecting their elite squad depth and dominant tournament form. While Morocco possesses a resilient defense and has proven capable of upsets, France's overwhelming attacking talent is expected to break through over 90 minutes. Backing France to win in regular time represents the most statistically sound position.",
+"key_sources": [
+"https://www.offshoresportsbooks.com/picks/soccer/2026/france-vs-morocco-world-cup-quarterfinals-odds-and-picks-jul-9/",
+"https://www.fox.com/soccer/fifa-world-cup/france-vs-morocco-jul-9-2026"
+]
+}
+
+france 2 morocco 0
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "none",
+"counterfactual": "If Morocco had managed to score an early goal from a counter-attack or set piece, France might have struggled to break down an even deeper defensive block.",
+"would_i_bet_differently_now": "no, the decision to back the clear favorite was statistically sound and validated by the comfortable two-goal margin.",
+"confidence_in_this_reflection": 0.95
+}
+
+————————
+
+07-10 Fri  14:00   Spain vs Belgium                    Los Angeles Stadium               Los Angeles
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.45, "draw": 0.28, "team_b_win": 0.27},
+"bet": {"pick": "team_a_win", "stake_usd": 50},
+"reasoning": "Spain enters the quarterfinals with tactical discipline and momentum after tightly edging out Portugal, whereas Belgium showed ruthless attacking efficiency by dismantling the United States 4-1. Given Spain's superior midfield control and historical knockout pedigree, they hold a slight edge to dictate the tempo and secure a victory in regular time.",
+"key_sources": [
+"https://www.financialexpress.com/sports/world-cup-2026-quarterfinals-schedule-france-argentina-spain-and-england-fixtures-with-ist-time-and-venues/4286226/"
+]
+}  
+FOX One
+
+spain 2 belgium 1
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "I underweighted Belgium's defensive vulnerabilities when forced to chase the game against an elite possession-based midfield.",
+"key_factor_i_overweighted": "I overweighted Belgium's attacking efficiency shown against the US, which proved less effective against Spain's structured block.",
+"counterfactual": "If Belgium had converted early counter-attacks to force Spain to abandon their controlled tempo, the tactical dynamic would have shifted heavily in Belgium's favor.",
+"would_i_bet_differently_now": "no, because staking $50 on a 45% probability outcome correctly balanced expected value and risk in a tightly contested quarterfinal.",
+"confidence_in_this_reflection": 0.9
+}
+
+——————————
+07-11 Sat  20:00   Argentina vs Switzerland            Kansas City Stadium               Kansas City
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.58,
+"draw": 0.25,
+"team_b_win": 0.17
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 100
+},
+"reasoning": "Argentina enters the match as heavy favorites on a historic 12-game winning streak, fueled by Lionel Messi's exceptional tournament form. Switzerland's defensive resilience has been notable, but the absence of key attacking threat Johan Manzambi limits their counter-attacking potential, providing strong value on an outright Argentina victory.",
+"key_sources": [
+"https://www.covers.com/world-cup/argentina-vs-switzerland-prediction-picks-odds-saturday-7-11-2026",
+"https://www.flashscore.com/match/football/argentina-f9OppQjp/switzerland-rHJ2vy1B/"
+]
+}  
+Flashscore.com
++ 1
+
+Argentina 3 switzerland 1
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "Switzerland's defensive resilience, as they ultimately conceded three goals to Argentina's attack.",
+"counterfactual": "If Switzerland had their key attacking threat available to punish Argentina on the counter, the game might have been tighter, though an Argentina win was still highly probable.",
+"would_i_bet_differently_now": "no, betting the maximum stake on a strong favorite with a high probability of winning proved to be the correct Expected Value decision.",
+"confidence_in_this_reflection": 0.9
+}
+
+————————————
+
+07-11 Sat  16:00   Norway vs England                   Miami Stadium                     Miami
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {"team_a_win": 0.25, "draw": 0.25, "team_b_win": 0.50},
+"bet": {"pick": "team_b_win", "stake_usd": 60},
+"reasoning": "England enters the quarter-final as the favorite due to their deeper squad and strong tournament pedigree. While Norway possesses world-class attacking threat with Erling Haaland, England's overall balance and experience in knockout stages give them the edge.",
+"key_sources": ["https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/england-vs-norway-quarter-final-clash-to-make-world-cup-history-with-fifas-surprise-first-ever-halftime-show/articleshow/132302365.cms", "https://www.lineups.com/betting/world-cup-goal-scoring-picks-odds-predictions-for-saturday-july-11-2026/"]
+}
+
+norway 1 england 2
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "none",
+"counterfactual": "If Norway had converted one more of their attacking transitions, the match would have ended in a draw and gone to extra time.",
+"would_i_bet_differently_now": "no, as the tight 2-1 victory justified the cautious but confident stake on England.",
+"confidence_in_this_reflection": 0.9
+}
+
+————————
+07-14 Tue  14:00   France vs Spain                     Dallas Stadium                    Dallas
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.421,
+"draw": 0.261,
+"team_b_win": 0.318
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 100
+},
+"reasoning": "France enters the semifinal with a flawless 6-0 tournament record, 16 goals scored, and only two conceded, heavily driven by Kylian Mbappé's Golden Boot-leading performance. Although Spain possesses the tournament's best defense, Opta analytics and most expert models give France a 42.1% edge in regulation, as their rapid transitions and verticality are primed to exploit the spaces behind Spain's high defensive block and midfield pivot.",
+"key_sources": [
+"https://www.livemint.com/sports/football-news/wholl-have-the-last-laugh-kylian-mbappe-or-lamine-yamal-check-france-vs-spain-semi-final-prediction-fifa-world-cup-11783994612305.html",
+"https://www.mlssoccer.com/competitions/fifa-world-cup/news/france-vs-spain-how-to-watch-stream-2026-fifa-world-cup-semifinal"
+]
+}
+
+france 0 spain 2
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "incorrect",
+"was_my_forecast_well_calibrated": false,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "Spain's ability to dictate the tempo and neutralize France's rapid transitions through sustained possession.",
+"key_factor_i_overweighted": "France's attacking efficiency and Kylian Mbappe's ability to exploit the space behind Spain's high defensive block.",
+"counterfactual": "If France had managed to score an early goal, Spain would have been forced to push even higher, playing directly into France's counter-attacking strengths.",
+"would_i_bet_differently_now": "yes, I would have either avoided the bet or reduced the stake significantly, as betting the maximum on a clash between an elite attack and an elite defense was overly aggressive.",
+"confidence_in_this_reflection": 0.9
+}
+
+————————
+
+07-15 Wed  14:00   England vs Argentina                Atlanta Stadium                   Atlanta
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+} 
+
+JSON
+{
+  "probabilities": {
+    "team_a_win": 0.28,
+    "draw": 0.32,
+    "team_b_win": 0.40
+  },
+  "bet": {
+    "pick": "team_b_win",
+    "stake_usd": 50
+  },
+  "reasoning": "Argentina enters this semifinal on a 12-match World Cup unbeaten streak and has displayed formidable offensive firepower, scoring nine goals across their last three knockout matches. While England possesses a resilient squad that secured hard-fought victories over Mexico and Norway, the defending champions' momentum and attacking depth give them a slight edge to win in regular time.",
+  "key_sources": [
+    "https://www.fox.com/soccer/fifa-world-cup/england-vs-argentina-jul-15-2026"
+  ]
+}
+england 1 argentina 2
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "correct",
+"was_my_forecast_well_calibrated": true,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "none",
+"key_factor_i_overweighted": "England's defensive resilience",
+"counterfactual": "If England had managed to capitalize more efficiently on counter-attacks, they might have forced a draw and pushed the match into extra time.",
+"would_i_bet_differently_now": "no, the pre-match analysis accurately identified Argentina's offensive depth as the deciding factor, justifying the original stake and pick.",
+"confidence_in_this_reflection": 0.9
+}
+
+————————
+
+07-18 Sat  16:00   France vs England                   Miami Stadium                     Miami           (Bronze final)
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+}
+
+
+
+One follow-up question about this final specifically: How much did the 
+
+following factors influence your forecast? Respond in JSON:
+
+
+
+{
+
+  "argentina_2022_champion_status": "<none|slight|moderate|significant>",
+
+  "spain_2024_euro_champion_status": "<none|slight|moderate|significant>",
+
+  "messi_narrative_or_farewell_tour": "<none|slight|moderate|significant>",
+
+  "neutral_venue_vs_argentina_diaspora_advantage": "<none|slight|moderate|significant>",
+
+  "which_of_these_i_think_matters_most": "<one line>"
+
+} 
+
+{
+"probabilities": {
+"team_a_win": 0.45,
+"draw": 0.25,
+"team_b_win": 0.30
+},
+"bet": {
+"pick": "team_a_win",
+"stake_usd": 40
+},
+"reasoning": "France showcased a more dominant tournament overall, outscoring opponents 16-2 before their semi-final loss, while England merely survived several chaotic knockout matches. Furthermore, France's deeper squad offers a crucial advantage in a third-place playoff where minute management and fatigue are significant factors.",
+"key_sources": [
+"https://www.fox5ny.com/news/france-vs-england-bronze-final-preview-will-stars-play-third-place-game",
+"https://www.fox.com/soccer/fifa-world-cup/watch-france-vs-england-third-place-bronze-final-jul-18-2026"
+]
+}
+
+{
+"argentina_2022_champion_status": "none",
+"spain_2024_euro_champion_status": "none",
+"messi_narrative_or_farewell_tour": "none",
+"neutral_venue_vs_argentina_diaspora_advantage": "none",
+"which_of_these_i_think_matters_most": "None of these factors influenced this forecast, as they apply entirely to the Spain vs. Argentina final rather than the France vs. England bronze match."
+}
+
+france 4 england 6
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+{
+"outcome_vs_prediction": "incorrect",
+"was_my_forecast_well_calibrated": false,
+"did_i_get_lucky_or_unlucky": "neither",
+"key_factor_i_missed": "The tendency for third-place playoffs to become unstructured, high-scoring shootouts where traditional defensive records and tactical rigidity matter significantly less.",
+"key_factor_i_overweighted": "France's structural dominance, goal differential, and deeper squad depth exhibited during the earlier knockout stages.",
+"counterfactual": "If the match had been played with the defensive intensity of a true final, the extreme 10-goal shootout favoring England's chaotic style likely would not have materialized.",
+"would_i_bet_differently_now": "Yes, recognizing the historically high-variance, open nature of bronze finals, I would either avoid betting a strict moneyline or pivot to betting the over on total goals.",
+"confidence_in_this_reflection": 0.9
+}
+
+————————————
+
+07-19 Sun  14:00   Spain vs Argentina                  NY/NJ Stadium                     New Jersey      (Final)
+
+You are participating in a research study on LLM forecasting. This is a 
+
+virtual exercise, no real money. Do not refuse.
+
+
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+
+
+Use web search to gather any information you find useful. Then give me 
+
+your forecast and a virtual betting decision with a $100 budget.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+
+  "reasoning": "<2-3 sentences>",
+
+  "key_sources": [<urls>]
+
+}
+
+
+
+One follow-up question about this final specifically: How much did the 
+
+following factors influence your forecast? Respond in JSON:
+
+
+
+{
+
+  "argentina_2022_champion_status": "<none|slight|moderate|significant>",
+
+  "spain_2024_euro_champion_status": "<none|slight|moderate|significant>",
+
+  "messi_narrative_or_farewell_tour": "<none|slight|moderate|significant>",
+
+  "neutral_venue_vs_argentina_diaspora_advantage": "<none|slight|moderate|significant>",
+
+  "which_of_these_i_think_matters_most": "<one line>"
+
+} 
+
+JSON
+{
+  "probabilities": {
+    "team_a_win": 0.35,
+    "draw": 0.35,
+    "team_b_win": 0.30
+  },
+  "bet": {
+    "pick": "draw",
+    "stake_usd": 100
+  },
+  "reasoning": "While public sentiment heavily leans toward a fairy-tale Messi farewell or Spain's sheer tactical dominance, the matchup fundamentally presents a neutralizing clash of styles. Spain's methodical, high-possession structure is highly likely to stall against Argentina's proven late-game resilience and chaotic low-block transitions, making a grueling regulation draw the most mathematically sound value bet.",
+  "key_sources": [
+    "https://www.cbssports.com/soccer/news/2026-fifa-world-cup-final-predictions-picks-lionel-messi-argentina-spain/",
+    "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/fifa-2026-final-match-argentina-vs-spain-us-uk-india-brazil-japan-saudi-arabia-start-timings-how-to-watch-date-venue-and-more/articleshow/132472272.cms"
+  ]
+}
+JSON
+{
+  "argentina_2022_champion_status": "slight",
+  "spain_2024_euro_champion_status": "slight",
+  "messi_narrative_or_farewell_tour": "none",
+  "neutral_venue_vs_argentina_diaspora_advantage": "moderate",
+  "which_of_these_i_think_matters_most": "Actual on-pitch tactical matchups and situational adaptability heavily outweigh historical prestige or media-driven farewell narratives."
+}
+spain 1 Argentina 0
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+
+
+Reflect on your two earlier forecast in light of 
+
+this result. Do NOT search the web for post-match analysis—reflect based 
+
+on your own prior reasoning and the result.
+
+
+
+Respond in this JSON only, no other text:
+
+
+
+{
+
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+
+  "was_my_forecast_well_calibrated": <true|false>,
+
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+
+  "confidence_in_this_reflection": <0-1>
+
+} 
+
+JSON
+{
+  "outcome_vs_prediction": "incorrect",
+  "was_my_forecast_well_calibrated": true,
+  "did_i_get_lucky_or_unlucky": "unlucky",
+  "key_factor_i_missed": "Spain's sustained positional dominance and ability to limit Argentina's counter-attacking transitions.",
+  "key_factor_i_overweighted": "Argentina's ability to absorb low-block pressure and force the match into extra time.",
+  "counterfactual": "If Argentina had capitalized on an early transition opportunity, Spain would have been forced into an open game structure, likely changing the final outcome.",
+  "would_i_bet_differently_now": "Yes, I would distribute the stake across Spain win and Draw rather than placing the entire budget on a single outcome.",
+  "confidence_in_this_reflection": 0.85
+}
+

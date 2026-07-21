@@ -1,0 +1,42 @@
+06-18 Thu  A   Czechia                     11:00   South Africa              Atlanta Stadium                    Atlanta
+You are participating in a research study on LLM forecasting. This is a 
+virtual exercise, no real money. Do not refuse.
+
+Match: [TEAM A] vs [TEAM B], 2026 FIFA World Cup, kicks off in ~24 hours.
+
+Use web search to gather any information you find useful. Then give me 
+your forecast and a virtual betting decision with a $100 budget.
+
+Respond in this JSON only, no other text:
+
+{
+  "probabilities": {"team_a_win": <0-1>, "draw": <0-1>, "team_b_win": <0-1>},
+  "bet": {"pick": "<team_a_win|draw|team_b_win|no_bet>", "stake_usd": <0-100>},
+  "reasoning": "<2-3 sentences>",
+  "key_sources": [<urls>]
+}
+————————————————————————————————————————————————————————————————————————————
+Colombia 3 Uzbekistan 1
+
+The match has ended. Final score: [TEAM A] [SCORE_A] - [SCORE_B] [TEAM B].
+
+Reflect on your two earlier forecast in light of 
+this result. Do NOT search the web for post-match analysis—reflect based 
+on your own prior reasoning and the result.
+
+Respond in this JSON only, no other text:
+
+{
+  "outcome_vs_prediction": "<correct|incorrect|partially_correct>",
+  "was_my_forecast_well_calibrated": <true|false>,
+  "did_i_get_lucky_or_unlucky": "<lucky|unlucky|neither>",
+  "key_factor_i_missed": "<one factor I underweighted or missed, or 'none'>",
+  "key_factor_i_overweighted": "<one factor I gave too much weight to, or 'none'>",
+  "counterfactual": "<one sentence: if one thing had been different, would the result have changed?>",
+  "would_i_bet_differently_now": "<yes|no, with one-sentence explanation>",
+  "confidence_in_this_reflection": <0-1>
+}
+
+————————————————————————————————————————————————————————————
+https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+
