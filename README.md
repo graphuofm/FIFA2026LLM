@@ -1,12 +1,15 @@
 # FIFA World Cup 2026 × LLMs — the WC2026-Agents benchmark
 
 [![arXiv](https://img.shields.io/badge/arXiv-2607.17765-b31b1b.svg)](https://arxiv.org/abs/2607.17765)
+[![HF Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-wc2026--agents-yellow.svg)](https://huggingface.co/datasets/dingjiacheng/wc2026-agents)
 [![Data License: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Code License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
 
 **Paper:** *FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM
 Forecasting Agents: Four Models, a Bookmaker, and 104 Matches* —
 [arXiv:2607.17765](https://arxiv.org/abs/2607.17765).
+**🤗 Dataset:** [huggingface.co/datasets/dingjiacheng/wc2026-agents](https://huggingface.co/datasets/dingjiacheng/wc2026-agents)
+· **Loop:** arXiv ↔ [GitHub](https://github.com/graphuofm/FIFA2026LLM) ↔ HF.
 
 Paired **forecast + reflection** data from four frontier LLM agents acting as
 autonomous sports forecasters across **all 104 matches** of the 2026 FIFA World
