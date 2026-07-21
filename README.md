@@ -1,9 +1,17 @@
-# FIFA World Cup 2026 × LLMs
+# FIFA World Cup 2026 × LLMs — the WC2026-Agents benchmark
 
-Paired **forecast + reflection** data from four frontier LLMs acting as
+[![arXiv](https://img.shields.io/badge/arXiv-2607.17765-b31b1b.svg)](https://arxiv.org/abs/2607.17765)
+[![Data License: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Code License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
+
+**Paper:** *FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM
+Forecasting Agents: Four Models, a Bookmaker, and 104 Matches* —
+[arXiv:2607.17765](https://arxiv.org/abs/2607.17765).
+
+Paired **forecast + reflection** data from four frontier LLM agents acting as
 autonomous sports forecasters across **all 104 matches** of the 2026 FIFA World
 Cup (11 June – 19 July 2026), with ground truth, real pre-match betting odds,
-a full analysis pipeline, and an ACM-format paper.
+a full analysis pipeline, and the paper above.
 
 > **Models.** Claude Opus 4.8 · ChatGPT (GPT-5.5 Thinking, high reasoning) ·
 > Gemini 3.1 Pro · Grok (Expert Mode). Each was web-enabled and held constant
@@ -80,12 +88,14 @@ Individual stages (run from `src/`): `build_per_model.py` + `results_truth.py`
 
 ```bibtex
 @misc{ding2026wc2026agents,
-  title        = {{FIFA} World Cup 2026 as a Contamination-Free Benchmark for
-                  {LLM} Forecasting Agents: Four Models, a Bookmaker, and 104 Matches},
-  author       = {Ding, Jiacheng and Guo, Cong and Xu, Jason},
-  year         = {2026},
-  note         = {Dataset and benchmark. Under review, KDD 2027 Datasets and Benchmarks Track},
-  howpublished = {\url{https://github.com/graphuofm/FIFA2026LLM}}
+  title         = {{FIFA} World Cup 2026 as a Contamination-Free Benchmark for
+                   {LLM} Forecasting Agents: Four Models, a Bookmaker, and 104 Matches},
+  author        = {Ding, Jiacheng and Guo, Cong and Xu, Jason},
+  year          = {2026},
+  eprint        = {2607.17765},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2607.17765}
 }
 ```
 

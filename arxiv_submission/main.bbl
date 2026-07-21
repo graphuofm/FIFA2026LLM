@@ -1,0 +1,449 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{37}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Angelini and De~Angelis(2019)]%
+        {angelini2019efficiency}
+\bibfield{author}{\bibinfo{person}{Giovanni Angelini} {and}
+  \bibinfo{person}{Luca De~Angelis}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Efficiency of online football betting markets}.
+\newblock \bibinfo{journal}{\emph{International Journal of Forecasting}}
+  \bibinfo{volume}{35}, \bibinfo{number}{2} (\bibinfo{year}{2019}),
+  \bibinfo{pages}{712--721}.
+\newblock
+
+
+\bibitem[{Anthropic}(2026)]%
+        {claude_opus48}
+\bibfield{author}{\bibinfo{person}{{Anthropic}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Claude Opus 4.8}.
+\newblock \bibinfo{howpublished}{\url{https://www.anthropic.com/claude}}.
+\newblock
+
+
+\bibitem[Baboota and Kaur(2019)]%
+        {baboota2019football}
+\bibfield{author}{\bibinfo{person}{Rahul Baboota} {and}
+  \bibinfo{person}{Harleen Kaur}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Predictive analysis and modelling football results
+  using machine learning approach for {English} {Premier} {League}}.
+\newblock \bibinfo{journal}{\emph{International Journal of Forecasting}}
+  \bibinfo{volume}{35}, \bibinfo{number}{2} (\bibinfo{year}{2019}),
+  \bibinfo{pages}{741--755}.
+\newblock
+
+
+\bibitem[Brier(1950)]%
+        {brier1950}
+\bibfield{author}{\bibinfo{person}{Glenn~W. Brier}.}
+  \bibinfo{year}{1950}\natexlab{}.
+\newblock \showarticletitle{Verification of forecasts expressed in terms of
+  probability}.
+\newblock \bibinfo{journal}{\emph{Monthly Weather Review}}
+  \bibinfo{volume}{78}, \bibinfo{number}{1} (\bibinfo{year}{1950}),
+  \bibinfo{pages}{1--3}.
+\newblock
+
+
+\bibitem[Constantinou et~al\mbox{.}(2012)]%
+        {constantinou2012pifootball}
+\bibfield{author}{\bibinfo{person}{Anthony~C. Constantinou},
+  \bibinfo{person}{Norman~E. Fenton}, {and} \bibinfo{person}{Martin Neil}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{pi-football: A {Bayesian} network model for
+  forecasting Association Football match outcomes}.
+\newblock \bibinfo{journal}{\emph{Knowledge-Based Systems}}
+  \bibinfo{volume}{36} (\bibinfo{year}{2012}), \bibinfo{pages}{322--339}.
+\newblock
+
+
+\bibitem[Dietvorst et~al\mbox{.}(2015)]%
+        {dietvorst2015aversion}
+\bibfield{author}{\bibinfo{person}{Berkeley~J. Dietvorst},
+  \bibinfo{person}{Joseph~P. Simmons}, {and} \bibinfo{person}{Cade Massey}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Algorithm aversion: People erroneously avoid
+  algorithms after seeing them err}.
+\newblock \bibinfo{journal}{\emph{Journal of Experimental Psychology: General}}
+  \bibinfo{volume}{144}, \bibinfo{number}{1} (\bibinfo{year}{2015}),
+  \bibinfo{pages}{114--126}.
+\newblock
+
+
+\bibitem[Fama(1970)]%
+        {fama1970efficient}
+\bibfield{author}{\bibinfo{person}{Eugene~F. Fama}.}
+  \bibinfo{year}{1970}\natexlab{}.
+\newblock \showarticletitle{Efficient capital markets: A review of theory and
+  empirical work}.
+\newblock \bibinfo{journal}{\emph{The Journal of Finance}}
+  \bibinfo{volume}{25}, \bibinfo{number}{2} (\bibinfo{year}{1970}),
+  \bibinfo{pages}{383--417}.
+\newblock
+
+
+\bibitem[Golchin and Surdeanu(2024)]%
+        {golchin2024contamination}
+\bibfield{author}{\bibinfo{person}{Shahriar Golchin} {and}
+  \bibinfo{person}{Mihai Surdeanu}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Time travel in {LLMs}: Tracing data contamination
+  in large language models}. In \bibinfo{booktitle}{\emph{International
+  Conference on Learning Representations (ICLR)}}.
+\newblock
+
+
+\bibitem[{Google DeepMind}(2026)]%
+        {gemini31pro}
+\bibfield{author}{\bibinfo{person}{{Google DeepMind}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Gemini 3.1 Pro model card}.
+\newblock
+  \bibinfo{howpublished}{\url{https://deepmind.google/models/model-cards/gemini-3-1-pro/}}.
+\newblock
+
+
+\bibitem[Guo et~al\mbox{.}(2017)]%
+        {guo2017calibration}
+\bibfield{author}{\bibinfo{person}{Chuan Guo}, \bibinfo{person}{Geoff Pleiss},
+  \bibinfo{person}{Yu Sun}, {and} \bibinfo{person}{Kilian~Q. Weinberger}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{On calibration of modern neural networks}. In
+  \bibinfo{booktitle}{\emph{International Conference on Machine Learning
+  (ICML)}}. \bibinfo{pages}{1321--1330}.
+\newblock
+
+
+\bibitem[Halawi et~al\mbox{.}(2024)]%
+        {halawi2024forecasting}
+\bibfield{author}{\bibinfo{person}{Danny Halawi}, \bibinfo{person}{Fred Zhang},
+  \bibinfo{person}{Chen Yueh-Han}, {and} \bibinfo{person}{Jacob Steinhardt}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Approaching human-level forecasting with language
+  models}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2402.18563}}
+  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Hendrycks et~al\mbox{.}(2021)]%
+        {hendrycks2021mmlu}
+\bibfield{author}{\bibinfo{person}{Dan Hendrycks}, \bibinfo{person}{Collin
+  Burns}, \bibinfo{person}{Steven Basart}, {et~al\mbox{.}}}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Measuring massive multitask language
+  understanding}. In \bibinfo{booktitle}{\emph{International Conference on
+  Learning Representations (ICLR)}}.
+\newblock
+
+
+\bibitem[Huang et~al\mbox{.}(2024)]%
+        {huang2024selfcorrect}
+\bibfield{author}{\bibinfo{person}{Jie Huang}, \bibinfo{person}{Xinyun Chen},
+  \bibinfo{person}{Swaroop Mishra}, {et~al\mbox{.}}}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Large language models cannot self-correct reasoning
+  yet}. In \bibinfo{booktitle}{\emph{International Conference on Learning
+  Representations (ICLR)}}.
+\newblock
+
+
+\bibitem[Kadavath et~al\mbox{.}(2022)]%
+        {kadavath2022know}
+\bibfield{author}{\bibinfo{person}{Saurav Kadavath}, \bibinfo{person}{Tom
+  Conerly}, \bibinfo{person}{Amanda Askell}, {et~al\mbox{.}}}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Language models (mostly) know what they know}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2207.05221}}
+  (\bibinfo{year}{2022}).
+\newblock
+
+
+\bibitem[Karger et~al\mbox{.}(2024)]%
+        {karger2024forecastbench}
+\bibfield{author}{\bibinfo{person}{Ezra Karger}, \bibinfo{person}{Houtan
+  Bastani}, \bibinfo{person}{Chen Yueh-Han}, {et~al\mbox{.}}}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{ForecastBench}: A dynamic benchmark of {AI}
+  forecasting capabilities}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2409.19839}}
+  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Levitt(2004)]%
+        {levitt2004gambling}
+\bibfield{author}{\bibinfo{person}{Steven~D. Levitt}.}
+  \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{Why are gambling markets organised so differently
+  from financial markets?}
+\newblock \bibinfo{journal}{\emph{The Economic Journal}} \bibinfo{volume}{114},
+  \bibinfo{number}{495} (\bibinfo{year}{2004}), \bibinfo{pages}{223--246}.
+\newblock
+
+
+\bibitem[Liang et~al\mbox{.}(2023)]%
+        {liang2023helm}
+\bibfield{author}{\bibinfo{person}{Percy Liang}, \bibinfo{person}{Rishi
+  Bommasani}, \bibinfo{person}{Tony Lee}, {et~al\mbox{.}}}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Holistic evaluation of language models}.
+\newblock \bibinfo{journal}{\emph{Transactions on Machine Learning Research
+  (TMLR)}} (\bibinfo{year}{2023}).
+\newblock
+
+
+\bibitem[Madaan et~al\mbox{.}(2023)]%
+        {madaan2023selfrefine}
+\bibfield{author}{\bibinfo{person}{Aman Madaan}, \bibinfo{person}{Niket
+  Tandon}, \bibinfo{person}{Prakhar Gupta}, {et~al\mbox{.}}}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Self-{Refine}: Iterative refinement with
+  self-feedback}. In \bibinfo{booktitle}{\emph{Advances in Neural Information
+  Processing Systems (NeurIPS)}}.
+\newblock
+
+
+\bibitem[Moore and Healy(2008)]%
+        {moore2008overconfidence}
+\bibfield{author}{\bibinfo{person}{Don~A. Moore} {and} \bibinfo{person}{Paul~J.
+  Healy}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{The trouble with overconfidence}.
+\newblock \bibinfo{journal}{\emph{Psychological Review}} \bibinfo{volume}{115},
+  \bibinfo{number}{2} (\bibinfo{year}{2008}), \bibinfo{pages}{502--517}.
+\newblock
+
+
+\bibitem[Naeini et~al\mbox{.}(2015)]%
+        {naeini2015ece}
+\bibfield{author}{\bibinfo{person}{Mahdi~Pakdaman Naeini},
+  \bibinfo{person}{Gregory~F. Cooper}, {and} \bibinfo{person}{Milos
+  Hauskrecht}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Obtaining well calibrated probabilities using
+  {Bayesian} binning}. In \bibinfo{booktitle}{\emph{AAAI Conference on
+  Artificial Intelligence}}.
+\newblock
+
+
+\bibitem[{OpenAI}(2026)]%
+        {gpt55}
+\bibfield{author}{\bibinfo{person}{{OpenAI}}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{GPT-5.5}}.
+\newblock
+  \bibinfo{howpublished}{\url{https://openai.com/index/gpt-5-5-instant/}}.
+\newblock
+
+
+\bibitem[Park et~al\mbox{.}(2023)]%
+        {park2023generative}
+\bibfield{author}{\bibinfo{person}{Joon~Sung Park}, \bibinfo{person}{Joseph~C.
+  O'Brien}, \bibinfo{person}{Carrie~J. Cai}, {et~al\mbox{.}}}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Generative agents: Interactive simulacra of human
+  behavior}. In \bibinfo{booktitle}{\emph{ACM Symposium on User Interface
+  Software and Technology (UIST)}}.
+\newblock
+
+
+\bibitem[Schoenegger et~al\mbox{.}(2024)]%
+        {schoenegger2024wisdom}
+\bibfield{author}{\bibinfo{person}{Philipp Schoenegger}, \bibinfo{person}{Indre
+  Tuminauskaite}, \bibinfo{person}{Peter~S. Park}, {and}
+  \bibinfo{person}{Philip~E. Tetlock}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Wisdom of the silicon crowd: {LLM} ensemble
+  prediction capabilities rival human crowd accuracy}.
+\newblock \bibinfo{journal}{\emph{Science Advances}} \bibinfo{volume}{10},
+  \bibinfo{number}{45} (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Shinn et~al\mbox{.}(2023)]%
+        {shinn2023reflexion}
+\bibfield{author}{\bibinfo{person}{Noah Shinn}, \bibinfo{person}{Federico
+  Cassano}, \bibinfo{person}{Ashwin Gopinath}, \bibinfo{person}{Karthik
+  Narasimhan}, {and} \bibinfo{person}{Shunyu Yao}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{{Reflexion}: Language agents with verbal
+  reinforcement learning}. In \bibinfo{booktitle}{\emph{Advances in Neural
+  Information Processing Systems (NeurIPS)}}.
+\newblock
+
+
+\bibitem[Snowberg and Wolfers(2010)]%
+        {snowberg2010favorite}
+\bibfield{author}{\bibinfo{person}{Erik Snowberg} {and} \bibinfo{person}{Justin
+  Wolfers}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Explaining the favorite--long shot bias: Is it
+  risk-love or misperceptions?}
+\newblock \bibinfo{journal}{\emph{Journal of Political Economy}}
+  \bibinfo{volume}{118}, \bibinfo{number}{4} (\bibinfo{year}{2010}),
+  \bibinfo{pages}{723--746}.
+\newblock
+
+
+\bibitem[Tetlock and Gardner(2015)]%
+        {tetlock2015superforecasting}
+\bibfield{author}{\bibinfo{person}{Philip~E. Tetlock} {and}
+  \bibinfo{person}{Dan Gardner}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Superforecasting: The Art and Science of
+  Prediction}}.
+\newblock \bibinfo{publisher}{Crown}.
+\newblock
+
+
+\bibitem[Tian et~al\mbox{.}(2023)]%
+        {tian2023calibration}
+\bibfield{author}{\bibinfo{person}{Katherine Tian}, \bibinfo{person}{Eric
+  Mitchell}, \bibinfo{person}{Allan Zhou}, {et~al\mbox{.}}}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Just ask for calibration: Strategies for eliciting
+  calibrated confidence scores from language models}. In
+  \bibinfo{booktitle}{\emph{Empirical Methods in Natural Language Processing
+  (EMNLP)}}.
+\newblock
+
+
+\bibitem[\v{S}trumbelj(2014)]%
+        {strumbelj2014odds}
+\bibfield{author}{\bibinfo{person}{Erik \v{S}trumbelj}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{On determining probability forecasts from betting
+  odds}.
+\newblock \bibinfo{journal}{\emph{International Journal of Forecasting}}
+  \bibinfo{volume}{30}, \bibinfo{number}{4} (\bibinfo{year}{2014}),
+  \bibinfo{pages}{934--943}.
+\newblock
+
+
+\bibitem[Wang et~al\mbox{.}(2024)]%
+        {wang2024agentsurvey}
+\bibfield{author}{\bibinfo{person}{Lei Wang}, \bibinfo{person}{Chen Ma},
+  \bibinfo{person}{Xueyang Feng}, {et~al\mbox{.}}}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{A survey on large language model based autonomous
+  agents}.
+\newblock \bibinfo{journal}{\emph{Frontiers of Computer Science}}
+  \bibinfo{volume}{18}, \bibinfo{number}{6} (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Wei et~al\mbox{.}(2022)]%
+        {wei2022cot}
+\bibfield{author}{\bibinfo{person}{Jason Wei}, \bibinfo{person}{Xuezhi Wang},
+  \bibinfo{person}{Dale Schuurmans}, {et~al\mbox{.}}}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Chain-of-thought prompting elicits reasoning in
+  large language models}. In \bibinfo{booktitle}{\emph{Advances in Neural
+  Information Processing Systems (NeurIPS)}}.
+\newblock
+
+
+\bibitem[Wolfers and Zitzewitz(2004)]%
+        {wolfers2004prediction}
+\bibfield{author}{\bibinfo{person}{Justin Wolfers} {and} \bibinfo{person}{Eric
+  Zitzewitz}.} \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{Prediction markets}.
+\newblock \bibinfo{journal}{\emph{Journal of Economic Perspectives}}
+  \bibinfo{volume}{18}, \bibinfo{number}{2} (\bibinfo{year}{2004}),
+  \bibinfo{pages}{107--126}.
+\newblock
+
+
+\bibitem[Wunderlich and Memmert(2018)]%
+        {wunderlich2018odds}
+\bibfield{author}{\bibinfo{person}{Fabian Wunderlich} {and}
+  \bibinfo{person}{Daniel Memmert}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{The betting odds rating system: Using soccer
+  forecasts to forecast soccer}.
+\newblock \bibinfo{journal}{\emph{PLOS ONE}} \bibinfo{volume}{13},
+  \bibinfo{number}{6} (\bibinfo{year}{2018}), \bibinfo{pages}{e0198668}.
+\newblock
+
+
+\bibitem[{xAI}(2026)]%
+        {grok_expert}
+\bibfield{author}{\bibinfo{person}{{xAI}}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Grok Expert Mode}.
+\newblock \bibinfo{howpublished}{\url{https://x.ai}}.
+\newblock
+
+
+\bibitem[Xi et~al\mbox{.}(2023)]%
+        {xi2023agents}
+\bibfield{author}{\bibinfo{person}{Zhiheng Xi}, \bibinfo{person}{Wenxiang
+  Chen}, \bibinfo{person}{Xin Guo}, {et~al\mbox{.}}}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{The rise and potential of large language model
+  based agents: A survey}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2309.07864}}
+  (\bibinfo{year}{2023}).
+\newblock
+
+
+\bibitem[Xiong et~al\mbox{.}(2024)]%
+        {xiong2024uncertainty}
+\bibfield{author}{\bibinfo{person}{Miao Xiong}, \bibinfo{person}{Zhiyuan Hu},
+  \bibinfo{person}{Xinyang Lu}, {et~al\mbox{.}}}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Can {LLMs} express their uncertainty? An empirical
+  evaluation of confidence elicitation}. In
+  \bibinfo{booktitle}{\emph{International Conference on Learning
+  Representations (ICLR)}}.
+\newblock
+
+
+\bibitem[Yao et~al\mbox{.}(2023)]%
+        {yao2023react}
+\bibfield{author}{\bibinfo{person}{Shunyu Yao}, \bibinfo{person}{Jeffrey Zhao},
+  \bibinfo{person}{Dian Yu}, {et~al\mbox{.}}} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{{ReAct}: Synergizing reasoning and acting in
+  language models}. In \bibinfo{booktitle}{\emph{International Conference on
+  Learning Representations (ICLR)}}.
+\newblock
+
+
+\bibitem[Zou et~al\mbox{.}(2022)]%
+        {zou2022forecasting}
+\bibfield{author}{\bibinfo{person}{Andy Zou}, \bibinfo{person}{Tristan Xiao},
+  \bibinfo{person}{Ryan Jia}, {et~al\mbox{.}}} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Forecasting future world events with neural
+  networks}. In \bibinfo{booktitle}{\emph{Advances in Neural Information
+  Processing Systems (NeurIPS)}}.
+\newblock
+
+
+\end{thebibliography}
