@@ -227,58 +227,65 @@ def fig_reasoning_factors():
             "variance_penalty": "variance · penalties", "experience_motiv": "experience · motivation",
             "home_altitude": "home · altitude", "head_to_head": "head-to-head",
             "fatigue_rest": "fatigue · rest"}
-    fig, ax = plt.subplots(figsize=(V.COL1 * 1.62, 4.1))
+    fig, ax = plt.subplots(figsize=(V.COL1 * 1.7, 4.25))
     y = np.arange(len(order))
+    mrow = list(order).index("market_odds")
+    ax.axhspan(mrow - 0.5, mrow + 0.5, color="#eef2f7", zorder=0)  # subtle market band
     for yi, f in zip(y, order):
         vals = [freq.loc[f, m] for m in M]
-        ax.plot([min(vals), max(vals)], [yi, yi], color=V.GRID, lw=3, solid_capstyle="round", zorder=1)
+        ax.plot([min(vals), max(vals)], [yi, yi], color="#dee2e7", lw=2.2,
+                solid_capstyle="round", zorder=1)
         for m in M:
-            ax.scatter(freq.loc[f, m], yi, s=42, color=_mc(m), marker=V.MODEL_MARKER[m],
-                       edgecolor="white", linewidth=0.6, zorder=3)
+            ax.scatter(freq.loc[f, m], yi, s=58, color=_mc(m), marker=V.MODEL_MARKER[m],
+                       edgecolor="white", linewidth=0.9, zorder=3)
+    # direct labels on the market-row extremes — no arrow, no callout box
+    ax.text(freq.loc["market_odds", "gemini"] - 0.018, mrow, "12%", ha="right",
+            va="center", fontsize=7.8, color=_mc("gemini"), weight="bold", zorder=4)
+    ax.text(freq.loc["market_odds", "claude"] + 0.02, mrow, "100%", ha="left",
+            va="center", fontsize=7.8, color=_mc("claude"), weight="bold", zorder=4)
     ax.set_yticks(y); ax.set_yticklabels([nice.get(f, f) for f in order])
-    # spotlight the market row + callout in the open bottom-left band
-    yi = list(order).index("market_odds")
-    ax.axhspan(yi - 0.45, yi + 0.45, color=V.BAD, alpha=0.07, zorder=0)
-    ax.annotate("Gemini barely cites the\nmarket (12%); Claude\nalways does (100%)",
-                xy=(0.12, yi), xytext=(0.44, 1.1), fontsize=7.6, color=V.BAD,
-                va="center", ha="left",
-                arrowprops=dict(arrowstyle="-", color=V.BAD, lw=0.9,
-                                connectionstyle="arc3,rad=-0.25", alpha=0.6))
-    ax.set_xlim(-0.02, 1.02); ax.set_xlabel("Share of pre-match forecasts citing the factor")
+    ax.get_yticklabels()[mrow].set_weight("bold")
+    ax.set_xlim(-0.02, 1.07); ax.set_xlabel("Share of pre-match forecasts citing the factor")
     ax.set_xticks([0, 0.25, 0.5, 0.75, 1.0])
     ax.set_xticklabels(["0", "25%", "50%", "75%", "100%"])
     V.despine(ax, left=False)
-    _model_legend(ax, loc="lower right", fontsize=7.4, ncol=2, columnspacing=0.8)
-    ax.set_title("Factor citation rate in pre-match reasoning", fontsize=9.6, color=V.INK)
+    _model_legend(ax, loc="lower right", fontsize=7.6, ncol=2, columnspacing=0.8)
+    ax.set_title("Factor citation rate in pre-match reasoning", fontsize=9.8, color=V.INK)
     V.save(fig, "fig_reasoning_factors")
 
 
 # --------------------------------------------------------------------------- #
 def fig_reflection():
     hon = pd.read_csv(ANA / "reflection_honesty.csv").set_index("model")
-    fig, ax = plt.subplots(figsize=(V.COL1 * 1.5, 2.35))
+    OWN, PART, DENY = "#3a8f5b", "#c9ced4", "#c8544f"   # muted honest / neutral / denial
+    fig, ax = plt.subplots(figsize=(V.COL1 * 1.6, 2.55))
     y = np.arange(len(M))[::-1]
+    h = 0.6
     for yi, m in zip(y, M):
         n = hon.loc[m, "n_wrong"]
         inc, par, cor = (hon.loc[m, "self_incorrect"] / n,
                          hon.loc[m, "self_partial"] / n, hon.loc[m, "self_correct"] / n)
-        ax.barh(yi, inc, color=V.GOOD, edgecolor="white")
-        ax.barh(yi, par, left=inc, color=V.MID, edgecolor="white")
-        ax.barh(yi, cor, left=inc + par, color=V.BAD, edgecolor="white")
-        ax.text(inc / 2, yi, f"{inc:.0%}", ha="center", va="center", fontsize=8, color="white")
-        if cor > 0.03:
-            ax.text(inc + par + cor / 2, yi, f"{cor:.0%}", ha="center", va="center",
-                    fontsize=7.5, color="white")
+        ax.barh(yi, inc, height=h, color=OWN, edgecolor="white", linewidth=1.3)
+        ax.barh(yi, par, left=inc, height=h, color=PART, edgecolor="white", linewidth=1.3)
+        ax.barh(yi, cor, left=inc + par, height=h, color=DENY, edgecolor="white", linewidth=1.3)
+        ax.text(inc / 2, yi, f"{inc:.0%}", ha="center", va="center", fontsize=8.6,
+                color="white", weight="bold")
+        if par > 0.10:
+            ax.text(inc + par / 2, yi, f"{par:.0%}", ha="center", va="center",
+                    fontsize=7.6, color=V.INK2)
+        # denial % placed just past the 100% line so tiny segments never clip
+        ax.text(1.015, yi, f"{cor:.0%}", ha="left", va="center", fontsize=7.8,
+                color=DENY, weight="bold")
     ax.set_yticks(y); ax.set_yticklabels([LBL[m] for m in M])
-    ax.set_xlim(0, 1); ax.set_xlabel("Share of the model's own wrong picks")
+    ax.set_xlim(0, 1.10); ax.set_xlabel("Share of the model's own wrong picks")
     ax.set_xticks([0, 0.25, 0.5, 0.75, 1.0]); ax.set_xticklabels(["0", "25%", "50%", "75%", "100%"])
     V.despine(ax, left=False)
-    ax.legend(handles=[Patch(facecolor=V.GOOD, label='owns it ("incorrect")'),
-                       Patch(facecolor=V.MID, label='"partially correct"'),
-                       Patch(facecolor=V.BAD, label='denies ("correct")')],
-              loc="lower left", bbox_to_anchor=(0, 1.0), ncol=3, fontsize=7.2, handlelength=1.0)
+    ax.legend(handles=[Patch(facecolor=OWN, label='owns it ("incorrect")'),
+                       Patch(facecolor=PART, label='"partially correct"'),
+                       Patch(facecolor=DENY, label='denies ("correct")')],
+              loc="lower left", bbox_to_anchor=(0, 1.0), ncol=3, fontsize=7.4, handlelength=1.0)
     ax.set_title("Self-assessment on the agent's own wrong picks",
-                 fontsize=8.8, color=V.INK, pad=22)
+                 fontsize=9, color=V.INK, pad=22)
     V.save(fig, "fig_reflection")
 
 
