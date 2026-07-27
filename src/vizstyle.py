@@ -15,6 +15,7 @@ from __future__ import annotations
 from pathlib import Path
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import scienceplots  # noqa: F401  (registers the 'science' style)
 
 FIG = Path(__file__).resolve().parent.parent / "paper" / "figures"
 FIG.mkdir(parents=True, exist_ok=True)
@@ -44,19 +45,22 @@ COL1, COL2 = 3.35, 7.0            # ACM column / full width (inches)
 
 
 def apply():
+    # Hybrid: SciencePlots 'science' serif base (matches acmart's Libertine body)
+    # WITHOUT its dashed grid; we keep our own minimal solid grid + palette.
+    plt.style.use(["science", "no-latex"])
     mpl.rcParams.update({
         "figure.dpi": 150, "savefig.dpi": 300,
-        "font.family": "sans-serif",
-        "font.sans-serif": ["DejaVu Sans", "Arial", "Helvetica"],
         "font.size": 8.6, "axes.titlesize": 9.6, "axes.labelsize": 8.6,
         "xtick.labelsize": 8.0, "ytick.labelsize": 8.0, "legend.fontsize": 8.0,
         "axes.edgecolor": BASE, "axes.linewidth": 0.8,
         "axes.grid": True, "grid.color": GRID, "grid.linewidth": 0.7,
+        "grid.linestyle": "-",
         "axes.axisbelow": True, "axes.facecolor": SURFACE,
         "figure.facecolor": SURFACE, "savefig.facecolor": SURFACE,
         "xtick.color": MUTED, "ytick.color": MUTED,
         "axes.labelcolor": INK, "text.color": INK,
         "xtick.major.size": 0, "ytick.major.size": 0,
+        "xtick.minor.visible": False, "ytick.minor.visible": False,
         "legend.frameon": False, "savefig.bbox": "tight", "savefig.pad_inches": 0.03,
         "axes.titlelocation": "left", "axes.titlepad": 8.0,
     })

@@ -35,7 +35,7 @@ Knowledge Discovery and Data Mining, Datasets and Benchmarks Track}{August 2027}
 Forecasting Agents: Four Models, a Bookmaker, and 104 Matches}
 
 \author{Jiacheng Ding}
-\authornote{These authors contributed equally to this research.}
+\authornote{Both authors contributed equally to this research.}
 \affiliation{\institution{University of Memphis}\city{Memphis}\state{Tennessee}\country{USA}}
 \email{jding2@memphis.edu}
 
@@ -44,11 +44,7 @@ Forecasting Agents: Four Models, a Bookmaker, and 104 Matches}
 \affiliation{\institution{University of Memphis}\city{Memphis}\state{Tennessee}\country{USA}}
 \email{cguo@memphis.edu}
 
-\author{Jason Xu}
-\affiliation{\institution{QuantaInsight}\city{Seattle}\state{Washington}\country{USA}}
-\email{jasonx@quantainsight.info}
-
-\renewcommand{\shortauthors}{Ding, Guo, and Xu}
+\renewcommand{\shortauthors}{Ding and Guo}
 
 \begin{abstract}
 We introduce \textbf{WC2026-Agents}, a benchmark and dataset for evaluating
@@ -404,6 +400,7 @@ where an agent has found private information.
   consensus; genuine disagreement is rare and unanimous picks are right about
   twice as often as wrong.}
   \label{fig:convergence}
+  \Description{A five-by-five heatmap of pairwise same-pick rates among the four agents and the market, all above 0.85 with several at 1.0, beside a stacked bar of matches by consensus showing most are unanimous and correct.}
 \end{figure*}
 
 \begin{figure*}[t]
@@ -413,6 +410,7 @@ where an agent has found private information.
   probability, all 104 matches. Points hug the diagonal ($r$ shown); Gemini is
   the loosest, consistent with it rarely citing the market (Fig.~\ref{fig:factors}).}
   \label{fig:scatter}
+  \Description{Four scatter panels, one per agent, of the agent's team-A win probability versus the market-implied probability across 104 matches; points cluster tightly on the diagonal with correlations from 0.97 to 0.99.}
 \end{figure*}
 
 \subsection{No agent beats the market}
@@ -438,8 +436,20 @@ probability (Fig.~\ref{fig:calibration}). Gemini is best calibrated (ECE 0.068),
 then Grok (0.097), ChatGPT (0.111), Claude (0.116). Calibration and full
 distribution can disagree: Gemini has the best top-pick ECE but the worst Brier,
 because it spreads probability mass more aggressively and stakes larger
-(Table~\ref{tab:t2}); the per-agent reliability curves are in App.~B
-(Fig.~\ref{fig:calibration}).
+(Table~\ref{tab:t2}).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{fig_calibration.pdf}
+  \caption{Reliability of each agent's top pick, with the market as a grey
+  reference curve. All lie in the shaded (under-confident) region; marker area
+  $\propto$ bin count. ECE also appears in Table~\ref{tab:t1}.}
+  \label{fig:calibration}
+  \Description{Four reliability diagrams, one per agent, plotting empirical
+  accuracy against predicted confidence for the top pick, each with a grey
+  market reference curve; all curves lie above the diagonal, indicating
+  under-confidence, with expected calibration error from 0.068 to 0.116.}
+\end{figure}
 
 \subsection{Decision quality diverges where accuracy does not}
 Settling each agent's own picks at real odds, betting ROI spans $-18.1\%$
@@ -462,6 +472,7 @@ users hold this difficulty fixed.)
   settling its own stakes at real 1X2 odds. Trajectories diverge despite nearly
   identical point predictions.}
   \label{fig:bankroll}
+  \Description{Cumulative virtual betting profit over 104 matches for the four agents and a flat-stake market baseline; the market ends highest at plus 1041 dollars, then Grok plus 650, Gemini plus 322, ChatGPT plus 118, and Claude minus 275.}
 \end{figure*}
 
 \subsection{Fading the market is unprofitable for every agent}
@@ -480,6 +491,7 @@ price and overrides it --- and is the only agent with a net loss.
   fade the market favourite. Bottom: net profit from market-conforming vs.\
   contrarian bets. Fading the market loses money for all four agents.}
   \label{fig:contrarian}
+  \Description{Top: horizontal bars of the share of each agent's bets that fade the market favourite, from Claude 57 percent down to Grok 5 percent. Bottom: net profit split into market-conforming versus contrarian bets, with contrarian bets losing money for all four agents.}
 \end{figure}
 
 \subsection{Staking discipline is a distinct axis}
@@ -516,6 +528,7 @@ yet still lands near the market, and consequently fades it in only 14\% of its
   \caption{Share of pre-match forecasts citing each factor, per agent (dumbbell:
   one marker per agent). Market/odds citation ranges from 12\% to 100\%.}
   \label{fig:factors}
+  \Description{A dumbbell chart of the share of pre-match forecasts in which each agent cites thirteen reasoning factors; on the market-or-odds factor Gemini is at 12 percent and Claude at 100 percent.}
 \end{figure}
 
 \begin{figure*}[t]
@@ -524,6 +537,7 @@ yet still lands near the market, and consequently fades it in only 14\% of its
   \caption{The eight matches mispredicted by all four agents. Every agent backed
   the favourite; four ties were lost on penalties after a 90-minute draw.}
   \label{fig:upsets}
+  \Description{A dot plot of the eight matches all four agents mispredicted, showing the mean consensus probability placed on the favourite; every agent backed the favourite and four ties were lost on penalties.}
 \end{figure*}
 
 \subsection{Reflection is a behavioural fingerprint}
@@ -542,6 +556,7 @@ self-report gates a downstream action~\cite{shinn2023reflexion,huang2024selfcorr
   \caption{Self-assessment on each agent's own wrong picks. Owning error
   (``incorrect'') ranges from 36\% to 86\% across agents.}
   \label{fig:reflection}
+  \Description{A stacked horizontal bar of how each agent self-labels its own wrong picks as owns-it, partially correct, or denies; owning error ranges from Gemini 86 percent down to ChatGPT 36 percent.}
 \end{figure}
 
 \subsection{Shared blind spots and candidate features}
@@ -638,6 +653,7 @@ calibration, betting discipline, and the honesty of their self-reflection --- th
 axes on which they actually differ. We release the data, odds, and evaluation
 suite to support live, rolling evaluation of agentic forecasting.
 
+\FloatBarrier
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
 
@@ -651,15 +667,7 @@ advancement fields, and all parse-issue flags. Randomness is not used in
 evaluation. The four-way score cross-check and the odds/citation validation are
 part of the build and re-run on every invocation.
 
-\section{Per-stage metrics and calibration curves}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\columnwidth]{fig_calibration.pdf}
-  \caption{Reliability of each agent's top pick (App.). All lie in the shaded
-  (under-confident) region; marker area $\propto$ bin count. ECE values also
-  appear in Table~\ref{tab:t1}.}
-  \label{fig:calibration}
-\end{figure}
+\section{Per-stage metrics}
 Table~\ref{tab:stage} breaks T1 down by phase. Knockout matches are markedly more
 predictable for every competitor (accuracy $.719$ vs.\ $\sim.65$; lower Brier),
 because seeding concentrates mismatches; the four agents are again
