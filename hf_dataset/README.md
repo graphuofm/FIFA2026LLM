@@ -112,7 +112,7 @@ subjects or personal data.
 @misc{ding2026wc2026agents,
   title         = {{FIFA} World Cup 2026 as a Contamination-Free Benchmark for
                    {LLM} Forecasting Agents: Four Models, a Bookmaker, and 104 Matches},
-  author        = {Ding, Jiacheng and Guo, Cong and Xu, Jason},
+  author        = {Ding, Jiacheng and Guo, Cong},
   year          = {2026},
   eprint        = {2607.17765},
   archivePrefix = {arXiv},
