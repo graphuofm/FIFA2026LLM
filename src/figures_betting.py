@@ -21,38 +21,31 @@ def fig_bankroll():
     bank = pd.read_csv(ANA / "bankroll.csv").set_index("mnum")
     summ = pd.read_csv(ANA / "betting_summary.csv")
     summ = summ[summ.phase == "all"].set_index("model")
-    fig, ax = plt.subplots(figsize=(V.COL2, 3.0))
-    ax.axhline(0, color=V.BASE, lw=0.9)
-    ax.axvline(72.5, color=V.MUTED, lw=0.8, ls=(0, (3, 3)))
-    ax.text(72.5, ax.get_ylim()[1], "  knockout →", va="top", ha="left",
-            fontsize=6.8, color=V.MUTED)
-    # market baseline: flat $100 on the market favourite each match
+    fig, ax = plt.subplots(figsize=(V.COL1, 2.6))
+    ax.axhline(0, color=V.BASE, lw=0.8)
+    ax.axvline(72.5, color=V.MUTED, lw=0.7, ls=(0, (3, 3)))
+    handles = []
     if "market" in bank.columns:
         mk = bank["market"]
-        ax.plot(mk.index, mk.values, color=V.MARKET_COLOR, lw=1.6, ls=(0, (5, 2)),
-                zorder=1)
-        ax.text(mk.index[-1] + 1.5, mk.values[-1],
-                f"Market (flat-fav)  ${mk.values[-1]:+.0f}", va="center",
-                fontsize=7.2, color=V.MARKET_COLOR, weight="bold")
-    finals = {m: bank[m].iloc[-1] for m in M}
+        ax.plot(mk.index, mk.values, color=V.MARKET_COLOR, lw=1.3, ls=(0, (5, 2)), zorder=1)
+        handles.append(Line2D([], [], color=V.MARKET_COLOR, ls=(0, (5, 2)), lw=1.3,
+                              label=f"Market  ${mk.values[-1]:+.0f}"))
     for m in M:
         s = bank[m]
-        ax.plot(s.index, s.values, color=V.MODEL_COLOR[m], lw=1.8,
-                marker=V.MODEL_MARKER[m], markevery=[len(s) - 1], markersize=5.5,
-                markeredgecolor="white", markeredgewidth=0.6, zorder=3)
-        roi = summ.loc[m, "roi_pct"]
-        ax.text(s.index[-1] + 1.5, s.values[-1],
-                f"{V.MODEL_LABEL[m]}  ${finals[m]:+.0f}  ({roi:+.1f}%)",
-                va="center", fontsize=7.4, color=V.MODEL_COLOR[m], weight="bold")
-    ax.set_xlim(1, 124)
-    ax.set_xlabel("Match number (m01 → m104)")
-    ax.set_ylabel("Cumulative net profit (virtual $)")
-    ax.text(36, ax.get_ylim()[1], "group stage", va="top", ha="center",
-            fontsize=6.8, color=V.MUTED)
+        ax.plot(s.index, s.values, color=V.MODEL_COLOR[m], lw=1.4, zorder=3)
+        roi = summ.loc[m, "roi_pct"]; net = bank[m].iloc[-1]
+        handles.append(Line2D([], [], color=V.MODEL_COLOR[m], lw=1.8,
+                              label=f"{V.MODEL_LABEL[m]}  ${net:+.0f} ({roi:+.0f}%)"))
+    ax.set_xlim(1, 104)
+    ax.set_xlabel("Match number (m01 → m104)", fontsize=8)
+    ax.set_ylabel("Cumulative profit (virtual $)", fontsize=8)
+    ax.text(72.5, ax.get_ylim()[1], " knockout", va="top", ha="left",
+            fontsize=6.4, color=V.MUTED)
     V.despine(ax)
-    ax.set_title("Cumulative virtual profit at real 1X2 odds "
-                 "(agents' own stakes; market = flat stake on its favourite)",
-                 fontsize=8.6, color=V.INK, loc="left")
+    ax.legend(handles=handles, loc="lower left", fontsize=6.1, handlelength=1.4,
+              labelspacing=0.25, borderpad=0.35, frameon=True, facecolor="white",
+              framealpha=0.85, edgecolor="none")
+    ax.set_title("Cumulative betting profit at real odds", fontsize=8.6, color=V.INK)
     V.save(fig, "fig_bankroll")
 
 

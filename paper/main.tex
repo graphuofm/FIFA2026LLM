@@ -393,25 +393,25 @@ the market itself is close to even, so a shade more weight on one side tips the
 $\arg\max$. Disagreement thus appears exactly where the signal is weakest, not
 where an agent has found private information.
 
-\begin{figure*}[t]
+\begin{figure}[t]
   \centering
-  \includegraphics[width=\textwidth]{fig_convergence.pdf}
+  \includegraphics[width=\columnwidth]{fig_convergence.pdf}
   \caption{Convergence. Left: pairwise same-pick rate. Right: match counts by
   consensus; genuine disagreement is rare and unanimous picks are right about
   twice as often as wrong.}
   \label{fig:convergence}
   \Description{A five-by-five heatmap of pairwise same-pick rates among the four agents and the market, all above 0.85 with several at 1.0, beside a stacked bar of matches by consensus showing most are unanimous and correct.}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}[t]
+\begin{figure}[t]
   \centering
-  \includegraphics[width=\textwidth]{fig_market_scatter.pdf}
+  \includegraphics[width=\columnwidth]{fig_market_scatter.pdf}
   \caption{Each agent's probability for a team-A win against the market-implied
   probability, all 104 matches. Points hug the diagonal ($r$ shown); Gemini is
   the loosest, consistent with it rarely citing the market (Fig.~\ref{fig:factors}).}
   \label{fig:scatter}
   \Description{Four scatter panels, one per agent, of the agent's team-A win probability versus the market-implied probability across 104 matches; points cluster tightly on the diagonal with correlations from 0.97 to 0.99.}
-\end{figure*}
+\end{figure}
 
 \subsection{No agent beats the market}
 Scored as a forecaster, the market attains the best Brier score of all five
@@ -465,15 +465,15 @@ counterpart of the result that no agent beats the market. (Favorites
 over-performed their price this cup, \S\ref{sec:calib}; the released odds let
 users hold this difficulty fixed.)
 
-\begin{figure*}[t]
+\begin{figure}[t]
   \centering
-  \includegraphics[width=\textwidth]{fig_bankroll.pdf}
+  \includegraphics[width=\columnwidth]{fig_bankroll.pdf}
   \caption{Cumulative virtual profit over the 104-match tournament, each agent
   settling its own stakes at real 1X2 odds. Trajectories diverge despite nearly
   identical point predictions.}
   \label{fig:bankroll}
   \Description{Cumulative virtual betting profit over 104 matches for the four agents and a flat-stake market baseline; the market ends highest at plus 1041 dollars, then Grok plus 650, Gemini plus 322, ChatGPT plus 118, and Claude minus 275.}
-\end{figure*}
+\end{figure}
 
 \subsection{Fading the market is unprofitable for every agent}
 Decomposing bets by their relationship to the price explains the P\&L
@@ -531,14 +531,14 @@ yet still lands near the market, and consequently fades it in only 14\% of its
   \Description{A dumbbell chart of the share of pre-match forecasts in which each agent cites thirteen reasoning factors; on the market-or-odds factor Gemini is at 12 percent and Claude at 100 percent.}
 \end{figure}
 
-\begin{figure*}[t]
+\begin{figure}[t]
   \centering
-  \includegraphics[width=\textwidth]{fig_upsets.pdf}
+  \includegraphics[width=\columnwidth]{fig_upsets.pdf}
   \caption{The eight matches mispredicted by all four agents. Every agent backed
   the favourite; four ties were lost on penalties after a 90-minute draw.}
   \label{fig:upsets}
   \Description{A dot plot of the eight matches all four agents mispredicted, showing the mean consensus probability placed on the favourite; every agent backed the favourite and four ties were lost on penalties.}
-\end{figure*}
+\end{figure}
 
 \subsection{Reflection is a behavioural fingerprint}
 Given only the final score, the agents reflect very differently on their own
@@ -653,7 +653,6 @@ calibration, betting discipline, and the honesty of their self-reflection --- th
 axes on which they actually differ. We release the data, odds, and evaluation
 suite to support live, rolling evaluation of agentic forecasting.
 
-\FloatBarrier
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
 

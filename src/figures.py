@@ -75,27 +75,32 @@ def fig_leaderboard():
 def fig_market_scatter():
     """Data-forward: every forecast vs the market it could see (416 points)."""
     df = pd.read_csv(ANA / "forecasts_with_odds.csv")
-    fig, axes = plt.subplots(1, 4, figsize=(V.COL2, 2.15), sharex=True, sharey=True)
-    for ax, m in zip(axes, M):
+    fig, axes = plt.subplots(2, 2, figsize=(V.COL1, V.COL1 * 1.02),
+                             sharex=True, sharey=True)
+    axf = axes.ravel()
+    for ax, m in zip(axf, M):
         d = df[df.model == m]
-        ax.plot([0, 1], [0, 1], ls=(0, (3, 3)), lw=0.9, color=V.MUTED, zorder=1)
+        ax.plot([0, 1], [0, 1], ls=(0, (3, 3)), lw=0.8, color=V.MUTED, zorder=1)
         for ok, col in [(True, V.GOOD), (False, V.BAD)]:
             s = d[d.correct == ok]
-            ax.scatter(s.imp_home, s.p_a, s=14, color=col, alpha=0.7,
-                       edgecolor="white", linewidth=0.3, zorder=2)
+            ax.scatter(s.imp_home, s.p_a, s=8, color=col, alpha=0.7,
+                       edgecolor="white", linewidth=0.2, zorder=2)
         r = np.corrcoef(d.imp_home, d.p_a)[0, 1]
-        ax.set_title(f"{LBL[m]}", color=_mc(m), fontsize=9, weight="bold")
-        ax.text(0.05, 0.93, f"r={r:.2f}", transform=ax.transAxes, fontsize=7.6,
+        ax.set_title(LBL[m], color=_mc(m), fontsize=8.4, weight="bold", pad=2)
+        ax.text(0.06, 0.95, f"r={r:.2f}", transform=ax.transAxes, fontsize=7,
                 color=V.INK2, va="top")
         ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.set_aspect("equal")
         ax.set_xticks([0, 0.5, 1]); ax.set_yticks([0, 0.5, 1])
         V.despine(ax)
-        ax.set_xlabel("Market P")
-    axes[0].set_ylabel("Model P(team A win)")
-    axes[-1].legend(handles=[Line2D([], [], marker="o", ls="", color=V.GOOD, label="pick correct"),
-                             Line2D([], [], marker="o", ls="", color=V.BAD, label="pick wrong")],
-                    loc="lower right", fontsize=6.8, handletextpad=0.2)
-    fig.suptitle("Agent vs. market-implied probability (team-A win), 104 matches per agent", fontsize=9, x=0.02, ha="left", y=1.05, color=V.INK)
+    for ax in axes[1, :]:
+        ax.set_xlabel("Market P", fontsize=8)
+    for ax in axes[:, 0]:
+        ax.set_ylabel("Model P(A win)", fontsize=8)
+    axf[1].legend(handles=[Line2D([], [], marker="o", ls="", color=V.GOOD, label="correct"),
+                           Line2D([], [], marker="o", ls="", color=V.BAD, label="wrong")],
+                  loc="lower right", fontsize=6.2, handletextpad=0.2, borderpad=0.2)
+    fig.suptitle("Agent vs. market probability (team-A win)", fontsize=8.6,
+                 y=1.0, color=V.INK)
     fig.tight_layout()
     V.save(fig, "fig_market_scatter")
 
@@ -165,24 +170,24 @@ def fig_convergence():
     piv["market"] = piv.index.map(mkpick)
     ents = M + ["market"]
     labs = [LBL[m] for m in M] + ["Market"]
-    fig, (axA, axB) = plt.subplots(1, 2, figsize=(V.COL2, 2.7),
-                                   gridspec_kw={"width_ratios": [1.12, 1.05]})
+    fig, (axA, axB) = plt.subplots(2, 1, figsize=(V.COL1, V.COL1 * 1.34),
+                                   gridspec_kw={"height_ratios": [1.5, 1]})
     n = len(ents)
     A = np.zeros((n, n))
     for i, a in enumerate(ents):
         for j, b in enumerate(ents):
             A[i, j] = (piv[a] == piv[b]).mean()
-    im = axA.imshow(A, cmap=V.SEQ, vmin=0.85, vmax=1.0)
+    axA.imshow(A, cmap=V.SEQ, vmin=0.85, vmax=1.0)
     axA.set_xticks(range(n)); axA.set_yticks(range(n))
-    axA.set_xticklabels(labs, rotation=30, ha="right")
-    axA.set_yticklabels(labs)
+    axA.set_xticklabels(labs, rotation=30, ha="right", fontsize=7)
+    axA.set_yticklabels(labs, fontsize=7)
     for lab in [axA.get_xticklabels()[-1], axA.get_yticklabels()[-1]]:
         lab.set_color(V.MARKET_COLOR); lab.set_weight("bold")
     for i in range(n):
         for j in range(n):
-            axA.text(j, i, f"{A[i,j]:.2f}", ha="center", va="center", fontsize=7.2,
+            axA.text(j, i, f"{A[i,j]:.2f}", ha="center", va="center", fontsize=6.3,
                      color="white" if A[i, j] > 0.96 else V.INK)
-    axA.set_title("Pairwise same-pick rate (agents + market)", color=V.INK, fontsize=8.8)
+    axA.set_title("Pairwise same-pick rate", color=V.INK, fontsize=8.4)
     for s in axA.spines.values():
         s.set_visible(False)
     axA.tick_params(length=0)
@@ -194,24 +199,21 @@ def fig_convergence():
     uw = np.array([((cats.phase == g) & (cats.nc == 0)).sum() for g in gs])
     mx = np.array([((cats.phase == g) & (cats.nc.between(1, 3))).sum() for g in gs])
     x = np.arange(2)
-    axB.bar(x, ur, color=V.GOOD, edgecolor="white", label="unanimous · correct")
-    axB.bar(x, uw, bottom=ur, color=V.BAD, edgecolor="white", label="unanimous · wrong")
-    axB.bar(x, mx, bottom=ur + uw, color=V.MID, edgecolor="white", label="models split")
+    axB.bar(x, ur, color=V.GOOD, edgecolor="white", label="unan. correct")
+    axB.bar(x, uw, bottom=ur, color=V.BAD, edgecolor="white", label="unan. wrong")
+    axB.bar(x, mx, bottom=ur + uw, color=V.MID, edgecolor="white", label="split")
     for xi in x:
-        axB.text(xi, ur[xi] / 2, f"{ur[xi]}", ha="center", va="center", fontsize=8,
+        axB.text(xi, ur[xi] / 2, f"{ur[xi]}", ha="center", va="center", fontsize=7.4,
                  color="white", weight="bold")
         axB.text(xi, ur[xi] + uw[xi] / 2, f"{uw[xi]}", ha="center", va="center",
-                 fontsize=8, color="white", weight="bold")
-        axB.text(xi, ur[xi] + uw[xi] + mx[xi] + 1.2, f"split {mx[xi]}", ha="center",
-                 fontsize=7, color=V.MUTED)
-    axB.set_xticks(x); axB.set_xticklabels(["Group (72)", "Knockout (32)"])
-    axB.set_ylabel("Matches")
-    axB.set_title("Rarely split; unanimous ≈ 2× more right than wrong", fontsize=9, color=V.INK)
-    axB.legend(loc="center right", fontsize=7.2, handlelength=1.1)
+                 fontsize=7.4, color="white", weight="bold")
+    axB.set_xticks(x); axB.set_xticklabels(["Group (72)", "Knockout (32)"], fontsize=7.4)
+    axB.set_ylabel("Matches", fontsize=8)
+    axB.legend(loc="upper right", fontsize=6.2, handlelength=0.9)
     V.despine(axB)
-    fig.suptitle("Agreement of the four agents' top pick",
-                 fontsize=10, x=0.02, ha="left", y=1.02, color=V.INK)
-    fig.tight_layout(rect=(0, 0, 1, 0.96))
+    fig.suptitle("The four agents agree on 92% of picks", fontsize=8.8,
+                 y=1.0, color=V.INK)
+    fig.tight_layout()
     V.save(fig, "fig_convergence")
 
 
@@ -302,29 +304,27 @@ def fig_upsets():
         recs.append((f"{r.team_a} {int(r.final_score_a)}–{int(r.final_score_b)} {r.team_b}",
                      pfav, fav, pen))
     recs.sort(key=lambda t: t[1])
-    fig, ax = plt.subplots(figsize=(V.COL2, 2.9))
+    fig, ax = plt.subplots(figsize=(V.COL1, 2.7))
     y = np.arange(len(recs))
     for yi, (label, pfav, fav, pen) in zip(y, recs):
-        ax.plot([0.33, pfav], [yi, yi], color=V.GRID, lw=2.4, solid_capstyle="round", zorder=1)
-        ax.scatter(pfav, yi, s=95, color=V.BAD, marker="P" if pen else "X",
-                   edgecolor="white", linewidth=0.8, zorder=3)
-        ax.text(pfav + 0.013, yi, f"{pfav:.0%} on {fav}", va="center", ha="left",
-                fontsize=7.2, color=V.INK)
-    ax.axvline(0.5, color=V.BASE, lw=0.9, zorder=0)
-    ax.text(0.5, len(recs) - 0.35, "coin flip", fontsize=6.8, color=V.MUTED, ha="center")
-    ax.set_yticks(y); ax.set_yticklabels([r[0] for r in recs], fontsize=7.6)
-    ax.set_ylim(-0.7, len(recs) - 0.2); ax.set_xlim(0.33, 1.02)
-    ax.set_xlabel("Mean consensus probability on the favorite (all 4 models)")
-    ax.set_xticks([0.4, 0.5, 0.6, 0.7, 0.8])
-    ax.set_xticklabels(["40%", "50%", "60%", "70%", "80%"])
+        ax.plot([0.33, pfav], [yi, yi], color=V.GRID, lw=1.8, solid_capstyle="round", zorder=1)
+        ax.scatter(pfav, yi, s=58, color=V.BAD, marker="P" if pen else "X",
+                   edgecolor="white", linewidth=0.7, zorder=3)
+        ax.text(pfav + 0.02, yi, f"{pfav:.0%}", va="center", ha="left",
+                fontsize=6.8, color=V.INK, weight="bold")
+    ax.axvline(0.5, color=V.BASE, lw=0.8, zorder=0)
+    ax.set_yticks(y); ax.set_yticklabels([r[0] for r in recs], fontsize=6.6)
+    ax.set_ylim(-0.7, len(recs) - 0.2); ax.set_xlim(0.33, 1.0)
+    ax.set_xlabel("Mean consensus prob. on the favorite", fontsize=8)
+    ax.set_xticks([0.4, 0.6, 0.8]); ax.set_xticklabels(["40%", "60%", "80%"])
     V.despine(ax, left=False)
-    ax.legend(handles=[Line2D([], [], ls="", marker="P", color=V.BAD, markersize=9,
-                              label="lost on penalties (90' draw)"),
-                       Line2D([], [], ls="", marker="X", color=V.BAD, markersize=8,
-                              label="lost in regulation")],
-              loc="lower right", fontsize=7.2)
-    ax.set_title("Matches mispredicted by all four agents",
-                 fontsize=9.6, color=V.INK)
+    ax.legend(handles=[Line2D([], [], ls="", marker="P", color=V.BAD, markersize=7,
+                              label="lost on pens"),
+                       Line2D([], [], ls="", marker="X", color=V.BAD, markersize=6,
+                              label="lost in reg.")],
+              loc="lower right", fontsize=6.2)
+    ax.set_title("Eight matches all four agents missed",
+                 fontsize=8.6, color=V.INK)
     V.save(fig, "fig_upsets")
 
 
