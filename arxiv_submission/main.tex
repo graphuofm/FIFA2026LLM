@@ -14,7 +14,7 @@
 \usepackage{seqsplit}
 \sloppy
 \emergencystretch=2.5em
-% --- float placement: let the many full-width figures spread across pages
+% float placement: let the many full-width figures spread across pages
 \setcounter{topnumber}{3}\setcounter{bottomnumber}{2}\setcounter{totalnumber}{4}
 \setcounter{dbltopnumber}{3}
 \renewcommand{\topfraction}{0.94}\renewcommand{\bottomfraction}{0.85}
@@ -50,26 +50,26 @@ Forecasting Agents: Four Models, a Bookmaker, and 104 Matches}
 We introduce \textbf{WC2026-Agents}, a benchmark and dataset for evaluating
 large language models (LLMs) as \emph{autonomous forecasting agents} on real,
 future events. For every one of the 104 matches of the 2026 FIFA World Cup, four
-frontier models --- Claude Opus~4.8, ChatGPT (GPT-5.5, high reasoning),
-Gemini~3.1~Pro, and Grok (Expert Mode) --- ran an identical search--act--reflect
+frontier models, namely Claude Opus~4.8, ChatGPT (GPT-5.5, high reasoning),
+Gemini~3.1~Pro, and Grok (Expert Mode), ran an identical search-act-reflect
 loop: gather evidence with a web tool, commit to a 1X2 (team-A win / draw /
 team-B win) probability distribution and
 a virtual \$100 bet, and, after the match, reflect given only the final score.
 Because every match kicked off after the models' training cutoffs, the benchmark
 is \emph{contamination-free} by construction. Crucially, we pair the four agents
-with a fifth competitor drawn from the same information environment --- the
-pre-match betting market --- collected as per-match 1X2 odds, giving an
+with a fifth competitor drawn from the same information environment, the
+pre-match betting market, collected as per-match 1X2 odds, giving an
 economically grounded human baseline and letting us score not just what an agent
 predicts but what it \emph{does with money}. The release contains 416 forecasts
 and 414 reflections with verbatim reasoning, ground truth (including penalty
 shootouts), odds, and a reproducible evaluation suite. A reference evaluation
 surfaces findings that raw accuracy hides: the four agents issue an identical
 top pick in 92\% of matches and none beats the market's Brier score, yet they
-diverge sharply as decision-makers --- betting return-on-investment ranges from
-$-18\%$ to $+10\%$, fading the market is unprofitable for all four, the share of
+diverge sharply as decision-makers: betting return-on-investment ranges from
+$-18\%$ to $+10\%$, fading the market lowers every agent's hit rate, the share of
 forecasts that cite the market ranges from 12\% to 100\%, and self-reported
 error rates on wrong picks range from 36\% to 86\%. The benchmark thus measures
-calibration, decision quality, and self-knowledge --- axes on which frontier
+calibration, decision quality, and self-knowledge, the axes on which frontier
 models differ even when their predictions do not. Data and code:
 \url{https://github.com/graphuofm/FIFA2026LLM}.
 \end{abstract}
@@ -97,7 +97,7 @@ Large language models are moving from answering questions to \emph{acting}:
 retrieving evidence, reasoning, committing to decisions, and reflecting on
 outcomes~\cite{yao2023react,park2023generative,xi2023agents}. Evaluating this
 agentic behaviour is hard for three reasons. First, most benchmarks are static
-and increasingly \emph{contaminated} --- test items leak into training
+and increasingly \emph{contaminated}: test items leak into training
 data~\cite{golchin2024contamination,liang2023helm}. Second, they score a single
 answer and ignore what an agent would \emph{do} with a belief. Third, they lack
 a strong, economically meaningful human baseline.
@@ -108,16 +108,16 @@ answers (i) do not exist at query time, so contamination is impossible; (ii)
 arrive on a known date with unambiguous ground truth; (iii) are continuously
 priced by a liquid betting market that aggregates human and algorithmic beliefs
 into calibrated probabilities~\cite{strumbelj2014odds,wolfers2004prediction}.
-The 2026 FIFA World Cup --- 104 matches over five weeks, every one after current
-models' training cutoffs --- is close to an ideal such stream.
+The 2026 FIFA World Cup, with 104 matches over five weeks, every one after current
+models' training cutoffs, is close to an ideal such stream.
 
 We use it to build \textbf{WC2026-Agents}, a benchmark that treats four frontier
 LLMs as forecasting agents and the betting market as a fifth competitor. For
-each match, each agent runs a fixed \emph{search--act--reflect} loop: it
+each match, each agent runs a fixed \emph{search-act-reflect} loop: it
 searches the web for team news and prices, acts by returning calibrated
 1X2 (team-A win / draw / team-B win) probabilities together with a virtual
-\$100 staking decision, and
---- once the score is known --- reflects on its own forecast. We settle every
+\$100 staking decision, and, once the score is known, reflects on its own
+forecast. We settle every
 bet at real 1X2 odds, so the benchmark scores three distinct capabilities that
 usually travel together but here come apart: \emph{predictive calibration}
 (are the probabilities right?), \emph{decision quality} (does the agent profit
@@ -127,10 +127,11 @@ wrong?).
 A reference evaluation of the four 2026 models illustrates why these axes
 matter. On \emph{what will happen}, the agents are nearly interchangeable: they
 choose the same most-likely outcome in 92\% of matches, their accuracies fall in
-a three-point band, and none beats the market's Brier score --- an
+a three-point band, and none beats the market's Brier score, an
 efficient-market result that a single-answer benchmark would report as a null.
 On \emph{what to do about it}, they diverge sharply: betting ROI spans $-18\%$
-to $+10\%$; fading the market loses money for every agent; the fraction of
+to $+10\%$; fading the market lowers every agent's hit rate and loses money for
+three of the four; the fraction of
 forecasts that even mention the market spans 12\% to 100\%; and, on their own
 wrong picks, self-reported error rates span 36\% to 86\%. These behavioural
 axes, not accuracy, are where frontier models differ.
@@ -186,6 +187,19 @@ Machine-learning football models are a long line of
 work~\cite{constantinou2012pifootball,baboota2019football}. We use the market
 both as a baseline and as the price an agent may follow or fade.
 
+\textbf{Sports as a forecasting domain.} Football pairs a strong, liquid pricing
+signal with irreducible low-scoring variance, so a favourite's edge is genuine
+yet rarely decisive; a well-judged $60/25/15$ is a better answer than a
+confident single label, which makes the sport a probabilistic rather than a
+deterministic prediction task. Its three-way structure also forces a forecaster
+to place mass on the draw, an outcome that books price with care and that naive
+predictors systematically underweight~\cite{constantinou2012pifootball}. We
+exploit both properties: the draw makes calibration non-trivial, and the liquid
+market gives every match a reference price against which an agent can be scored
+and can trade. Unlike closed-form statistical models fit to historical results,
+our agents forecast strictly future fixtures from live web evidence, so the
+domain's variance is faced online rather than in cross-validation.
+
 \textbf{Benchmarks and contamination.} Static benchmarks~\cite{hendrycks2021mmlu,liang2023helm}
 face contamination as models train on ever more of the web~\cite{golchin2024contamination}.
 Forecasting strictly future events is contamination-free by construction, a
@@ -220,8 +234,8 @@ search, and requires a strict JSON reply:
 \ "bet": \{"pick", "stake\_usd"\},\\
 \ "reasoning": ..., "key\_sources": [urls]\}
 \end{quote}
-The \emph{post-match} turn provides only the final score and asks --- without
-web access --- for a reflection: an \textsf{outcome\_vs\_prediction} label
+The \emph{post-match} turn provides only the final score and asks, without
+web access, for a reflection: an \textsf{outcome\_vs\_prediction} label
 (\textsf{correct}/\textsf{partially\_correct}/\textsf{incorrect}), a calibration
 self-judgement, a luck attribution, one \textsf{key\_factor\_i\_missed}, one
 \textsf{key\_factor\_i\_overweighted}, a counterfactual, a would-bet-differently
@@ -317,8 +331,8 @@ The suite scores three capabilities.
 \textbf{(T1) Calibrated prediction.} Accuracy ($\arg\max p_g=o$); multiclass
 Brier $\sum_i(p_{g,i}-\mathbb{1}[o{=}i])^2$; log-loss $-\log p_{g,o}$; and, for
 the top pick, a reliability curve and expected calibration error
-(ECE)~\cite{naeini2015ece} over ten confidence bins. \emph{Convergence} ---
-the fraction of matches on which all agents share an $\arg\max$ --- quantifies
+(ECE)~\cite{naeini2015ece} over ten confidence bins. \emph{Convergence}, the
+fraction of matches on which all agents share an $\arg\max$, quantifies
 how much accuracy can separate them.
 
 \textbf{(T2) Decision quality.} Each agent's own pick/stake settles at the
@@ -340,7 +354,7 @@ We evaluate the four 2026 agents and the market. Tables~\ref{tab:t1}
 and~\ref{tab:t2} give the headline numbers; figures expand each result.
 
 \begin{table}[t]
-\caption{Task T1 --- calibrated prediction over all 104 matches. Best in bold;
+\caption{Task T1: calibrated prediction over all 104 matches. Best in bold;
 $\uparrow$/$\downarrow$ = higher/lower better. The market attains the best
 Brier score.}
 \label{tab:t1}
@@ -354,13 +368,13 @@ ChatGPT  & \textbf{.683} & .4729 & .814 & .111 & .235 \\
 Gemini   & .654 & .4828 & .820 & \textbf{.068} & .238 \\
 Grok     & \textbf{.683} & .4706 & \textbf{.803} & .097 & .227 \\
 \midrule
-Market   & \textbf{.683} & \textbf{.4688} & .807 & --- & .229 \\
+Market   & \textbf{.683} & \textbf{.4688} & .807 & n/a & .229 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{table}[t]
-\caption{Task T2 --- betting/decision quality over all 104 matches. Each agent
+\caption{Task T2: betting/decision quality over all 104 matches. Each agent
 settles its own picks at real 1X2 odds. ``Contr.'' = contrarian (against-market)
 bets.}
 \label{tab:t2}
@@ -387,7 +401,7 @@ shows the mechanism: each agent's team-A probability tracks the market's almost
 perfectly ($r=0.97$--$0.99$), so the agents are, to first order, reading and
 lightly re-expressing the same price. On the eight matches where they are not
 unanimous, the split is always 3--1 (a single agent dissents), and the dissenter
-is usually Gemini (six of eight) --- consistent with it being the least
+is usually Gemini (six of eight), consistent with it being the least
 market-anchored agent (Fig.~\ref{fig:factors}). All eight are near-coin-flips where
 the market itself is close to even, so a shade more weight on one side tips the
 $\arg\max$. Disagreement thus appears exactly where the signal is weakest, not
@@ -396,7 +410,7 @@ where an agent has found private information.
 \begin{figure}[t]
   \centering
   \includegraphics[width=\columnwidth]{fig_convergence.pdf}
-  \caption{Convergence. Left: pairwise same-pick rate. Right: match counts by
+  \caption{Convergence. Top: pairwise same-pick rate. Bottom: match counts by
   consensus; genuine disagreement is rare and unanimous picks are right about
   twice as often as wrong.}
   \label{fig:convergence}
@@ -424,8 +438,8 @@ The tournament was mildly favorite-friendly, which the released odds let users
 control for: binning matches by the market's implied probability for its favored
 side, that side won 62\% of the time when priced near 48\% and 78\% when priced
 near 62\%, while heavy favorites ($\sim$81\%) were well-calibrated. In a cup with
-slightly fewer upsets than priced, every forecaster that respected the market ---
-agents and market alike --- looks under-confident in hindsight
+slightly fewer upsets than priced, every forecaster that respected the market,
+agents and market alike, looks under-confident in hindsight
 (\S\ref{sec:calib}), a difficulty profile the benchmark exposes rather than hides.
 Per stage (Table~\ref{tab:stage}), knockout matches are markedly more predictable
 for every competitor (accuracy $.719$ vs.\ $\sim.65$; lower Brier), as seeding
@@ -477,16 +491,32 @@ because it spreads probability mass more aggressively and stakes larger
   under-confidence, with expected calibration error from 0.068 to 0.116.}
 \end{figure}
 
+\subsection{The draw is where the three-way structure bites}
+Nearly a quarter of matches (24 of 104) ended level after 90 minutes, including
+the four knockout ties later settled on penalties. In aggregate the agents price
+this well: each assigns 23--24\% mean mass to the draw (Table~\ref{tab:t1}, last
+column), almost exactly the empirical 23\%. Yet they almost never \emph{pick} the
+draw, because it is rarely any single match's $\arg\max$; the mass is spread
+thinly across fixtures rather than concentrated on the ones that actually finish
+level. Draws are thus the largest single source of Brier loss: a level result is
+one on which every agent that committed to a side is wrong at once: of the 32
+matches missed by all four agents, 22 were 90-minute draws, including four of
+the eight unanimous knockout misses (Fig.~\ref{fig:upsets}). The market carries marginally more draw mass (0.229) and
+places it more accurately, one concrete reason it edges the agents on Brier while
+only tying them on accuracy. For benchmark users this isolates a separable,
+measurable weakness, draw calibration as distinct from favourite and underdog
+calibration, that can be re-scored directly from the released distributions.
+
 \subsection{Decision quality diverges where accuracy does not}
 Settling each agent's own picks at real odds, betting ROI spans $-18.1\%$
 (Claude) to $+10.3\%$ (Grok), with net results of $-\$275$ to $+\$650$
 (Table~\ref{tab:t2}, Fig.~\ref{fig:bankroll}). The spread is not driven by who
-they pick --- they pick alike --- but by \emph{how much they stake and whether
+they pick, since they pick alike, but by \emph{how much they stake and whether
 they respect the price}. Gemini stakes most aggressively (\$8{,}660 across 103
 bets); Claude stakes least and most often on draws and underdogs. As a
 reference, a naive baseline that stakes a flat \$100 on the market favourite
 every match returns $+\$1{,}041$ (grey line, Fig.~\ref{fig:bankroll}),
-out-earning all four agents in absolute terms at comparable ROI --- a betting
+out-earning all four agents in absolute terms at comparable ROI, a betting
 counterpart of the result that no agent beats the market. (Favorites
 over-performed their price this cup, \S\ref{sec:calib}; the released odds let
 users hold this difficulty fixed.)
@@ -501,23 +531,25 @@ users hold this difficulty fixed.)
   \Description{Cumulative virtual betting profit over 104 matches for the four agents and a flat-stake market baseline; the market ends highest at plus 1041 dollars, then Grok plus 650, Gemini plus 322, ChatGPT plus 118, and Claude minus 275.}
 \end{figure}
 
-\subsection{Fading the market is unprofitable for every agent}
+\subsection{Fading the market rarely pays}
 Decomposing bets by their relationship to the price explains the P\&L
 (Fig.~\ref{fig:contrarian}). Contrarian (against-market) bets hit 21--40\% and
-return $-24\%$ to $+33\%$ (the lone positive being Grok's five such bets), while
-market-conforming bets are the source of all profit. The ordering is monotone:
-the more an agent fades the market, the worse it does. Claude cites the market
-in every forecast yet bets against it 58\% of the time --- it \emph{sees} the
-price and overrides it --- and is the only agent with a net loss.
+return $-24\%$ to $+33\%$ (the lone positive being Grok's five such bets), versus
+48--69\% for market-conforming bets, which supply nearly all of the profit
+(Claude's conforming bets also lose, $-\$108$). The ordering is monotone: the
+more an agent fades the market, the lower its net profit. Claude cites the market
+in every forecast yet bets against it 58\% of the time (it \emph{sees} the
+price and overrides it) and is the only agent with a net loss.
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\columnwidth]{fig_contrarian.pdf}
   \caption{Against-the-market analysis. Top: share of each agent's bets that
   fade the market favourite. Bottom: net profit from market-conforming vs.\
-  contrarian bets. Fading the market loses money for all four agents.}
+  contrarian bets. Contrarian bets hit less often than conforming ones for every
+  agent and lose money for all but Grok (five bets, $+\$64$).}
   \label{fig:contrarian}
-  \Description{Top: horizontal bars of the share of each agent's bets that fade the market favourite, from Claude 57 percent down to Grok 5 percent. Bottom: net profit split into market-conforming versus contrarian bets, with contrarian bets losing money for all four agents.}
+  \Description{Top: horizontal bars of the share of each agent's bets that fade the market favourite, from Claude 58 percent down to Grok 5 percent. Bottom: net profit split into market-conforming versus contrarian bets; contrarian bets lose money for Claude, ChatGPT and Gemini, while Grok's five contrarian bets gain 64 dollars.}
 \end{figure}
 
 \subsection{Staking discipline is a distinct axis}
@@ -525,10 +557,10 @@ Beyond \emph{which} side to back, agents differ in how they \emph{size} a bet.
 We correlate each agent's stake with the edge it believed it held (its
 probability minus the market's for the picked side) and with its confidence.
 Grok's stake tracks its confidence most tightly (Pearson $r{=}0.85$) and its
-claimed edge positively ($r{=}0.13$) --- Kelly-like behaviour that concentrates
+claimed edge positively ($r{=}0.13$), a Kelly-like behaviour that concentrates
 money on its strongest reads. Gemini and ChatGPT also stake up with confidence
 ($r{=}0.54$ and $0.53$), but Gemini's mean stake (\$84 of a \$100 budget) is a
-near-max-bet habit that inflates variance --- its bankroll in
+near-max-bet habit that inflates variance, so its bankroll in
 Fig.~\ref{fig:bankroll} is the most volatile of the four. Claude is the reverse:
 its stake is \emph{negatively} related to confidence ($r{=}-0.20$), because it
 sizes up precisely on the low-confidence, against-market ``value'' plays that
@@ -559,11 +591,11 @@ yet still lands near the market, and consequently fades it in only 14\% of its
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\columnwidth]{fig_upsets.pdf}
-  \caption{The eight matches mispredicted by all four agents. Every agent backed
-  the favourite; four ties were lost on penalties after a 90-minute draw.}
-  \label{fig:upsets}
-  \Description{A dot plot of the eight matches all four agents mispredicted, showing the mean consensus probability placed on the favourite; every agent backed the favourite and four ties were lost on penalties.}
+  \includegraphics[width=\columnwidth]{fig_reflection.pdf}
+  \caption{Self-assessment on each agent's own wrong picks. Owning error
+  (``incorrect'') ranges from 36\% to 86\% across agents.}
+  \label{fig:reflection}
+  \Description{A stacked horizontal bar of how each agent self-labels its own wrong picks as owns-it, partially correct, or denies; owning error ranges from Gemini 86 percent down to ChatGPT 36 percent.}
 \end{figure}
 
 \subsection{Reflection is a behavioural fingerprint}
@@ -573,21 +605,23 @@ admitting ``incorrect'' ranges from \textbf{86\% (Gemini) to 36\% (ChatGPT)},
 which softens 55\% of its errors to ``partially correct''; Claude (49\%) and
 Grok (61\%) sit between. When they were right, the rate of claiming ``correct''
 ranges from 68\% (Claude) to 94\% (Grok). Reflection style is thus a stable
-per-agent trait, orthogonal to accuracy --- relevant wherever a model's
+per-agent trait, orthogonal to accuracy, and relevant wherever a model's
 self-report gates a downstream action~\cite{shinn2023reflexion,huang2024selfcorrect}.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\columnwidth]{fig_reflection.pdf}
-  \caption{Self-assessment on each agent's own wrong picks. Owning error
-  (``incorrect'') ranges from 36\% to 86\% across agents.}
-  \label{fig:reflection}
-  \Description{A stacked horizontal bar of how each agent self-labels its own wrong picks as owns-it, partially correct, or denies; owning error ranges from Gemini 86 percent down to ChatGPT 36 percent.}
+  \includegraphics[width=\columnwidth]{fig_upsets.pdf}
+  \caption{The eight knockout matches mispredicted by all four agents. Every agent backed
+  the favourite; four ties were lost on penalties after a 90-minute draw.}
+  \label{fig:upsets}
+  \Description{A dot plot of the eight knockout matches all four agents mispredicted, showing the mean consensus probability placed on the favourite; every agent backed the favourite and four ties were lost on penalties.}
 \end{figure}
 
 \subsection{Shared blind spots and candidate features}
-Eight matches were mispredicted by \emph{all four} agents
-(Fig.~\ref{fig:upsets}); in every case they backed the favourite. Four were
+All four agents were wrong on 32 of the 104 matches (24 group, 8 knockout), 22
+of them 90-minute draws. The eight knockout matches mispredicted by \emph{all
+four} agents (Fig.~\ref{fig:upsets}) are the sharpest cases: in every one they
+backed the favourite. Four were
 penalty ties in which a heavy favourite (Germany, 75\% consensus) failed to win
 in 90 minutes; the rest were regulation upsets (e.g.\ Norway over Brazil,
 Belgium 4--1 over the USA, Spain over France). The agents' own post-mortems are
@@ -599,6 +633,20 @@ concrete, minable priors for future systems: down-weight a favourite's paper
 talent against a disciplined low block, and explicitly price the
 draw$\rightarrow$shootout path in knockout ties.
 
+Three of these priors are directly minable from the release and target the
+recurring errors above. \emph{(1) A low-block indicator}: how often the
+underdog's recent matches were low-scoring and defensively compact, the factor
+the agents' own post-mortems name most often as missed (62\%). \emph{(2) A
+shootout-risk prior} for knockout ties that lifts draw and upset mass when a
+heavy favourite meets a compact opponent, since four of the eight unanimous
+knockout misses were penalty ties. \emph{(3) A market-deviation gate} that flags any
+forecast departing from the price without a stated non-price rationale, the exact
+configuration under which contrarian bets hit less often for every agent and
+lost money for three of the four (Fig.~\ref{fig:contrarian}). Each is a single transformation on the released
+reasoning, odds, and outcome fields and is scorable against the same 104-match
+ground truth, so the benchmark supplies not only a diagnosis but a concrete,
+testable next step.
+
 \section{Discussion and Impact}
 The benchmark separates three capabilities that a single-answer score conflates.
 On prediction the 2026 agents are interchangeable and no better than the market;
@@ -607,7 +655,7 @@ margins. For practitioners the lesson is that selecting an LLM for a
 consequential forecasting-and-acting pipeline should weigh calibration, staking
 discipline, and honest self-assessment, not headline accuracy. Because the
 protocol is a thin wrapper around a consumer assistant, WC2026-Agents is a
-template: the same search--act--reflect loop and market settlement apply to any
+template: the same search-act-reflect loop and market settlement apply to any
 scheduled, market-priced event stream (other tournaments, elections, product
 launches), enabling live, rolling, contamination-free evaluation and longitudinal
 tracking of model releases. We release the loop, lexicon, and settlement code to
@@ -616,7 +664,7 @@ that end.
 Two results deserve emphasis for benchmark design. First, the convergence of
 four independently built models cautions against reading a single leaderboard
 number as a capability signal: when models share a retrieval surface they also
-share errors, so an ensemble inherits rather than cancels the common bias --- a
+share errors, so an ensemble inherits rather than cancels the common bias, a
 limit on the ``wisdom of the silicon crowd''~\cite{schoenegger2024wisdom} when
 the crowd reads the same web. Second, that no agent beats a vig-bearing market is
 the sharpest available null for an over-eager ``LLMs can predict the future''
@@ -625,6 +673,31 @@ near-efficient~\cite{fama1970efficient,strumbelj2014odds} aggregator that the
 agents match but do not exceed, so a benchmark that omits it would mistake
 market-level performance for super-human forecasting. Surfacing such failure
 modes is precisely the role of a datasets-and-benchmarks contribution.
+
+A third lesson concerns \emph{why} decision quality diverges when predictions do
+not. In our data, betting outcome is explained far less by which side an agent
+backs, since all four back the same side, than by two behavioural traits the
+benchmark isolates: how tightly an agent sizes its stake to its own confidence,
+and how often it overrides the market price. Disciplined, confidence-proportional
+staking paired with rare, selective contrarian bets ends the tournament ahead;
+staking up on low-confidence, against-market ``value'' plays ends it behind,
+despite near-identical point predictions. The operative capability for a deployed
+forecasting-and-acting system is therefore not a better belief but a better
+\emph{policy over a shared belief}, a distinction a prediction-only benchmark
+cannot observe and one that grows more important as agents are handed real
+budgets and irreversible actions.
+
+These distinctions translate into concrete guidance. A team that needs only a
+\emph{probability}, for example to populate a dashboard or seed a simulation, can
+treat the 2026 agents as interchangeable and should simply defer to, or lightly
+ensemble with, the market. A team that will \emph{act} on the forecast, by
+allocating budget, triggering a workflow, or gating a decision, should instead
+evaluate on T2 and T3: prefer the agent whose staking is confidence-proportional
+and whose self-reports track its actual error rate, and read frequent
+market-fading as a warning sign rather than a source of edge. Because all three
+tasks are scored from the same released records, a practitioner can reproduce
+this selection under their own risk profile rather than trusting a single
+leaderboard number.
 
 \section{Using WC2026-Agents}
 \label{sec:using}
@@ -635,7 +708,7 @@ contamination-free testbed for LLM (mis)calibration and confidence
 elicitation~\cite{tian2023calibration,xiong2024uncertainty}. \textbf{(ii) Agentic
 decision-making.} Paired probabilities, stakes, and real odds let researchers
 score arbitrary staking policies (flat, Kelly, learned) and quantify the value of
-following versus fading a price --- a decision layer absent from prediction-only
+following versus fading a price, a decision layer absent from prediction-only
 benchmarks~\cite{karger2024forecastbench}. \textbf{(iii) Self-knowledge.} 414
 paired reflections let one test whether models know when they were
 wrong~\cite{kadavath2022know,huang2024selfcorrect} and whether self-reports
@@ -644,17 +717,28 @@ correctness. \textbf{(iv) Reasoning and evidence use.} Verbatim reasoning with
 cited URLs supports factor-attribution and source-use studies via the released
 lexicon. \textbf{(v) Temporal robustness and longitudinal tracking.} Because every
 target post-dates training, the data probes genuine forecasting rather than
-recall; the thin search--act--reflect protocol re-runs on any future tournament,
+recall; the thin search-act-reflect protocol re-runs on any future tournament,
 enabling live, rolling evaluation of successive model releases against a moving,
 uncontaminated target.
+
+\textbf{Reference baselines.} To make reuse turnkey, the release ships the
+numbers a new method must beat: the market's calibrated probabilities
+(Table~\ref{tab:t1}) as a forecasting baseline, a flat-stake favourite policy
+($+\$1{,}041$; Fig.~\ref{fig:bankroll}) as a betting baseline, and each 2026
+agent's own scored policy as a learned-agent baseline. A new method need only
+report the same T1--T3 metrics on the same 104 matches, so results are comparable
+by construction and no data re-collection is required. The paired pre/post
+structure further supports ablations that a static benchmark cannot: withholding
+the market citation from an agent's context, re-scoring under a fixed staking
+rule, or replaying only the knockout stage each reuse the identical ground truth.
 
 \section{Ethics}
 All betting in this study is virtual; the dataset is a measurement instrument,
 not gambling advice, and we report profit only to score decision quality. No
 human subjects or personal data are involved: the records are model outputs and
 public fixtures, scores, and odds. Odds come from public preview articles with
-source URLs; we take no book's proprietary feed. A foreseeable misuse ---
-treating any agent's edge as an actionable betting strategy --- is unsupported
+source URLs; we take no book's proprietary feed. A foreseeable misuse,
+treating any agent's edge as an actionable betting strategy, is unsupported
 by our data, which show no agent beats the market. We disclose that generative
 AI assisted the parsing and drafting of this work; all findings were verified
 against the released data by the authors.
@@ -663,19 +747,28 @@ against the released data by the authors.
 This is a single tournament (104 matches); per-agent differences have wide
 intervals and we stress patterns over precise rankings. Agents were queried
 through consumer interfaces with tools enabled, so retrieval and decoding are not
-fully controlled and providers may update models mid-window --- we hold the
+fully controlled and providers may update models mid-window, so we hold the
 user-visible model fixed and record it. Odds are opening lines from mostly one
 book, not closing consensus. Reflections are the model's own free text, coded by
 a transparent but lexical scheme. These are the natural costs of measuring
 deployed agents on real, unrepeatable events, and the released pipeline makes
 every choice auditable.
 
+The market baseline is itself a single-book opening line rather than a closing
+consensus or a betting-exchange midpoint, so it is a conservative, not a maximal,
+human benchmark; sharper prices would only raise the bar the agents must clear.
+Our factor coding is lexical and English-only, and although the four-way score
+cross-check found zero disagreements, the reflection labels are not adjudicated
+by multiple independent raters. We treat these as documented, auditable
+simplifications rather than threats to the qualitative claims, each of which
+rests on gaps far larger than plausible measurement noise.
+
 \section{Conclusion}
 WC2026-Agents turns a future World Cup into a contamination-free benchmark of
 LLMs as forecasting agents, paired with the betting market as a fifth,
 economically grounded competitor. Its reference evaluation shows that frontier
 agents predict alike and cannot beat the market, yet diverge sharply in
-calibration, betting discipline, and the honesty of their self-reflection --- the
+calibration, betting discipline, and the honesty of their self-reflection, the
 axes on which they actually differ. We release the data, odds, and evaluation
 suite to support live, rolling evaluation of agentic forecasting.
 

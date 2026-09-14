@@ -54,7 +54,7 @@ With nearly identical predictions, their betting results ranged from a $275 loss
 
 ## 4. Going against the market mostly hurt
 
-We counted a bet as contrarian when it backed an outcome other than the market favourite. Claude did this on 57% of its bets, ChatGPT on 36%, Gemini on 14% and Grok on just 5%.
+We counted a bet as contrarian when it backed an outcome other than the market favourite. Claude did this on 58% of its bets, ChatGPT on 36%, Gemini on 14% and Grok on just 5%.
 
 Contrarian bets won 21% to 40% of the time, compared with 48% to 69% for bets that agreed with the market. They cost Claude $167, Gemini $112 and ChatGPT $38. Grok placed only five contrarian bets, and those made $64, which is too few to read much into.
 

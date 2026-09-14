@@ -36,7 +36,7 @@ The bookmaker is still the bar to clear.
 **5/**
 Betting against the market mostly hurt. Contrarian bets won 21-40% of the time vs 48-69% when agreeing with it.
 
-Claude bet against the favourite on 57% of its bets. Grok did it on 5%.
+Claude bet against the favourite on 58% of its bets. Grok did it on 5%.
 
 **6/**
 Shared blind spot: 24 of 104 matches were draws after 90 minutes, but no model made a draw its top pick more than 4 times.

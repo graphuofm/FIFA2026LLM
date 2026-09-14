@@ -57,7 +57,7 @@ def fig_contrarian():
     y = np.arange(len(M))[::-1]
     # top: contrarian share
     for yi, m in zip(y, M):
-        sh = con.loc[m, "contrarian_share"]
+        sh = con.loc[m, "n_contrarian"] / con.loc[m, "n_bets"]
         axT.barh(yi, sh, color=V.MODEL_COLOR[m], edgecolor="white")
         axT.text(sh + 0.012, yi, f"{sh:.0%}", va="center", fontsize=7.4, color=V.INK)
     axT.set_yticks(y); axT.set_yticklabels([V.MODEL_LABEL[m] for m in M])
@@ -80,8 +80,8 @@ def fig_contrarian():
     axB.set_yticks(y); axB.set_yticklabels([V.MODEL_LABEL[m] for m in M])
     axB.set_xlim(-320, 720); axB.set_xlabel("Net profit (virtual $)", fontsize=7.8)
     V.despine(axB, left=False)
-    axB.legend(loc="lower right", fontsize=6.8, handlelength=1.0)
-    fig.suptitle("Fading the market loses for every agent", fontsize=9,
+    axB.legend(loc="upper right", fontsize=6.8, handlelength=1.0)
+    fig.suptitle("Contrarian bets win less often for every agent", fontsize=9,
                  x=0.02, ha="left", y=1.0, color=V.INK)
     fig.tight_layout(rect=(0, 0, 1, 0.97))
     V.save(fig, "fig_contrarian")
