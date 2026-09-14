@@ -6,7 +6,8 @@ Rules for every post: post from your own account, say you are an author, keep th
 
 ## X / Twitter thread (no Premium: every post is under 280 characters)
 
-Attach `docs/figures/og_betting.png` to post 1 and `docs/figures/fig_contrarian.png` to post 5.
+Attach `docs/figures/og_betting.png` to post 1 and `docs/figures/fig_contrarian.png` to post 4.
+Per your preference, the thread does not compare the AIs with the betting market; the paper and project page cover that.
 
 **1/**
 We had four AI models forecast and place virtual bets on all 104 matches of the 2026 World Cup: Claude Opus 4.8, ChatGPT (GPT-5.5), Gemini 3.1 Pro and Grok Expert Mode. Real pre-match odds, no hindsight.
@@ -15,8 +16,6 @@ Here is what happened 🧵
 
 **2/**
 On predictions they were almost clones: the same pick in 96 of 104 matches, accuracy 65-68%.
-
-The betting market's favourite was right 68.3% of the time too.
 
 **3/**
 Money is where they split. Virtual profit at real odds:
@@ -29,21 +28,16 @@ Claude -$275
 Grok's knockout run: +$595, 24 of 32 bets won.
 
 **4/**
-But no AI beat the market's Brier score, and simply backing the market favourite every match made +$1,041.
-
-The bookmaker is still the bar to clear.
-
-**5/**
 Betting against the market mostly hurt. Contrarian bets won 21-40% of the time vs 48-69% when agreeing with it.
 
 Claude bet against the favourite on 58% of its bets. Grok did it on 5%.
 
-**6/**
+**5/**
 Shared blind spot: 24 of 104 matches were draws after 90 minutes, but no model made a draw its top pick more than 4 times.
 
 22 of the 32 matches all four got wrong were draws.
 
-**7/**
+**6/**
 Everything is open: 416 forecasts with reasoning, 414 self-reflections, odds and results.
 
 Paper: https://arxiv.org/abs/2607.17765
