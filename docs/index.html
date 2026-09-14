@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Which AI Predicted the 2026 World Cup Best? WC2026-Agents Benchmark</title>
+<meta name="description" content="WC2026-Agents: Claude Opus 4.8, ChatGPT (GPT-5.5), Gemini 3.1 Pro and Grok forecast and placed virtual bets on all 104 matches of the 2026 FIFA World Cup, scored against results and real betting odds. Grok made the most virtual profit (+$650); no model beat the betting market's Brier score.">
+<link rel="canonical" href="https://graphuofm.github.io/FIFA2026LLM/">
+<link rel="alternate" hreflang="en" href="https://graphuofm.github.io/FIFA2026LLM/">
+<link rel="alternate" hreflang="zh" href="https://graphuofm.github.io/FIFA2026LLM/zh.html">
+<link rel="alternate" type="text/markdown" href="https://graphuofm.github.io/FIFA2026LLM/llms-full.txt">
+<meta name="author" content="Jiacheng Ding, Cong Guo">
+<meta name="citation_title" content="FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches">
+<meta name="citation_author" content="Ding, Jiacheng">
+<meta name="citation_author" content="Guo, Cong">
+<meta name="citation_publication_date" content="2026/07/20">
+<meta name="citation_arxiv_id" content="2607.17765">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Which AI predicted the 2026 World Cup best? ChatGPT vs Claude vs Gemini vs Grok vs the betting market">
+<meta property="og:description" content="Four LLM agents forecast and bet on all 104 World Cup 2026 matches at real odds. Open data, open code, arXiv:2607.17765.">
+<meta property="og:url" content="https://graphuofm.github.io/FIFA2026LLM/">
+<meta property="og:image" content="https://graphuofm.github.io/FIFA2026LLM/figures/og_betting.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://arxiv.org/abs/2607.17765",
+      "headline": "FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches",
+      "name": "FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches",
+      "author": [
+        {"@type": "Person", "name": "Jiacheng Ding", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Memphis"}},
+        {"@type": "Person", "name": "Cong Guo", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Memphis"}}
+      ],
+      "datePublished": "2026-07-20",
+      "url": "https://arxiv.org/abs/2607.17765",
+      "sameAs": ["https://doi.org/10.48550/arXiv.2607.17765", "https://arxiv.org/pdf/2607.17765"],
+      "about": ["Large language model agents", "Forecasting", "2026 FIFA World Cup", "Betting odds", "Calibration"]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://huggingface.co/datasets/dingjiacheng/wc2026-agents",
+      "name": "WC2026-Agents",
+      "alternateName": ["FIFA2026LLM", "WC2026 Agents"],
+      "description": "Pre-match forecasts, virtual bets, reasoning and post-match self-reflections from four LLM forecasting agents (Claude Opus 4.8, ChatGPT GPT-5.5, Gemini 3.1 Pro, Grok Expert Mode) on all 104 matches of the 2026 FIFA World Cup, with ground-truth results including penalty shootouts and real pre-match 1X2 betting odds. 416 forecasts and 414 reflections.",
+      "url": "https://graphuofm.github.io/FIFA2026LLM/",
+      "sameAs": ["https://github.com/graphuofm/FIFA2026LLM", "https://huggingface.co/datasets/dingjiacheng/wc2026-agents"],
+      "creator": [
+        {"@type": "Person", "name": "Jiacheng Ding", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Memphis"}},
+        {"@type": "Person", "name": "Cong Guo", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Memphis"}}
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "isAccessibleForFree": true,
+      "keywords": ["LLM agents", "forecasting", "FIFA World Cup 2026", "sports prediction", "betting odds", "calibration", "benchmark", "ChatGPT", "Claude", "Gemini", "Grok"],
+      "temporalCoverage": "2026-06-11/2026-07-19",
+      "spatialCoverage": {"@type": "Place", "name": "United States, Canada and Mexico"},
+      "variableMeasured": ["win/draw/win probabilities", "virtual bet pick and stake", "reasoning text", "post-match self-reflection", "match result", "pre-match betting odds"],
+      "distribution": [
+        {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://huggingface.co/datasets/dingjiacheng/wc2026-agents/resolve/main/data/forecasts.csv"}
+      ],
+      "citation": "Ding, J. and Guo, C. (2026). FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches. arXiv:2607.17765.",
+      "dateModified": "2026-09-14"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Which AI predicted the 2026 FIFA World Cup best?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the metric. In the WC2026-Agents benchmark (all 104 matches), ChatGPT (GPT-5.5) and Grok (Expert Mode) tied for the highest accuracy at 68.3%, Claude Opus 4.8 (Brier 0.4705) and Grok (0.4706) had the best probability scores, and Grok earned the most in virtual betting (+$650, ROI +10.3%). None of the four beat the pre-match betting market's Brier score of 0.469."}},
+        {"@type": "Question", "name": "Did any AI beat the betting odds at the 2026 World Cup?", "acceptedAnswer": {"@type": "Answer", "text": "No, not convincingly. The vig-free market probabilities scored a Brier of 0.469, better than all four agents (0.4705 to 0.4828). On log-loss Grok (0.803) and Claude (0.806) were marginally below the market (0.807), a gap too small to be meaningful over 104 matches. A flat bet on the market favourite in every match earned +$1,041, more than any agent."}},
+        {"@type": "Question", "name": "Which AI made the most money betting on the 2026 World Cup?", "acceptedAnswer": {"@type": "Answer", "text": "Grok (Expert Mode): +$650 virtual profit on 104 bets (ROI +10.3%), including +$595 in the knockout stage. Gemini 3.1 Pro made +$322, ChatGPT (GPT-5.5) +$118, and Claude Opus 4.8 lost $275 (ROI -18.1%). Bets were virtual, sized by each model (up to $100) and settled at real pre-match odds."}},
+        {"@type": "Question", "name": "How accurate were ChatGPT, Claude, Gemini and Grok at predicting World Cup 2026 matches?", "acceptedAnswer": {"@type": "Answer", "text": "Over all 104 matches (win/draw/win after 90 minutes): ChatGPT 68.3%, Grok 68.3%, Claude 66.3%, Gemini 65.4%. The betting market's favourite was also right 68.3% of the time. In the 32 knockout matches all four agents scored exactly 71.9%. The four models chose the same outcome in 96 of 104 matches."}},
+        {"@type": "Question", "name": "Did AI predict Spain winning the 2026 World Cup final?", "acceptedAnswer": {"@type": "Answer", "text": "Before Spain beat Argentina 1-0 in the final on 19 July 2026, all four agents rated a Spain win at least as likely as any other outcome, with Spain win probabilities of 35% to 44%. The agents forecast each match separately about a day before kickoff; they did not make one pre-tournament champion pick."}},
+        {"@type": "Question", "name": "Which 2026 World Cup matches did every AI get wrong?", "acceptedAnswer": {"@type": "Answer", "text": "All four agents missed 32 of the 104 matches, and 22 of those were level after 90 minutes. In the knockout stage all four missed 8: Germany 1-1 Paraguay, Netherlands 1-1 Morocco, Australia 1-1 Egypt and Switzerland 0-0 Colombia (all decided on penalties), plus Brazil 1-2 Norway, USA 1-4 Belgium, France 0-2 Spain and France 4-6 England."}},
+        {"@type": "Question", "name": "Why do AI models fail to predict draws in football?", "acceptedAnswer": {"@type": "Answer", "text": "In WC2026-Agents, 24 of 104 matches (23%) were draws after 90 minutes, yet each model made a draw its single most likely outcome in at most 4 matches. The models gave draws a sensible average probability (22.7% to 23.8%), but a draw is rarely the single most likely result, so top-pick accuracy misses almost every draw."}},
+        {"@type": "Question", "name": "Does it pay for an AI to bet against the betting market?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly not. Bets on an outcome other than the market favourite won 21% to 40% of the time, versus 48% to 69% for bets that agreed with the market. Contrarian bets lost money for Claude (-$167 on 42 bets), Gemini (-$112) and ChatGPT (-$38). Grok rarely went against the market; its 5 contrarian bets made +$64."}},
+        {"@type": "Question", "name": "Why is WC2026-Agents contamination-free?", "acceptedAnswer": {"@type": "Answer", "text": "Every match kicked off after the models' training cutoffs, so the results could not be in any model's training data. The same four model versions were used unchanged from 11 June to 19 July 2026, and every forecast was recorded before kickoff."}},
+        {"@type": "Question", "name": "Where can I download the WC2026-Agents dataset?", "acceptedAnswer": {"@type": "Answer", "text": "It is free under CC BY 4.0 on Hugging Face (dingjiacheng/wc2026-agents) and GitHub (graphuofm/FIFA2026LLM), with code under MIT. It contains 416 forecasts, 414 post-match reflections, results including penalty shootouts, and pre-match odds for all 104 matches."}},
+        {"@type": "Question", "name": "Who created WC2026-Agents?", "acceptedAnswer": {"@type": "Answer", "text": "Jiacheng Ding and Cong Guo of the University of Memphis. The benchmark is described in the arXiv paper 'FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches' (arXiv:2607.17765)."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root { --ink:#1d232b; --ink2:#4a5360; --line:#dfe3e8; --bg:#fbfbfa; --card:#fff; --accent:#1c6fd0; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:860px; margin:0 auto; padding:32px 18px 64px; }
+  h1 { font-size:2rem; line-height:1.2; margin:0 0 8px; }
+  h2 { font-size:1.35rem; margin:44px 0 10px; padding-top:12px; border-top:1px solid var(--line); }
+  h3 { font-size:1.05rem; margin:22px 0 4px; }
+  .sub { color:var(--ink2); margin:0 0 18px; }
+  .links a { display:inline-block; margin:0 10px 8px 0; padding:6px 12px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); text-decoration:none; font-weight:600; font-size:.92rem; }
+  .answer { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:8px; padding:14px 18px; margin:18px 0; }
+  .tbl { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:.93rem; background:var(--card); }
+  th, td { border-bottom:1px solid var(--line); padding:7px 9px; text-align:right; white-space:nowrap; }
+  th:first-child, td:first-child { text-align:left; }
+  th { font-weight:650; color:var(--ink2); }
+  figure { margin:18px 0; background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  figure img { display:block; max-width:100%; height:auto; margin:0 auto; }
+  figcaption { color:var(--ink2); font-size:.88rem; margin-top:6px; }
+  pre { background:#f1f3f5; border-radius:8px; padding:12px; overflow-x:auto; font-size:.84rem; }
+  footer { color:var(--ink2); font-size:.88rem; margin-top:48px; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<p class="sub"><a href="zh.html">中文版</a></p>
+<h1>Which AI predicted the 2026 FIFA World Cup best?</h1>
+<p class="sub"><strong>WC2026-Agents</strong>: four LLM forecasting agents versus the betting market on all 104 matches of the 2026 FIFA World Cup (11 June to 19 July 2026). By Jiacheng Ding and Cong Guo, University of Memphis.</p>
+
+<p class="links">
+  <a href="https://arxiv.org/abs/2607.17765">Paper (arXiv:2607.17765)</a>
+  <a href="https://huggingface.co/datasets/dingjiacheng/wc2026-agents">Dataset (Hugging Face)</a>
+  <a href="https://github.com/graphuofm/FIFA2026LLM">Code (GitHub)</a>
+</p>
+
+<div class="answer">
+  <p style="margin:0"><strong>Short answer.</strong> Claude Opus 4.8, ChatGPT (GPT-5.5), Gemini 3.1 Pro and Grok (Expert Mode) each forecast and placed a virtual bet on every 2026 World Cup match about a day before kickoff. They picked the same outcome in 96 of 104 matches and reached 65.4% to 68.3% accuracy. <strong>None beat the betting market's Brier score (0.469).</strong> Where they differed was money: at real pre-match odds <strong>Grok made the most virtual profit (+$650, ROI +10.3%)</strong>, Gemini +$322, ChatGPT +$118, and Claude lost $275. Simply backing the market favourite every match made +$1,041.</p>
+</div>
+
+<h2 id="leaderboard">Results at a glance</h2>
+<div class="tbl">
+<table>
+  <thead><tr><th>Forecaster</th><th>Accuracy</th><th>Brier (lower is better)</th><th>Log-loss</th><th>Virtual profit</th><th>ROI</th><th>Bets</th></tr></thead>
+  <tbody>
+    <tr><td>Betting market (vig-free odds)</td><td>68.3%</td><td>0.469</td><td>0.807</td><td>+$1,041*</td><td></td><td>104</td></tr>
+    <tr><td>Grok (Expert Mode)</td><td>68.3%</td><td>0.4706</td><td>0.803</td><td>+$650</td><td>+10.3%</td><td>104</td></tr>
+    <tr><td>Gemini 3.1 Pro</td><td>65.4%</td><td>0.4828</td><td>0.820</td><td>+$322</td><td>+3.7%</td><td>103</td></tr>
+    <tr><td>ChatGPT (GPT-5.5, high reasoning)</td><td>68.3%</td><td>0.4729</td><td>0.814</td><td>+$118</td><td>+8.0%</td><td>55</td></tr>
+    <tr><td>Claude Opus 4.8</td><td>66.3%</td><td>0.4705</td><td>0.806</td><td>-$275</td><td>-18.1%</td><td>73</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="sub" style="font-size:.88rem">Accuracy is the share of 104 matches where the top-probability outcome (home win, draw, away win after 90 minutes) happened. *Flat stake on the market favourite in every match. Agents chose their own stake (up to $100) or could skip a bet.</p>
+
+<h2 id="what">What is WC2026-Agents?</h2>
+<p>WC2026-Agents is an open benchmark and dataset for evaluating large language models as autonomous forecasting agents on real future events. For each of the 104 matches of the 2026 FIFA World Cup, four frontier models ran the same search, act and reflect loop: search the web, commit to win/draw/win probabilities and a virtual bet of up to $100, and after the match reflect on the result given only the final score. Every match kicked off after the models' training cutoffs, so the benchmark is contamination-free by construction. The pre-match betting market is scored as a fifth forecaster.</p>
+<p>The release contains 416 forecasts with verbatim reasoning, 414 post-match reflections, ground-truth results including penalty shootouts, pre-match 1X2 odds with sources, and a reproducible evaluation pipeline.</p>
+
+<h2 id="findings">Key findings</h2>
+
+<h3>1. The four AIs make almost identical predictions</h3>
+<p>They chose the same outcome in 96 of 104 matches (92%). The 8 disagreements were all 3 against 1, with Gemini the lone dissenter in 6. Accuracy spans only three matches: ChatGPT and Grok 68.3%, Claude 66.3%, Gemini 65.4%. In the 32 knockout matches all four scored exactly 71.9%.</p>
+<figure><img src="figures/fig_convergence.png" alt="Heatmap of pairwise same-pick rates between Claude, ChatGPT, Gemini, Grok and the betting market, and a bar chart showing most matches were unanimous" loading="lazy"><figcaption>How often each pair of forecasters picked the same outcome, and how many matches were unanimous.</figcaption></figure>
+
+<h3>2. No AI beat the betting market</h3>
+<p>The vig-free market probabilities scored a Brier of 0.469, better than every agent (0.4705 to 0.4828). On log-loss Grok (0.803) and Claude (0.806) sat marginally below the market (0.807), too close to call over 104 matches. A flat bet on the market favourite every match returned +$1,041, more than any agent earned.</p>
+
+<h3>3. Betting separates the models</h3>
+<p>Same predictions, different money. Grok bet on all 104 matches and won 70 bets for +$650 (ROI +10.3%), including +$595 and 24 of 32 winning bets in the knockout stage. Gemini staked the most ($8,660) for +$322. ChatGPT was the most selective (55 bets) for +$118 (ROI +8.0%). Claude won only 24 of 73 bets and lost $275 (ROI -18.1%).</p>
+<figure><img src="figures/fig_bankroll.png" alt="Line chart of cumulative virtual betting profit over 104 matches: market favourite +1041 dollars, Grok +650, Gemini +322, ChatGPT +118, Claude -275" loading="lazy"><figcaption>Cumulative virtual profit at real pre-match odds, group stage then knockout.</figcaption></figure>
+
+<h3>4. Betting against the market mostly lost</h3>
+<p>Claude backed an outcome other than the market favourite on 57% of its bets, ChatGPT 36%, Gemini 14%, Grok 5%. Those contrarian bets won 21% to 40% of the time, versus 48% to 69% when agreeing with the market, and lost money for Claude (-$167), Gemini (-$112) and ChatGPT (-$38). Grok's 5 contrarian bets made +$64.</p>
+<figure><img src="figures/fig_contrarian.png" alt="Bar charts of each AI's share of bets against the market favourite and the profit from market-conforming versus contrarian bets" loading="lazy"><figcaption>Share of bets against the market favourite, and profit split by conforming versus contrarian bets.</figcaption></figure>
+
+<h3>5. They read different evidence</h3>
+<p>Share of forecasts whose reasoning cites betting odds or the market: Claude 100%, ChatGPT 92%, Grok 63%, Gemini 12%. Grok most often cited squad quality (88%) and recent form (76%). Head-to-head records (4% to 23%) and fatigue or rest (7% to 10%) were rarely mentioned by any model.</p>
+<figure><img src="figures/fig_reasoning_factors.png" alt="Dumbbell chart of how often each AI cites 13 reasoning factors such as market odds, squad quality, form, injuries and FIFA ranking" loading="lazy"><figcaption>How often each agent cites each factor in its pre-match reasoning.</figcaption></figure>
+
+<h3>6. Draws are the blind spot</h3>
+<p>24 of 104 matches (23%) were level after 90 minutes, but no model made a draw its top pick more than 4 times (Claude 1, ChatGPT 2, Grok 2, Gemini 4). Of the 32 matches all four agents got wrong, 22 were draws.</p>
+
+<h3>7. Upsets that fooled every AI</h3>
+<p>In the knockout stage all four agents missed 8 matches: Germany 1-1 Paraguay, Netherlands 1-1 Morocco, Australia 1-1 Egypt and Switzerland 0-0 Colombia (decided on penalties), plus Brazil 1-2 Norway, USA 1-4 Belgium, France 0-2 Spain and France 4-6 England. In their post-mortems the agents most often named the underdog's defensive organisation as the factor they missed (62% of wrong picks) and the favourite's squad quality as the factor they over-weighted (40%).</p>
+<figure><img src="figures/fig_upsets.png" alt="Dot plot of the eight 2026 World Cup knockout matches that all four AIs mispredicted, with the consensus probability on the favourite" loading="lazy"><figcaption>Knockout matches every agent got wrong, with the average probability they gave the favourite.</figcaption></figure>
+
+<h3>8. AIs differ in admitting mistakes</h3>
+<p>After a wrong pick, each agent labelled its own forecast. Gemini called it incorrect 86% of the time, Grok 61%, Claude 49% and ChatGPT 36%; the rest were described as partially correct or correct.</p>
+<figure><img src="figures/fig_reflection.png" alt="Stacked bars of how each AI labels its own wrong predictions: owns the error, partially correct, or denies" loading="lazy"><figcaption>Self-labels on wrong picks in post-match reflection.</figcaption></figure>
+
+<h2 id="method">How the experiment worked</h2>
+<ul>
+  <li><strong>Models:</strong> Claude Opus 4.8, ChatGPT (GPT-5.5, high reasoning), Gemini 3.1 Pro and Grok (Expert Mode), all web-enabled and unchanged for the whole tournament.</li>
+  <li><strong>Before each match</strong> (about 24 hours ahead): web search, then a JSON forecast with win/draw/win probabilities, a bet pick and stake (up to $100, or no bet), reasoning and sources.</li>
+  <li><strong>After each match:</strong> given only the final score, an 8-field reflection: outcome label, calibration, luck, missed factor, over-weighted factor, counterfactual, would-bet-differently, confidence.</li>
+  <li><strong>Scoring:</strong> accuracy, multiclass Brier score, log-loss and calibration against the 90-minute result; bets settled at real pre-match decimal odds; the vig-free market probabilities scored as a fifth forecaster.</li>
+  <li><strong>Limits:</strong> one tournament, 104 matches, virtual money, and model versions as of June to July 2026. Differences of a few matches in accuracy are not statistically meaningful.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<h3>Which AI predicted the 2026 FIFA World Cup best?</h3>
+<p>It depends on the metric. In the WC2026-Agents benchmark (all 104 matches), ChatGPT (GPT-5.5) and Grok (Expert Mode) tied for the highest accuracy at 68.3%, Claude Opus 4.8 (Brier 0.4705) and Grok (0.4706) had the best probability scores, and Grok earned the most in virtual betting (+$650, ROI +10.3%). None of the four beat the pre-match betting market's Brier score of 0.469.</p>
+<h3>Did any AI beat the betting odds at the 2026 World Cup?</h3>
+<p>No, not convincingly. The vig-free market probabilities scored a Brier of 0.469, better than all four agents (0.4705 to 0.4828). On log-loss Grok (0.803) and Claude (0.806) were marginally below the market (0.807), a gap too small to be meaningful over 104 matches. A flat bet on the market favourite in every match earned +$1,041, more than any agent.</p>
+<h3>Which AI made the most money betting on the 2026 World Cup?</h3>
+<p>Grok (Expert Mode): +$650 virtual profit on 104 bets (ROI +10.3%), including +$595 in the knockout stage. Gemini 3.1 Pro made +$322, ChatGPT (GPT-5.5) +$118, and Claude Opus 4.8 lost $275 (ROI -18.1%). Bets were virtual, sized by each model (up to $100) and settled at real pre-match odds.</p>
+<h3>How accurate were ChatGPT, Claude, Gemini and Grok at predicting World Cup 2026 matches?</h3>
+<p>Over all 104 matches (win/draw/win after 90 minutes): ChatGPT 68.3%, Grok 68.3%, Claude 66.3%, Gemini 65.4%. The betting market's favourite was also right 68.3% of the time. In the 32 knockout matches all four agents scored exactly 71.9%. The four models chose the same outcome in 96 of 104 matches.</p>
+<h3>Did AI predict Spain winning the 2026 World Cup final?</h3>
+<p>Before Spain beat Argentina 1-0 in the final on 19 July 2026, all four agents rated a Spain win at least as likely as any other outcome, with Spain win probabilities of 35% to 44%. The agents forecast each match separately about a day before kickoff; they did not make one pre-tournament champion pick.</p>
+<h3>Which 2026 World Cup matches did every AI get wrong?</h3>
+<p>All four agents missed 32 of the 104 matches, and 22 of those were level after 90 minutes. In the knockout stage all four missed 8: Germany 1-1 Paraguay, Netherlands 1-1 Morocco, Australia 1-1 Egypt and Switzerland 0-0 Colombia (all decided on penalties), plus Brazil 1-2 Norway, USA 1-4 Belgium, France 0-2 Spain and France 4-6 England.</p>
+<h3>Why do AI models fail to predict draws in football?</h3>
+<p>In WC2026-Agents, 24 of 104 matches (23%) were draws after 90 minutes, yet each model made a draw its single most likely outcome in at most 4 matches. The models gave draws a sensible average probability (22.7% to 23.8%), but a draw is rarely the single most likely result, so top-pick accuracy misses almost every draw.</p>
+<h3>Does it pay for an AI to bet against the betting market?</h3>
+<p>Mostly not. Bets on an outcome other than the market favourite won 21% to 40% of the time, versus 48% to 69% for bets that agreed with the market. Contrarian bets lost money for Claude (-$167 on 42 bets), Gemini (-$112) and ChatGPT (-$38). Grok rarely went against the market; its 5 contrarian bets made +$64.</p>
+<h3>Why is WC2026-Agents contamination-free?</h3>
+<p>Every match kicked off after the models' training cutoffs, so the results could not be in any model's training data. The same four model versions were used unchanged from 11 June to 19 July 2026, and every forecast was recorded before kickoff.</p>
+<h3>Where can I download the WC2026-Agents dataset?</h3>
+<p>It is free under CC BY 4.0 on Hugging Face (dingjiacheng/wc2026-agents) and GitHub (graphuofm/FIFA2026LLM), with code under MIT. It contains 416 forecasts, 414 post-match reflections, results including penalty shootouts, and pre-match odds for all 104 matches.</p>
+<h3>Who created WC2026-Agents?</h3>
+<p>Jiacheng Ding and Cong Guo of the University of Memphis. The benchmark is described in the arXiv paper "FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches" (arXiv:2607.17765).</p>
+
+<h2 id="data">Use the data</h2>
+<pre>from datasets import load_dataset
+forecasts = load_dataset("dingjiacheng/wc2026-agents", "forecasts")
+odds = load_dataset("dingjiacheng/wc2026-agents", "odds")</pre>
+<p>Reproduce every table and figure: <code>pip install -r requirements.txt</code> then <code>python src/run_all.py</code> in the <a href="https://github.com/graphuofm/FIFA2026LLM">GitHub repository</a>.</p>
+
+<h2 id="cite">Cite</h2>
+<pre>@misc{ding2026wc2026agents,
+  title         = {{FIFA} World Cup 2026 as a Contamination-Free Benchmark for
+                   {LLM} Forecasting Agents: Four Models, a Bookmaker, and 104 Matches},
+  author        = {Ding, Jiacheng and Guo, Cong},
+  year          = {2026},
+  eprint        = {2607.17765},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2607.17765}
+}</pre>
+
+<footer>
+  <p>WC2026-Agents by Jiacheng Ding and Cong Guo, University of Memphis. Data CC BY 4.0, code MIT. All betting is virtual and for research only; this is not gambling advice. Last updated 14 September 2026.</p>
+</footer>
+</main>
+</body>
+</html>

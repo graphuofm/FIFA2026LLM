@@ -1,0 +1,34 @@
+# WC2026-Agents
+
+> Open benchmark and dataset in which four LLM forecasting agents (Claude Opus 4.8, ChatGPT GPT-5.5, Gemini 3.1 Pro, Grok Expert Mode) forecast and placed virtual bets on all 104 matches of the 2026 FIFA World Cup, scored against results and real pre-match betting odds. Paper: arXiv:2607.17765, by Jiacheng Ding and Cong Guo (University of Memphis). Data CC BY 4.0, code MIT.
+
+Key results (all 104 matches, 11 June to 19 July 2026):
+
+- The four agents picked the same outcome in 96 of 104 matches (92%). Accuracy: ChatGPT 68.3%, Grok 68.3%, Claude 66.3%, Gemini 65.4%. The betting market's favourite was also right 68.3% of the time.
+- No agent beat the betting market's Brier score (market 0.469; agents 0.4705 to 0.4828).
+- Virtual betting profit at real odds: Grok +$650 (ROI +10.3%), Gemini +$322 (+3.7%), ChatGPT +$118 (+8.0%), Claude -$275 (-18.1%). A flat bet on the market favourite every match earned +$1,041.
+- Bets against the market favourite won 21% to 40% of the time versus 48% to 69% for bets with the market; they lost money for Claude, Gemini and ChatGPT, while Grok's 5 contrarian bets made +$64.
+- Share of forecasts citing betting odds: Claude 100%, ChatGPT 92%, Grok 63%, Gemini 12%.
+- 24 of 104 matches were 90-minute draws, but no agent made a draw its top pick more than 4 times.
+- Final: Spain 1-0 Argentina; all four agents rated a Spain win at least as likely as any other outcome (35% to 44%).
+
+## Paper
+
+- [arXiv abstract page](https://arxiv.org/abs/2607.17765): FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches
+- [arXiv PDF](https://arxiv.org/pdf/2607.17765): full paper
+
+## Data and code
+
+- [Hugging Face dataset](https://huggingface.co/datasets/dingjiacheng/wc2026-agents): 416 forecasts, 414 reflections, results, odds; load with `load_dataset("dingjiacheng/wc2026-agents", "forecasts")`
+- [GitHub repository](https://github.com/graphuofm/FIFA2026LLM): parsing, analysis and figure code; `python src/run_all.py` reproduces every number
+- [Full fact sheet](https://graphuofm.github.io/FIFA2026LLM/llms-full.txt): every metric, method details, FAQ and limitations in plain markdown
+
+## Pages
+
+- [Project page (English)](https://graphuofm.github.io/FIFA2026LLM/): findings, figures and FAQ
+- [Project page (Chinese)](https://graphuofm.github.io/FIFA2026LLM/zh.html): 中文版结果与常见问题
+
+## Optional
+
+- [Data schema](https://github.com/graphuofm/FIFA2026LLM/blob/main/data/README.md): column definitions and known source quirks
+- [Citation file](https://github.com/graphuofm/FIFA2026LLM/blob/main/CITATION.cff): machine-readable citation

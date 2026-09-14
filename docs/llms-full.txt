@@ -1,0 +1,81 @@
+# WC2026-Agents: full fact sheet
+
+> WC2026-Agents is an open benchmark and dataset for evaluating large language models (LLMs) as autonomous forecasting agents on real future events. Four frontier models forecast and placed virtual bets on every one of the 104 matches of the 2026 FIFA World Cup (11 June to 19 July 2026, United States, Canada and Mexico), and the pre-match betting market was scored as a fifth forecaster. Paper: "FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches", Jiacheng Ding and Cong Guo, University of Memphis, arXiv:2607.17765 (2026). Last updated 14 September 2026.
+
+## Links
+
+- Paper: https://arxiv.org/abs/2607.17765 (DOI 10.48550/arXiv.2607.17765)
+- Dataset: https://huggingface.co/datasets/dingjiacheng/wc2026-agents
+- Code: https://github.com/graphuofm/FIFA2026LLM
+- Project page: https://graphuofm.github.io/FIFA2026LLM/
+- License: data CC BY 4.0; code MIT
+
+## Setup
+
+- Agents: Claude Opus 4.8; ChatGPT (GPT-5.5, high reasoning); Gemini 3.1 Pro; Grok (Expert Mode). All web-enabled; the same versions were used for the entire tournament.
+- Before each match (about 24 hours ahead), each agent searched the web and returned JSON: probabilities for team A win, draw and team B win; a bet pick and stake of up to $100 (or no bet); free-text reasoning; key sources.
+- After each match, given only the final score, each agent returned an 8-field reflection: outcome versus prediction, calibration, luck, key factor missed, key factor over-weighted, counterfactual, would it bet differently, confidence.
+- Contamination-free: every match kicked off after the models' training cutoffs.
+- Ground truth is the 90-minute result (how a 1X2 bet settles). Knockout ties decided on penalties count as draws; the team that advanced is recorded separately.
+- Market baseline: pre-match 1X2 decimal odds (mostly DraftKings), with the bookmaker margin removed to get implied probabilities; source URL recorded per match.
+- Size: 104 matches, 416 forecasts, 414 reflections (two Gemini group-stage reflections are missing in the source and flagged, not imputed).
+
+## Leaderboard (all 104 matches)
+
+| Forecaster | Accuracy | Brier (lower is better) | Log-loss | Virtual profit | ROI | Bets | Bets won |
+|---|---|---|---|---|---|---|---|
+| Betting market (vig-free) | 68.3% | 0.469 | 0.807 | +$1,041 (flat stake on favourite) | | 104 | |
+| Grok (Expert Mode) | 68.3% | 0.4706 | 0.803 | +$650.10 | +10.3% | 104 | 70 (67.3%) |
+| Gemini 3.1 Pro | 65.4% | 0.4828 | 0.820 | +$321.75 | +3.7% | 103 | 65 (63.1%) |
+| ChatGPT (GPT-5.5) | 68.3% | 0.4729 | 0.814 | +$117.95 | +8.0% | 55 | 28 (50.9%) |
+| Claude Opus 4.8 | 66.3% | 0.4705 | 0.806 | -$275.39 | -18.1% | 73 | 24 (32.9%) |
+
+Total staked: Gemini $8,660 (mean $84 per bet), Grok $6,305 ($61), ChatGPT $1,471 ($27), Claude $1,519 ($21).
+
+By stage:
+
+- Group stage (72 matches) accuracy: ChatGPT 66.7%, Grok 66.7%, Claude 63.9%, Gemini 62.5%, market 66.7%.
+- Knockout stage (32 matches) accuracy: all four agents 71.9%, market 71.9%. Knockout Brier: Grok 0.425, Claude 0.428, ChatGPT 0.429, market 0.431, Gemini 0.477.
+- Knockout betting: Grok +$595 (ROI +34.6%, 24 of 32 bets won), ChatGPT +$80 (+26.3%), Gemini +$54 (+2.0%), Claude +$32 (+7.2%).
+- Group-stage betting: Gemini +$268, Grok +$55, ChatGPT +$38, Claude -$308.
+
+## Findings
+
+1. Convergence. The agents chose the same top outcome in 96 of 104 matches (92%). All 8 splits were 3 against 1; Gemini was the lone dissenter in 6.
+2. The market is still the bar. No agent beat the market's Brier score over all 104 matches. Grok and Claude were marginally below the market on log-loss (0.803 and 0.806 versus 0.807), a difference too small to be meaningful over 104 matches.
+3. Decisions differ even when beliefs agree. With near-identical picks, betting results ranged from -$275 to +$650, driven by how often each agent bet, how much it staked, and whether it bet against the market.
+4. Contrarian bets. Share of bets on an outcome other than the market favourite: Claude 57.5% (42 of 73), ChatGPT 36.4% (20 of 55), Gemini 13.6% (14 of 103), Grok 4.8% (5 of 104). Contrarian hit rate: Claude 21.4%, ChatGPT 25.0%, Gemini 28.6%, Grok 40.0%; versus market-conforming hit rate 48.4%, 65.7%, 68.5%, 68.7%. Contrarian profit: Claude -$167, Gemini -$112, ChatGPT -$38, Grok +$64.
+5. Reasoning. Share of pre-match forecasts citing each factor (Claude / ChatGPT / Gemini / Grok): market or odds 100% / 92% / 12% / 63%; squad quality 44% / 55% / 54% / 88%; recent form 50% / 47% / 59% / 76%; defensive organisation 73% / 39% / 74% / 56%; attacking threat 64% / 64% / 67% / 66%; FIFA ranking 18% / 38% / 4% / 61%; injuries and suspensions 40% / 46% / 19% / 31%; penalties and variance 53% / 16% / 16% / 32%; head-to-head 11% / 4% / 11% / 23%; fatigue and rest 8% / 8% / 7% / 10%.
+6. Draws. 24 of 104 matches (23%) were draws after 90 minutes (20 in the group stage, 4 knockout ties decided on penalties). Number of matches where a draw was the agent's top pick: Claude 1, ChatGPT 2, Grok 2, Gemini 4. Mean draw probability: 22.7% to 23.8%.
+7. Shared misses. All four agents were wrong on 32 matches (24 group, 8 knockout); 22 of the 32 were draws. Knockout matches every agent missed: Germany 1-1 Paraguay (Paraguay won on penalties; 75% average probability on Germany), Netherlands 1-1 Morocco (Morocco on penalties), Australia 1-1 Egypt (Egypt on penalties), Switzerland 0-0 Colombia (Switzerland on penalties), Brazil 1-2 Norway (round of 16), USA 1-4 Belgium (round of 16), France 0-2 Spain (semi-final), France 4-6 England (third-place match).
+8. Post-mortems. Across wrong picks, the factor most often named as missed: underdog defensive organisation 62%, attacking threat 50%, knockout or penalty variance 32%. Most often named as over-weighted: favourite's squad quality 40%, attacking firepower 38%.
+9. Self-knowledge. On its own wrong picks, share labelled "incorrect": Gemini 86% (31 of 36), Grok 61% (20 of 33), Claude 49% (17 of 35), ChatGPT 36% (12 of 33). On correct picks, share labelled "correct": Grok 94%, Gemini 85%, ChatGPT 76%, Claude 68%.
+10. Final. Spain beat Argentina 1-0 on 19 July 2026. Spain win probabilities before the final: Claude 44%, ChatGPT 44%, Grok 42%, Gemini 35% (Gemini gave the draw 35% too).
+
+## FAQ
+
+Which AI predicted the 2026 FIFA World Cup best?
+It depends on the metric. ChatGPT (GPT-5.5) and Grok tied for top accuracy (68.3%); Claude (Brier 0.4705) and Grok (0.4706) had the best probability scores; Grok earned the most virtual betting profit (+$650, ROI +10.3%). None beat the betting market's Brier score (0.469).
+
+Did any AI beat the bookmakers at the 2026 World Cup?
+No, not convincingly. The market's Brier score (0.469) was better than every agent's, and a flat bet on the market favourite (+$1,041) out-earned all four.
+
+Which AI made the most money betting on the World Cup?
+Grok (Expert Mode), +$650 on 104 virtual bets at real odds, including +$595 in the knockout stage.
+
+Is ChatGPT, Claude, Gemini or Grok better at football predictions?
+On picking winners they are nearly indistinguishable (65.4% to 68.3%, same pick in 92% of matches). They differ in betting behaviour, use of market information and willingness to admit mistakes.
+
+Why can't AI predict draws?
+Draws happened in 23% of matches and the models did assign them about 23% probability, but a draw is rarely the single most likely outcome, so a top-pick forecaster almost never predicts one.
+
+Is the data free?
+Yes. Data CC BY 4.0 on Hugging Face and GitHub; code MIT.
+
+## Limitations
+
+One tournament and 104 matches; accuracy differences of one to three matches are not statistically significant. Betting is virtual. Results describe the specific model versions used in June and July 2026 with their consumer web search, not the models in general. Reasoning factors were coded with a transparent keyword lexicon, not by hand.
+
+## Citation
+
+Ding, Jiacheng and Guo, Cong. 2026. FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches. arXiv:2607.17765.

@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use the WC2026-Agents dataset or code, please cite the paper below."
+title: "WC2026-Agents: LLM forecasting agents on the 2026 FIFA World Cup"
+type: dataset
+authors:
+  - family-names: Ding
+    given-names: Jiacheng
+    email: jding2@memphis.edu
+    affiliation: University of Memphis
+  - family-names: Guo
+    given-names: Cong
+    email: cguo@memphis.edu
+    affiliation: University of Memphis
+repository-code: "https://github.com/graphuofm/FIFA2026LLM"
+url: "https://graphuofm.github.io/FIFA2026LLM/"
+license:
+  - MIT
+  - CC-BY-4.0
+date-released: "2026-07-20"
+keywords:
+  - LLM agents
+  - forecasting
+  - FIFA World Cup 2026
+  - betting odds
+  - calibration
+  - benchmark
+  - contamination-free evaluation
+abstract: >-
+  Pre-match forecasts, virtual bets, and post-match reflections from four LLM
+  agents (Claude Opus 4.8, ChatGPT GPT-5.5, Gemini 3.1 Pro, Grok Expert Mode)
+  on all 104 matches of the 2026 FIFA World Cup, scored against ground truth
+  and real pre-match betting odds.
+preferred-citation:
+  type: article
+  title: "FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches"
+  authors:
+    - family-names: Ding
+      given-names: Jiacheng
+    - family-names: Guo
+      given-names: Cong
+  year: 2026
+  doi: "10.48550/arXiv.2607.17765"
+  url: "https://arxiv.org/abs/2607.17765"
+  identifiers:
+    - type: other
+      value: "arXiv:2607.17765"

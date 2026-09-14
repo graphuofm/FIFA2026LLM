@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>哪个AI预测2026世界杯最准？WC2026-Agents：ChatGPT、Claude、Gemini、Grok对决博彩市场</title>
+<meta name="description" content="WC2026-Agents 基准：Claude Opus 4.8、ChatGPT（GPT-5.5）、Gemini 3.1 Pro 和 Grok 对2026年世界杯全部104场比赛做赛前预测并按真实赔率虚拟下注。Grok 虚拟收益最高（+650美元），但没有一个模型的 Brier 分数超过博彩市场。">
+<link rel="canonical" href="https://graphuofm.github.io/FIFA2026LLM/zh.html">
+<link rel="alternate" hreflang="en" href="https://graphuofm.github.io/FIFA2026LLM/">
+<link rel="alternate" hreflang="zh" href="https://graphuofm.github.io/FIFA2026LLM/zh.html">
+<meta name="author" content="Jiacheng Ding, Cong Guo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="哪个AI预测2026世界杯最准？四大AI对决博彩市场，104场实测">
+<meta property="og:description" content="四个大模型智能体按真实赔率预测并虚拟下注2026世界杯全部104场比赛。数据与代码开源，论文 arXiv:2607.17765。">
+<meta property="og:url" content="https://graphuofm.github.io/FIFA2026LLM/zh.html">
+<meta property="og:image" content="https://graphuofm.github.io/FIFA2026LLM/figures/og_betting.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {"@type": "Question", "name": "哪个AI预测2026年世界杯最准？", "acceptedAnswer": {"@type": "Answer", "text": "取决于看哪个指标。在 WC2026-Agents 基准（全部104场比赛）中，ChatGPT（GPT-5.5）和 Grok（Expert 模式）准确率并列最高，均为68.3%；概率质量（Brier 分数）最好的是 Claude Opus 4.8（0.4705）和 Grok（0.4706）；按真实赔率虚拟下注赚得最多的是 Grok（+650美元，投资回报率 +10.3%）。四个模型的 Brier 分数都没有超过赛前博彩市场（0.469）。"}},
+    {"@type": "Question", "name": "有AI在2026世界杯上赢过博彩赔率吗？", "acceptedAnswer": {"@type": "Answer", "text": "没有明显赢过。去除抽水后的市场概率 Brier 分数为0.469，优于全部四个模型（0.4705至0.4828）。对数损失上 Grok（0.803）和 Claude（0.806）略低于市场（0.807），但在104场的样本上差距小到没有意义。每场都押市场热门的固定下注策略收益 +1041美元，超过任何一个AI。"}},
+    {"@type": "Question", "name": "哪个AI在2026世界杯虚拟下注中赚钱最多？", "acceptedAnswer": {"@type": "Answer", "text": "Grok（Expert 模式）：104注共盈利 +650美元（投资回报率 +10.3%），其中淘汰赛阶段 +595美元。Gemini 3.1 Pro 盈利 +322美元，ChatGPT（GPT-5.5）+118美元，Claude Opus 4.8 亏损275美元（投资回报率 -18.1%）。所有下注都是虚拟的，由模型自行决定金额（每场最多100美元），按真实赛前赔率结算。"}},
+    {"@type": "Question", "name": "ChatGPT、Claude、Gemini、Grok 预测2026世界杯比赛的准确率是多少？", "acceptedAnswer": {"@type": "Answer", "text": "全部104场（按90分钟胜平负）：ChatGPT 68.3%，Grok 68.3%，Claude 66.3%，Gemini 65.4%；博彩市场热门的命中率同样是68.3%。32场淘汰赛中四个模型准确率完全相同，都是71.9%。四个模型在104场中有96场选了同一个结果。"}},
+    {"@type": "Question", "name": "AI预测到西班牙夺得2026世界杯冠军了吗？", "acceptedAnswer": {"@type": "Answer", "text": "2026年7月19日决赛西班牙1比0战胜阿根廷。赛前四个模型都把西班牙获胜列为可能性最高（或并列最高）的结果，给出的西班牙胜率在35%到44%之间。需要说明的是，模型是在每场比赛开球前约一天逐场预测的，并没有在赛前一次性预测冠军。"}},
+    {"@type": "Question", "name": "2026世界杯哪些比赛所有AI都预测错了？", "acceptedAnswer": {"@type": "Answer", "text": "四个模型共同预测错了104场中的32场，其中22场90分钟内打平。淘汰赛阶段四个模型全部猜错8场：德国1比1巴拉圭、荷兰1比1摩洛哥、澳大利亚1比1埃及、瑞士0比0哥伦比亚（均通过点球大战决出胜负），以及巴西1比2挪威、美国1比4比利时、法国0比2西班牙、法国4比6英格兰。"}},
+    {"@type": "Question", "name": "为什么AI很难预测足球比赛的平局？", "acceptedAnswer": {"@type": "Answer", "text": "在 WC2026-Agents 中，104场里有24场（23%）90分钟打平，但每个模型把平局作为最可能结果的次数最多只有4次。模型给平局的平均概率其实合理（22.7%至23.8%），只是平局很少是单一最可能的结果，所以按最高概率选结果时几乎会错过所有平局。"}},
+    {"@type": "Question", "name": "AI逆着博彩市场下注划算吗？", "acceptedAnswer": {"@type": "Answer", "text": "大多不划算。押注非市场热门结果的命中率只有21%到40%，而顺着市场下注的命中率为48%到69%。逆市场下注让 Claude 亏损167美元（42注）、Gemini 亏损112美元、ChatGPT 亏损38美元。Grok 很少逆市场下注，它仅有的5注逆向下注盈利 +64美元。"}},
+    {"@type": "Question", "name": "WC2026-Agents 数据集在哪里下载？", "acceptedAnswer": {"@type": "Answer", "text": "数据以 CC BY 4.0 协议免费开放，可在 Hugging Face（dingjiacheng/wc2026-agents）和 GitHub（graphuofm/FIFA2026LLM）获取，代码采用 MIT 协议。包含416条赛前预测、414条赛后反思、含点球大战的比赛结果以及全部104场的赛前赔率。"}},
+    {"@type": "Question", "name": "WC2026-Agents 是谁做的？", "acceptedAnswer": {"@type": "Answer", "text": "由美国孟菲斯大学（University of Memphis）的 Jiacheng Ding 和 Cong Guo 完成，论文为《FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches》（arXiv:2607.17765）。"}}
+  ]
+}
+</script>
+<style>
+  :root { --ink:#1d232b; --ink2:#4a5360; --line:#dfe3e8; --bg:#fbfbfa; --card:#fff; --accent:#1c6fd0; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.75 system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+  main { max-width:860px; margin:0 auto; padding:32px 18px 64px; }
+  h1 { font-size:1.9rem; line-height:1.3; margin:0 0 8px; }
+  h2 { font-size:1.3rem; margin:44px 0 10px; padding-top:12px; border-top:1px solid var(--line); }
+  h3 { font-size:1.05rem; margin:22px 0 4px; }
+  .sub { color:var(--ink2); margin:0 0 18px; }
+  .links a { display:inline-block; margin:0 10px 8px 0; padding:6px 12px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); text-decoration:none; font-weight:600; font-size:.92rem; }
+  .answer { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:8px; padding:14px 18px; margin:18px 0; }
+  .tbl { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:.93rem; background:var(--card); }
+  th, td { border-bottom:1px solid var(--line); padding:7px 9px; text-align:right; white-space:nowrap; }
+  th:first-child, td:first-child { text-align:left; }
+  th { color:var(--ink2); }
+  figure { margin:18px 0; background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  figure img { display:block; max-width:100%; height:auto; margin:0 auto; }
+  figcaption { color:var(--ink2); font-size:.88rem; margin-top:6px; }
+  pre { background:#f1f3f5; border-radius:8px; padding:12px; overflow-x:auto; font-size:.84rem; }
+  footer { color:var(--ink2); font-size:.88rem; margin-top:48px; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<p class="sub"><a href="./">English</a></p>
+<h1>哪个AI预测2026年世界杯最准？</h1>
+<p class="sub"><strong>WC2026-Agents</strong>：四个大模型预测智能体与博彩市场同台，覆盖2026年FIFA世界杯全部104场比赛（2026年6月11日至7月19日）。作者：Jiacheng Ding、Cong Guo（美国孟菲斯大学）。</p>
+
+<p class="links">
+  <a href="https://arxiv.org/abs/2607.17765">论文 arXiv:2607.17765</a>
+  <a href="https://huggingface.co/datasets/dingjiacheng/wc2026-agents">数据集 Hugging Face</a>
+  <a href="https://github.com/graphuofm/FIFA2026LLM">代码 GitHub</a>
+</p>
+
+<div class="answer">
+  <p style="margin:0"><strong>一句话结论：</strong>Claude Opus 4.8、ChatGPT（GPT-5.5）、Gemini 3.1 Pro 和 Grok（Expert 模式）在每场世界杯比赛开球前约一天，各自联网搜索、给出胜平负概率并虚拟下注。四个模型在104场中有96场选了同一个结果，准确率在65.4%到68.3%之间，<strong>没有一个的 Brier 分数超过博彩市场（0.469）</strong>。真正拉开差距的是下注：按真实赔率结算，<strong>Grok 虚拟盈利最多（+650美元，回报率 +10.3%）</strong>，Gemini +322美元，ChatGPT +118美元，Claude 亏损275美元。而每场都押市场热门能赚 +1041美元。</p>
+</div>
+
+<h2>结果一览</h2>
+<div class="tbl">
+<table>
+  <thead><tr><th>预测者</th><th>准确率</th><th>Brier（越低越好）</th><th>对数损失</th><th>虚拟收益</th><th>回报率</th><th>下注数</th></tr></thead>
+  <tbody>
+    <tr><td>博彩市场（去抽水赔率）</td><td>68.3%</td><td>0.469</td><td>0.807</td><td>+$1,041*</td><td></td><td>104</td></tr>
+    <tr><td>Grok（Expert 模式）</td><td>68.3%</td><td>0.4706</td><td>0.803</td><td>+$650</td><td>+10.3%</td><td>104</td></tr>
+    <tr><td>Gemini 3.1 Pro</td><td>65.4%</td><td>0.4828</td><td>0.820</td><td>+$322</td><td>+3.7%</td><td>103</td></tr>
+    <tr><td>ChatGPT（GPT-5.5，高推理）</td><td>68.3%</td><td>0.4729</td><td>0.814</td><td>+$118</td><td>+8.0%</td><td>55</td></tr>
+    <tr><td>Claude Opus 4.8</td><td>66.3%</td><td>0.4705</td><td>0.806</td><td>-$275</td><td>-18.1%</td><td>73</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="sub" style="font-size:.88rem">准确率：最高概率的结果（90分钟主胜、平、客胜）与实际一致的比例。*每场固定金额押市场热门。模型可自选下注金额（最多100美元）或放弃下注。</p>
+
+<h2>WC2026-Agents 是什么？</h2>
+<p>WC2026-Agents 是一个开源基准与数据集，用来评估大语言模型作为自主预测智能体、在真实未来事件上的表现。2026年世界杯的104场比赛，四个前沿模型都执行同一套“搜索、决策、反思”流程：联网搜集信息，给出胜平负概率和最多100美元的虚拟下注，赛后只拿到最终比分再做复盘反思。所有比赛都在模型训练截止日期之后开球，因此从设计上杜绝了数据污染。赛前博彩市场作为第五个预测者一起评分。</p>
+<p>数据包含416条带原文推理的赛前预测、414条赛后反思、含点球大战的真实结果、带来源的赛前胜平负赔率，以及可复现的评测代码。</p>
+
+<h2>主要发现</h2>
+<h3>1. 四个AI的预测几乎一模一样</h3>
+<p>104场中有96场（92%）选了同一个结果；8场分歧全部是3比1，其中6场是 Gemini 单独唱反调。准确率只差3场：ChatGPT 和 Grok 68.3%，Claude 66.3%，Gemini 65.4%。32场淘汰赛四个模型准确率完全相同，都是71.9%。</p>
+<figure><img src="figures/fig_convergence.png" alt="Claude、ChatGPT、Gemini、Grok与博彩市场两两选择相同结果的比例热力图" loading="lazy"><figcaption>各预测者两两选同一结果的比例，以及全票一致的场次。</figcaption></figure>
+
+<h3>2. 没有AI赢过博彩市场</h3>
+<p>去抽水的市场概率 Brier 分数0.469，好于所有模型（0.4705至0.4828）。对数损失上 Grok（0.803）和 Claude（0.806）略低于市场（0.807），但差距在104场样本上可以忽略。每场押市场热门的固定策略收益 +1041美元，高于任何AI。</p>
+
+<h3>3. 下注才把模型区分开</h3>
+<p>预测相同，钱却不同。Grok 104场全部下注，赢70注，盈利 +650美元（回报率 +10.3%），其中淘汰赛32注赢24注、盈利 +595美元。Gemini 投入最多（8660美元），盈利 +322美元。ChatGPT 最谨慎（只下55注），盈利 +118美元（回报率 +8.0%）。Claude 73注只赢24注，亏损275美元（回报率 -18.1%）。</p>
+<figure><img src="figures/fig_bankroll.png" alt="104场累计虚拟下注收益折线图：市场热门+1041美元，Grok+650，Gemini+322，ChatGPT+118，Claude-275" loading="lazy"><figcaption>按真实赛前赔率结算的累计虚拟收益。</figcaption></figure>
+
+<h3>4. 逆着市场下注大多亏钱</h3>
+<p>Claude 有57%的下注押的不是市场热门，ChatGPT 36%，Gemini 14%，Grok 5%。逆向下注命中率只有21%到40%，顺市场下注为48%到69%；逆向下注让 Claude 亏167美元、Gemini 亏112美元、ChatGPT 亏38美元，Grok 仅有的5注逆向下注盈利 +64美元。</p>
+<figure><img src="figures/fig_contrarian.png" alt="各AI逆市场下注比例，以及顺市场与逆市场下注的收益对比" loading="lazy"><figcaption>逆市场下注占比，及顺势与逆势下注的收益拆分。</figcaption></figure>
+
+<h3>5. 它们看的证据不一样</h3>
+<p>推理中引用赔率或市场的比例：Claude 100%，ChatGPT 92%，Grok 63%，Gemini 12%。Grok 最常引用阵容实力（88%）和近期状态（76%）。历史交锋（4%至23%）和体能休息（7%至10%）几乎没有模型关注。</p>
+<figure><img src="figures/fig_reasoning_factors.png" alt="各AI在赛前推理中引用13类因素的频率，如赔率、阵容、状态、伤病、FIFA排名" loading="lazy"><figcaption>各模型赛前推理中各类因素的引用频率。</figcaption></figure>
+
+<h3>6. 平局是共同盲区</h3>
+<p>104场中24场（23%）90分钟打平，但没有一个模型把平局作为首选超过4次（Claude 1次、ChatGPT 2次、Grok 2次、Gemini 4次）。四个模型全错的32场里，22场是平局。</p>
+
+<h3>7. 骗过所有AI的冷门</h3>
+<p>淘汰赛中四个模型全部猜错8场：德国1比1巴拉圭、荷兰1比1摩洛哥、澳大利亚1比1埃及、瑞士0比0哥伦比亚（均点球决胜），以及巴西1比2挪威、美国1比4比利时、法国0比2西班牙、法国4比6英格兰。赛后复盘中，模型最常承认漏看的是弱队的防守组织（占错误预测的62%），最常高估的是强队的阵容实力（40%）。</p>
+<figure><img src="figures/fig_upsets.png" alt="2026世界杯淘汰赛中四个AI全部猜错的8场比赛及其对热门的平均概率" loading="lazy"><figcaption>所有模型都猜错的淘汰赛，以及它们给热门的平均概率。</figcaption></figure>
+
+<h3>8. 认错态度差别很大</h3>
+<p>预测错误后让模型自评：Gemini 86%的情况下承认“错了”，Grok 61%，Claude 49%，ChatGPT 36%；其余自评为“部分正确”或“正确”。</p>
+<figure><img src="figures/fig_reflection.png" alt="各AI对自己错误预测的自评：承认错误、部分正确、否认" loading="lazy"><figcaption>错误预测的赛后自评分布。</figcaption></figure>
+
+<h2>实验怎么做的</h2>
+<ul>
+  <li><strong>模型：</strong>Claude Opus 4.8、ChatGPT（GPT-5.5，高推理）、Gemini 3.1 Pro、Grok（Expert 模式），全部联网，整个赛事期间版本不变。</li>
+  <li><strong>赛前（约提前24小时）：</strong>联网搜索后输出 JSON：胜平负概率、下注选项与金额（最多100美元或不下注）、推理与信息来源。</li>
+  <li><strong>赛后：</strong>只给最终比分，输出8项反思：结果判断、校准、运气、漏看因素、高估因素、反事实、是否会改变下注、置信度。</li>
+  <li><strong>评分：</strong>以90分钟结果计算准确率、多分类 Brier 分数、对数损失和校准度；下注按真实赛前小数赔率结算；去抽水的市场概率作为第五个预测者。</li>
+  <li><strong>局限：</strong>只有一届赛事、104场、虚拟资金，模型版本为2026年6至7月。准确率相差几场在统计上没有显著意义。</li>
+</ul>
+
+<h2>常见问题</h2>
+<h3>哪个AI预测2026年世界杯最准？</h3>
+<p>取决于看哪个指标。在 WC2026-Agents 基准（全部104场比赛）中，ChatGPT（GPT-5.5）和 Grok（Expert 模式）准确率并列最高，均为68.3%；概率质量（Brier 分数）最好的是 Claude Opus 4.8（0.4705）和 Grok（0.4706）；按真实赔率虚拟下注赚得最多的是 Grok（+650美元，投资回报率 +10.3%）。四个模型的 Brier 分数都没有超过赛前博彩市场（0.469）。</p>
+<h3>有AI在2026世界杯上赢过博彩赔率吗？</h3>
+<p>没有明显赢过。去除抽水后的市场概率 Brier 分数为0.469，优于全部四个模型（0.4705至0.4828）。对数损失上 Grok（0.803）和 Claude（0.806）略低于市场（0.807），但在104场的样本上差距小到没有意义。每场都押市场热门的固定下注策略收益 +1041美元，超过任何一个AI。</p>
+<h3>哪个AI在2026世界杯虚拟下注中赚钱最多？</h3>
+<p>Grok（Expert 模式）：104注共盈利 +650美元（投资回报率 +10.3%），其中淘汰赛阶段 +595美元。Gemini 3.1 Pro 盈利 +322美元，ChatGPT（GPT-5.5）+118美元，Claude Opus 4.8 亏损275美元（投资回报率 -18.1%）。所有下注都是虚拟的，由模型自行决定金额（每场最多100美元），按真实赛前赔率结算。</p>
+<h3>ChatGPT、Claude、Gemini、Grok 预测2026世界杯比赛的准确率是多少？</h3>
+<p>全部104场（按90分钟胜平负）：ChatGPT 68.3%，Grok 68.3%，Claude 66.3%，Gemini 65.4%；博彩市场热门的命中率同样是68.3%。32场淘汰赛中四个模型准确率完全相同，都是71.9%。四个模型在104场中有96场选了同一个结果。</p>
+<h3>AI预测到西班牙夺得2026世界杯冠军了吗？</h3>
+<p>2026年7月19日决赛西班牙1比0战胜阿根廷。赛前四个模型都把西班牙获胜列为可能性最高（或并列最高）的结果，给出的西班牙胜率在35%到44%之间。需要说明的是，模型是在每场比赛开球前约一天逐场预测的，并没有在赛前一次性预测冠军。</p>
+<h3>2026世界杯哪些比赛所有AI都预测错了？</h3>
+<p>四个模型共同预测错了104场中的32场，其中22场90分钟内打平。淘汰赛阶段四个模型全部猜错8场：德国1比1巴拉圭、荷兰1比1摩洛哥、澳大利亚1比1埃及、瑞士0比0哥伦比亚（均通过点球大战决出胜负），以及巴西1比2挪威、美国1比4比利时、法国0比2西班牙、法国4比6英格兰。</p>
+<h3>为什么AI很难预测足球比赛的平局？</h3>
+<p>在 WC2026-Agents 中，104场里有24场（23%）90分钟打平，但每个模型把平局作为最可能结果的次数最多只有4次。模型给平局的平均概率其实合理（22.7%至23.8%），只是平局很少是单一最可能的结果，所以按最高概率选结果时几乎会错过所有平局。</p>
+<h3>AI逆着博彩市场下注划算吗？</h3>
+<p>大多不划算。押注非市场热门结果的命中率只有21%到40%，而顺着市场下注的命中率为48%到69%。逆市场下注让 Claude 亏损167美元（42注）、Gemini 亏损112美元、ChatGPT 亏损38美元。Grok 很少逆市场下注，它仅有的5注逆向下注盈利 +64美元。</p>
+<h3>WC2026-Agents 数据集在哪里下载？</h3>
+<p>数据以 CC BY 4.0 协议免费开放，可在 Hugging Face（dingjiacheng/wc2026-agents）和 GitHub（graphuofm/FIFA2026LLM）获取，代码采用 MIT 协议。包含416条赛前预测、414条赛后反思、含点球大战的比赛结果以及全部104场的赛前赔率。</p>
+<h3>WC2026-Agents 是谁做的？</h3>
+<p>由美国孟菲斯大学（University of Memphis）的 Jiacheng Ding 和 Cong Guo 完成，论文为《FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches》（arXiv:2607.17765）。</p>
+
+<h2>引用</h2>
+<pre>@misc{ding2026wc2026agents,
+  title         = {{FIFA} World Cup 2026 as a Contamination-Free Benchmark for
+                   {LLM} Forecasting Agents: Four Models, a Bookmaker, and 104 Matches},
+  author        = {Ding, Jiacheng and Guo, Cong},
+  year          = {2026},
+  eprint        = {2607.17765},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2607.17765}
+}</pre>
+
+<footer>
+  <p>WC2026-Agents，作者 Jiacheng Ding、Cong Guo（美国孟菲斯大学）。数据 CC BY 4.0，代码 MIT。所有下注均为虚拟、仅供研究，不构成任何博彩建议。最后更新：2026年9月14日。</p>
+</footer>
+</main>
+</body>
+</html>

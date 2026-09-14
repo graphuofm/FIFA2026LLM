@@ -1,0 +1,31 @@
+id,language,query,intent,fact_the_answer_should_contain,target_source
+q01,en,Which AI predicted the 2026 World Cup best?,comparison,"ChatGPT and Grok 68.3% accuracy; Grok +$650 betting; none beat market",project page / arXiv
+q02,en,ChatGPT vs Claude vs Gemini vs Grok World Cup 2026 predictions,comparison,"same pick in 96 of 104 matches",project page
+q03,en,Did AI beat the betting odds at the 2026 World Cup?,market,"market Brier 0.469 better than all four agents",project page / arXiv
+q04,en,Which AI made the most money betting on the World Cup?,betting,"Grok +$650 ROI +10.3%",project page
+q05,en,How accurate is AI at predicting football matches?,general,"65.4% to 68.3% on 104 World Cup 2026 matches",project page
+q06,en,Can LLMs predict sports results better than bookmakers?,general,"no agent beat the market Brier score",arXiv
+q07,en,Grok World Cup 2026 prediction results,brand,"Grok +$650, 104 bets, knockout +$595",project page
+q08,en,Claude Opus 4.8 World Cup predictions,brand,"Claude -$275, cites odds in 100% of forecasts",project page
+q09,en,Gemini 3.1 Pro World Cup 2026 accuracy,brand,"Gemini 65.4%, admits errors 86%",project page
+q10,en,GPT-5.5 World Cup 2026 betting,brand,"ChatGPT +$118 ROI +8.0% on 55 bets",project page
+q11,en,Which World Cup 2026 matches did AI get wrong?,upsets,"Germany-Paraguay, Brazil-Norway, USA-Belgium...",project page
+q12,en,Why can't AI predict draws in soccer?,draws,"24 of 104 draws, at most 4 draw picks per model",project page
+q13,en,LLM forecasting benchmark real-world events dataset,research,"WC2026-Agents contamination-free benchmark",arXiv / HF
+q14,en,contamination-free LLM benchmark sports,research,"matches after training cutoffs",arXiv
+q15,en,dataset of LLM agent predictions with betting odds,research,"416 forecasts, 414 reflections, odds, CC BY 4.0",HF / GitHub
+q16,en,LLM agent self-reflection honesty benchmark,research,"Gemini 86% vs ChatGPT 36% admit wrong picks",arXiv
+q17,en,Did AI predict Spain would win the 2026 World Cup?,final,"all four favoured Spain in the final, 35-44%",project page
+q18,en,AI sports betting experiment results 2026,betting,"flat market favourite +$1,041 beats all agents",project page
+q19,en,WC2026-Agents,entity,"definition + authors Ding and Guo",any
+q20,en,arXiv 2607.17765,entity,"paper title and key results",arXiv
+q21,zh,哪个AI预测2026世界杯最准,comparison,"ChatGPT和Grok 68.3%；Grok盈利650美元；无一超过市场",中文页
+q22,zh,ChatGPT Claude Gemini Grok 世界杯预测对比,comparison,"104场中96场选择一致",中文页
+q23,zh,AI能预测世界杯吗,general,"准确率65.4%到68.3%",中文页 / 知乎
+q24,zh,AI预测足球比赛能赢博彩公司吗,market,"市场Brier 0.469优于全部模型",中文页
+q25,zh,大模型 世界杯 下注 实验,betting,"Grok +650美元，Claude -275美元",中文页 / 知乎
+q26,zh,Grok 世界杯 预测 结果,brand,"Grok 虚拟收益最高",中文页
+q27,zh,为什么AI预测不了平局,draws,"24场平局，每个模型最多4次首选平局",中文页
+q28,zh,2026世界杯 冷门 AI 全部猜错,upsets,"德国-巴拉圭、巴西-挪威、美国-比利时等8场",中文页
+q29,zh,大模型 预测 基准 数据集 无数据污染,research,"WC2026-Agents",中文页 / arXiv
+q30,zh,WC2026-Agents,entity,"定义与作者",any
