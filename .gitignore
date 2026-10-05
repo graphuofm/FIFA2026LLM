@@ -25,4 +25,4 @@ paper/page*.png
 data/analysis/rebuttal/international_results.csv
 
 # review-period drafts, kept local only
-rebuttal/
+/rebuttal/

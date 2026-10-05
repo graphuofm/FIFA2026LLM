@@ -1,0 +1,2 @@
+n,agreement,kappa,precision,recall,tp,fp,fn,tn
+40,0.95,0.886,1.0,0.929,26,0,2,12
