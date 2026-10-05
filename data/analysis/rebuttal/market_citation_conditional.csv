@@ -1,0 +1,8 @@
+model,cites_market,n,accuracy,brier,agrees_with_market_fav,corr_p_a_vs_market
+claude,True,104,0.663,0.4705,0.981,0.994
+chatgpt,False,8,0.875,0.3419,1.0,0.986
+chatgpt,True,96,0.667,0.4838,1.0,0.991
+gemini,False,92,0.652,0.5005,0.946,0.966
+gemini,True,12,0.667,0.3468,0.917,0.995
+grok,False,39,0.59,0.5161,1.0,0.985
+grok,True,65,0.738,0.4433,1.0,0.986

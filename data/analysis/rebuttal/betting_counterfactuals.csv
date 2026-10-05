@@ -1,0 +1,6 @@
+model,n_bets,actual_profit,actual_roi,actual_roi_ci_lo,actual_roi_ci_hi,flatstake_profit,flatstake_roi,flatstake_roi_ci_lo,flatstake_roi_ci_hi,argmax_always_profit,argmax_always_roi,argmax_always_ci_lo,argmax_always_ci_hi
+claude,73,-275.39,-18.13,-44.67,10.08,-1455.23,-19.93,-48.3,11.53,590.68,5.68,-9.81,21.32
+chatgpt,55,117.95,8.02,-16.76,29.99,46.48,0.85,-30.5,33.36,1040.68,10.01,-5.62,25.71
+gemini,103,321.75,3.72,-13.1,20.67,618.86,6.01,-11.8,24.12,485.49,4.67,-11.0,20.4
+grok,104,650.1,10.31,-4.57,25.15,1132.59,10.89,-5.7,27.61,1040.68,10.01,-5.62,25.71
+market_favourite_flat,104,1040.68,10.01,-5.62,25.71,,,,,,,,

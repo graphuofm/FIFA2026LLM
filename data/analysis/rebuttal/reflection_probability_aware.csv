@@ -1,0 +1,21 @@
+model,self_label_on_wrong_pick,n,mean_p_on_true_outcome,mean_p_on_its_pick
+claude,incorrect,17,0.24,0.553
+claude,partially_correct,16,0.262,0.531
+claude,correct,2,0.36,0.375
+claude,ADMIT_RATE p_true>=0.30,12,0.333,
+claude,ADMIT_RATE p_true<0.30,23,0.565,
+chatgpt,incorrect,12,0.234,0.557
+chatgpt,partially_correct,18,0.246,0.531
+chatgpt,correct,3,0.29,0.493
+chatgpt,ADMIT_RATE p_true>=0.30,7,0.429,
+chatgpt,ADMIT_RATE p_true<0.30,26,0.346,
+gemini,incorrect,31,0.239,0.566
+gemini,partially_correct,1,0.32,0.38
+gemini,correct,4,0.338,0.408
+gemini,ADMIT_RATE p_true>=0.30,14,0.643,
+gemini,ADMIT_RATE p_true<0.30,22,1.0,
+grok,incorrect,20,0.204,0.608
+grok,partially_correct,12,0.28,0.519
+grok,correct,1,0.35,0.38
+grok,ADMIT_RATE p_true>=0.30,8,0.25,
+grok,ADMIT_RATE p_true<0.30,25,0.72,

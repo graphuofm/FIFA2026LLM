@@ -1,0 +1,16 @@
+entity,metric,value,ci95_lo,ci95_hi
+claude,accuracy,0.6635,0.5769,0.75
+claude,brier,0.4705,0.403,0.541
+claude,log_loss,0.806,0.7134,0.902
+chatgpt,accuracy,0.6827,0.5962,0.7692
+chatgpt,brier,0.4729,0.4046,0.5439
+chatgpt,log_loss,0.8137,0.7192,0.9117
+gemini,accuracy,0.6538,0.5577,0.7404
+gemini,brier,0.4828,0.4124,0.556
+gemini,log_loss,0.8204,0.7226,0.9216
+grok,accuracy,0.6827,0.5962,0.7692
+grok,brier,0.4706,0.395,0.5494
+grok,log_loss,0.803,0.6984,0.9108
+market,accuracy,0.6827,0.5962,0.7692
+market,brier,0.4688,0.3988,0.5427
+market,log_loss,0.8066,0.7081,0.9104

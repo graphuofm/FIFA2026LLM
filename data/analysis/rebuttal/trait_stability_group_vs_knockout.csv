@@ -1,0 +1,9 @@
+model,phase,n,accuracy,bet_rate,mean_stake,contrarian_share,cites_market,own_error_rate
+claude,group,72,0.639,0.667,22.4,0.458,1.0,0.538
+claude,knockout,32,0.719,0.781,17.8,0.8,1.0,0.333
+chatgpt,group,72,0.667,0.569,28.4,0.341,0.917,0.333
+chatgpt,knockout,32,0.719,0.438,21.9,0.429,0.938,0.444
+gemini,group,72,0.625,0.986,85.1,0.127,0.125,0.852
+gemini,knockout,32,0.719,1.0,81.9,0.156,0.094,0.889
+grok,group,72,0.667,1.0,63.7,0.056,0.75,0.625
+grok,knockout,32,0.719,1.0,53.8,0.031,0.344,0.556

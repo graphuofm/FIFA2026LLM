@@ -20,3 +20,9 @@ paper/*.fls
 paper/*.fdb_latexmk
 paper/*.synctex.gz
 paper/page*.png
+
+# third-party data downloaded by rebuttal_elo.py (CC0, not redistributed here)
+data/analysis/rebuttal/international_results.csv
+
+# review-period drafts, kept local only
+rebuttal/

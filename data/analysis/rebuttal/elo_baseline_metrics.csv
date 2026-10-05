@@ -1,0 +1,4 @@
+entity,metric,value,ci95_lo,ci95_hi
+elo,accuracy,0.6635,0.5769,0.75
+elo,brier,0.4949,0.4253,0.5674
+elo,log_loss,0.8415,,

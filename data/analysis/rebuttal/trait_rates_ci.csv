@@ -1,0 +1,17 @@
+model,trait,value,ci95_lo,ci95_hi
+claude,bet_rate,0.702,0.615,0.788
+claude,contrarian_share,0.575,0.463,0.689
+claude,cites_market,1.0,1.0,1.0
+claude,own_error_rate,0.486,0.317,0.651
+chatgpt,bet_rate,0.529,0.433,0.625
+chatgpt,contrarian_share,0.364,0.241,0.491
+chatgpt,cites_market,0.923,0.865,0.971
+chatgpt,own_error_rate,0.364,0.2,0.533
+gemini,bet_rate,0.99,0.971,1.0
+gemini,contrarian_share,0.136,0.077,0.204
+gemini,cites_market,0.115,0.058,0.183
+gemini,own_error_rate,0.861,0.738,0.97
+grok,bet_rate,1.0,1.0,1.0
+grok,contrarian_share,0.048,0.01,0.096
+grok,cites_market,0.625,0.529,0.721
+grok,own_error_rate,0.606,0.432,0.769
